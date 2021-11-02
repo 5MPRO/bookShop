@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/ShopBanSach2/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/drawable/border_btn_thanhtoan.xml" value="0.18703703703703703" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/drawable/border_chinhsach.xml" value="0.10833333333333334" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/drawable/retange.xml" value="0.10833333333333334" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_chitietsanpham.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_giohang.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_lien_he.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_main.xml" value="0.3173873045078197" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_tai_khoan.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_thong_bao.xml" value="0.1" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_thongtin_tai_khoan.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_thongtinkhachhang.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_truyen_tranh.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_van_hoc.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/dong_giohang.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/dong_listview_loaisp.xml" value="0.1" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/dong_sanphamgiamgia.xml" value="0.1" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/dong_sanphammoinhat.xml" value="0.1" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/dong_truyentranh.xml" value="0.1796875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
