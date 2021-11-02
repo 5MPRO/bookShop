@@ -144,7 +144,7 @@
         android:layout_height="0dp">
         <LinearLayout
             android:id="@+id/ln_home"
-            android:gravity="center|top"
+            android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -162,7 +162,7 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
-            android:gravity="center|top"
+            android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -181,7 +181,7 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
-            android:gravity="center|top"
+            android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -200,7 +200,7 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_tb"
-            android:gravity="center|top"
+            android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -219,7 +219,7 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/ln_tk"
-            android:gravity="center|top"
+            android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
