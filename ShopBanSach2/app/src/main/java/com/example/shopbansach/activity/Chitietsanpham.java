@@ -40,7 +40,7 @@ public class Chitietsanpham extends AppCompatActivity {
     String HinhanhChitiet = "";
     String MotaChitiet = "";
     int Idsanpham = 0;
-    private ActionBar toolbarmenu;
+    LinearLayout ln_home,ln_tk,ln_tb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,46 +54,28 @@ public class Chitietsanpham extends AppCompatActivity {
     }
 
     private void OnclickMenu() {
-        toolbarmenu = getSupportActionBar();
-
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigationmenu);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        toolbarmenu.setTitle("Trang chủ");
-    }
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment;
-            switch (item.getItemId()) {
-                case R.id.navigationmenu:
-                    toolbarmenu.setTitle("Trang chủ");
-                    Intent intent1 = new Intent(getApplicationContext(),MainActivity.class);
-                    startActivity(intent1);
-                    return true;
-                case R.id.navigation_list:
-                    toolbarmenu.setTitle("Danh sách");
-                    return true;
-                case R.id.navigation_search:
-                    toolbarmenu.setTitle("Tìm kiếm");
-                    return true;
-                case R.id.navigation_bell:
-                    toolbarmenu.setTitle("Thông báo");
-                    Intent intent4 = new Intent(getApplicationContext(),ThongBaoActivity.class);
-                    startActivity(intent4);
-                    return true;
-                case R.id.navigation_profile:
-                    toolbarmenu.setTitle("Tài khoản");
-                    Intent intent5 = new Intent(getApplicationContext(),TaiKhoanActivity.class);
-                    startActivity(intent5);
-                    return true;
+        ln_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
             }
-            return false;
-        }
-    };
+        });
+        ln_tk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_tb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -190,5 +172,8 @@ public class Chitietsanpham extends AppCompatActivity {
         txtmota = findViewById(R.id.textviewmotachitietsp);
         spinner = findViewById(R.id.spinner);
         btndatmua = findViewById(R.id.buttondatmuachitietsp);
+        ln_home = findViewById(R.id.ln_home);
+        ln_tk = findViewById(R.id.ln_tk);
+        ln_tb = findViewById(R.id.ln_tb);
     }
 }

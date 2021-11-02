@@ -53,6 +53,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     ViewFlipper viewFlipper;
+    LinearLayout ln_tb,ln_tk;
     RecyclerView recyclerViewSpkm,recyclerViewSpmn;
     NavigationView navigationView;
     ListView listViewmanhinhchinh;
@@ -62,9 +63,7 @@ public class MainActivity extends AppCompatActivity {
     LoaispAdapter loaispAdapter;
     SanphamAdapter sanphamAdapter;
     SanPhamGgAdapter sanphamAdapter1;
-    private ActionBar toolbarmenu;
     public static ArrayList<Giohang> manggiohang;
-
     int id=0;
     String tenloaisp="";
     String hinhanhloaisp="";
@@ -89,46 +88,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void OnclickMenu() {
-        toolbarmenu = getSupportActionBar();
-
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigationmenu);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        toolbarmenu.setTitle("Trang chủ");
-    }
-
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment;
-            switch (item.getItemId()) {
-                case R.id.navigationmenu:
-                    toolbarmenu.setTitle("Trang chủ");
-                    Intent intent1 = new Intent(getApplicationContext(),MainActivity.class);
-                    startActivity(intent1);
-                    return true;
-                case R.id.navigation_list:
-                    toolbarmenu.setTitle("Danh sách");
-                    return true;
-                case R.id.navigation_search:
-                    toolbarmenu.setTitle("Tìm kiếm");
-                    return true;
-                case R.id.navigation_bell:
-                    toolbarmenu.setTitle("Thông báo");
-                    Intent intent4 = new Intent(getApplicationContext(),ThongBaoActivity.class);
-                    startActivity(intent4);
-                    return true;
-                case R.id.navigation_profile:
-                    toolbarmenu.setTitle("Tài khoản");
-                    Intent intent5 = new Intent(getApplicationContext(),TaiKhoanActivity.class);
-                    startActivity(intent5);
-                    return true;
+        ln_tb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
+                startActivity(intent);
             }
-            return false;
-        }
-    };
+        });
+        ln_tk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -392,5 +366,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             manggiohang = new ArrayList<>();
         }
+        ln_tb = findViewById(R.id.ln_tb);
+        ln_tk = findViewById(R.id.ln_tk);
     }
 }

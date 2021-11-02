@@ -32,7 +32,7 @@
                         android:id="@+id/toolbarmanhinhchinh"
                         app:titleTextColor="@color/white"
                         app:title="Trang chủ"
-                        android:background="#3F51B5"
+                        android:background="@color/pirimary"
                         android:layout_width="match_parent"
                         android:layout_height="?attr/actionBarSize"/>
                     <ViewFlipper
@@ -40,7 +40,11 @@
                         android:id="@+id/viewflipper"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
+                    </RelativeLayout>
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -66,83 +70,96 @@
                                 android:text="CHÍNH SÁCH KHÁCH HÀNG TẠI NEW SHOP"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
+
                             <LinearLayout
 
-                                android:gravity="center"
-                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
                                 <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
+                                    android:orientation="vertical">
+
                                     <android.support.design.widget.FloatingActionButton
-                                        android:backgroundTint="@color/white"
-                                        android:src="@drawable/ic_car"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"/>
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/white"
+                                        android:src="@drawable/ic_car" />
+
                                     <TextView
-                                        android:gravity="center"
-                                        android:textSize="10sp"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
-                                        android:text="Free Shipping trên 250.000đ"/>
+                                        android:gravity="center"
+                                        android:text="Free Shipping trên 250.000đ"
+                                        android:textSize="10sp" />
                                 </LinearLayout>
+
                                 <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
+                                    android:orientation="vertical">
+
                                     <android.support.design.widget.FloatingActionButton
-                                        android:backgroundTint="@color/white"
-                                        android:src="@drawable/iconhc"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"/>
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/white"
+                                        android:src="@drawable/iconhc" />
+
                                     <TextView
-                                        android:gravity="center"
-                                        android:textSize="10sp"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
-                                        android:text="Sản phẩm chính hãng"/>
+                                        android:gravity="center"
+                                        android:text="Sản phẩm chính hãng"
+                                        android:textSize="10sp" />
                                 </LinearLayout>
+
                                 <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
+                                    android:orientation="vertical">
+
                                     <android.support.design.widget.FloatingActionButton
-                                        android:backgroundTint="@color/white"
-                                        android:src="@drawable/icon_money"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"/>
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/white"
+                                        android:src="@drawable/icon_money" />
+
                                     <TextView
-                                        android:gravity="center"
-                                        android:textSize="10sp"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
-                                        android:text="Nhận hàng rồi thanh toán"/>
+                                        android:gravity="center"
+                                        android:text="Nhận hàng rồi thanh toán"
+                                        android:textSize="10sp" />
                                 </LinearLayout>
+
                                 <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
                                     android:layout_margin="2dp"
                                     android:gravity="center"
-                                    android:orientation="vertical"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
+                                    android:orientation="vertical">
+
                                     <android.support.design.widget.FloatingActionButton
-                                        android:backgroundTint="@color/white"
-                                        android:src="@drawable/ic_doitra"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"/>
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/white"
+                                        android:src="@drawable/ic_doitra" />
+
                                     <TextView
-                                        android:gravity="center"
-                                        android:textSize="10sp"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
-                                        android:text="Đổi trả dễ dàng"/>
+                                        android:gravity="center"
+                                        android:text="Đổi trả dễ dàng"
+                                        android:textSize="10sp" />
                                 </LinearLayout>
                             </LinearLayout>
 
@@ -193,8 +210,7 @@
                                 android:id="@+id/recyclersanphammoinhat"
                                 android:layout_width="match_parent"
                                 android:layout_height="470dp"
-                                android:nestedScrollingEnabled="false"
-                                />
+                                android:nestedScrollingEnabled="false" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
@@ -222,17 +238,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:background="@color/white"
             android:orientation="horizontal"
             android:weightSum="5"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
             android:layout_gravity="end"
             >
 
             <LinearLayout
+                android:id="@+id/ln_home"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -242,6 +259,7 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:tint="@color/pirimary"
                     android:src="@drawable/home_menu_activity" />
 
                 <TextView
@@ -253,6 +271,7 @@
             </LinearLayout>
 
             <LinearLayout
+
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -297,7 +316,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/ln_tb_ct"
+                android:id="@+id/ln_tb"
+
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -319,6 +339,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ln_tk"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
