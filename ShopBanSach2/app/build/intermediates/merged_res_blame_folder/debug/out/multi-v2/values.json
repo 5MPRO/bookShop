@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\LTDD\\AndroidStudioProjects\\ShopBanSach2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "D:\\LTDD\\AndroidStudioProjects\\bookShop\\ShopBanSach2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
                     "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\8d10a46eb4c6dbdc7d8906a07ced84cd\\transformed\\coordinatorlayout-28.0.0\\res\\values\\values.xml",
@@ -23,7 +23,43 @@
                     }
                 },
                 {
-                    "source": "D:\\LTDD\\AndroidStudioProjects\\ShopBanSach2\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\f93592df7d43ce7cd1e9f892cab5cd60\\transformed\\transition-28.0.0\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,95,138,185,240,285,339,391,440,501",
+                        "endColumns": "39,42,46,54,44,53,51,48,60,49",
+                        "endOffsets": "90,133,180,235,280,334,386,435,496,546"
+                    },
+                    "to": {
+                        "startLines": "652,660,663,664,665,678,679,680,681,682",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "35956,36327,36466,36513,36568,37162,37216,37268,37317,37378",
+                        "endColumns": "39,42,46,54,44,53,51,48,60,49",
+                        "endOffsets": "35991,36365,36508,36563,36608,37211,37263,37312,37373,37423"
+                    }
+                },
+                {
+                    "source": "D:\\LTDD\\AndroidStudioProjects\\bookShop\\ShopBanSach2\\app\\src\\main\\res\\values\\themes.xml",
+                    "from": {
+                        "startLines": "2,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "100,453",
+                        "endLines": "8,12",
+                        "endColumns": "12,12",
+                        "endOffsets": "448,682"
+                    },
+                    "to": {
+                        "startLines": "2696,2732",
+                        "startColumns": "4,4",
+                        "startOffsets": "171213,173844",
+                        "endLines": "2702,2735",
+                        "endColumns": "12,12",
+                        "endOffsets": "171561,174073"
+                    }
+                },
+                {
+                    "source": "D:\\LTDD\\AndroidStudioProjects\\bookShop\\ShopBanSach2\\app\\src\\main\\res\\values\\colors.xml",
                     "from": {
                         "startLines": "15,7,20,14,12,13,10,9,16,17,18,19,2,3,4,5,6,11,8",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,20 +76,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\f93592df7d43ce7cd1e9f892cab5cd60\\transformed\\transition-28.0.0\\res\\values\\values.xml",
+                    "source": "D:\\LTDD\\AndroidStudioProjects\\bookShop\\ShopBanSach2\\app\\src\\main\\res\\values\\attrs.xml",
                     "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,95,138,185,240,285,339,391,440,501",
-                        "endColumns": "39,42,46,54,44,53,51,48,60,49",
-                        "endOffsets": "90,133,180,235,280,334,386,435,496,546"
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endLines": "4",
+                        "endColumns": "24",
+                        "endOffsets": "207"
                     },
                     "to": {
-                        "startLines": "652,660,663,664,665,678,679,680,681,682",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "35956,36327,36466,36513,36568,37162,37216,37268,37317,37378",
-                        "endColumns": "39,42,46,54,44,53,51,48,60,49",
-                        "endOffsets": "35991,36365,36508,36563,36608,37211,37263,37312,37373,37423"
+                        "startLines": "4138",
+                        "startColumns": "4",
+                        "startOffsets": "270674",
+                        "endLines": "4141",
+                        "endColumns": "24",
+                        "endOffsets": "270863"
                     }
                 },
                 {
@@ -76,26 +114,7 @@
                     }
                 },
                 {
-                    "source": "D:\\LTDD\\AndroidStudioProjects\\ShopBanSach2\\app\\src\\main\\res\\values\\themes.xml",
-                    "from": {
-                        "startLines": "2,9",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,453",
-                        "endLines": "8,12",
-                        "endColumns": "12,12",
-                        "endOffsets": "448,682"
-                    },
-                    "to": {
-                        "startLines": "2696,2732",
-                        "startColumns": "4,4",
-                        "startOffsets": "171213,173844",
-                        "endLines": "2702,2735",
-                        "endColumns": "12,12",
-                        "endOffsets": "171561,174073"
-                    }
-                },
-                {
-                    "source": "D:\\LTDD\\AndroidStudioProjects\\ShopBanSach2\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "D:\\LTDD\\AndroidStudioProjects\\bookShop\\ShopBanSach2\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "1,7,8,2,4,5,6,3",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -128,44 +147,6 @@
                         "endLines": "562,563,564,572,573,574,654,4520",
                         "endColumns": "58,47,55,74,75,71,65,24",
                         "endOffsets": "30379,30427,30483,31169,31245,31317,36091,299220"
-                    }
-                },
-                {
-                    "source": "D:\\LTDD\\AndroidStudioProjects\\ShopBanSach2\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "247"
-                    },
-                    "to": {
-                        "startLines": "3109",
-                        "startColumns": "4",
-                        "startOffsets": "198616",
-                        "endLines": "3112",
-                        "endColumns": "12",
-                        "endOffsets": "198847"
-                    }
-                },
-                {
-                    "source": "D:\\LTDD\\AndroidStudioProjects\\ShopBanSach2\\app\\src\\main\\res\\values\\attrs.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endLines": "4",
-                        "endColumns": "24",
-                        "endOffsets": "207"
-                    },
-                    "to": {
-                        "startLines": "4138",
-                        "startColumns": "4",
-                        "startOffsets": "270674",
-                        "endLines": "4141",
-                        "endColumns": "24",
-                        "endOffsets": "270863"
                     }
                 },
                 {
@@ -242,6 +223,25 @@
                         "endLines": "402,403,509,510,511,512,513,514,515,623,624,625,626,627,628,629,630,631,632,633,634,635,636,637,646,647,655,656,669,670,671,672,673,677,699,761,2447,2451,2452,2456,2457,2830,2831,3902,4104,4136,4178,4185",
                         "endColumns": "68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,34,34,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
                         "endOffsets": "19785,19848,26925,26993,27065,27135,27196,27270,27343,34228,34289,34351,34415,34477,34538,34606,34706,34766,34832,34905,34974,35031,35083,35145,35670,35746,36126,36161,36792,36853,36910,36944,36979,37157,38438,43514,156209,156410,156520,156721,156850,181715,181782,243226,268402,270467,272623,273000"
+                    }
+                },
+                {
+                    "source": "D:\\LTDD\\AndroidStudioProjects\\bookShop\\ShopBanSach2\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endLines": "4",
+                        "endColumns": "12",
+                        "endOffsets": "247"
+                    },
+                    "to": {
+                        "startLines": "3109",
+                        "startColumns": "4",
+                        "startOffsets": "198616",
+                        "endLines": "3112",
+                        "endColumns": "12",
+                        "endOffsets": "198847"
                     }
                 }
             ]
