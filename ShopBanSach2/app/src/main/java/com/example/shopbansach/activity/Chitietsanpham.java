@@ -40,7 +40,7 @@ public class Chitietsanpham extends AppCompatActivity {
     String HinhanhChitiet = "";
     String MotaChitiet = "";
     int Idsanpham = 0;
-    LinearLayout ln_home,ln_tk;
+    LinearLayout ln_home,ln_tk,ln_tb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +65,13 @@ public class Chitietsanpham extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_tb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
                 startActivity(intent);
             }
         });
@@ -167,5 +174,6 @@ public class Chitietsanpham extends AppCompatActivity {
         btndatmua = findViewById(R.id.buttondatmuachitietsp);
         ln_home = findViewById(R.id.ln_home);
         ln_tk = findViewById(R.id.ln_tk);
+        ln_tb = findViewById(R.id.ln_tb);
     }
 }

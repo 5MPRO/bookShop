@@ -22,61 +22,36 @@ public class TaiKhoanActivity extends AppCompatActivity {
     Button btndonhang,btndangxuat,btntttk;
     Toolbar toolbartk;
     TextView txtEmail;
-    private ActionBar toolbarmenu;
+    LinearLayout ln_tb,ln_home;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tai_khoan);
         AnhXa();
         GetEmail();
-        OnClickconten();
+        OnClickcontent();
         AcctionToolbar();
         OnclickMenu();
     }
 
     private void OnclickMenu() {
-        toolbarmenu = getSupportActionBar();
-
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigationmenu);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        toolbarmenu.setTitle("Trang chủ");
+        ln_tb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment;
-            switch (item.getItemId()) {
-                case R.id.navigationmenu:
-                    toolbarmenu.setTitle("Trang chủ");
-                    Intent intent1 = new Intent(TaiKhoanActivity.this,MainActivity.class);
-                    startActivity(intent1);
-                    return true;
-                case R.id.navigation_list:
-                    toolbarmenu.setTitle("Danh sách");
-                    return true;
-                case R.id.navigation_search:
-                    toolbarmenu.setTitle("Tìm kiếm");
-                    return true;
-                case R.id.navigation_bell:
-                    toolbarmenu.setTitle("Thông báo");
-                    Intent intent4 = new Intent(getApplicationContext(),ThongBaoActivity.class);
-                    startActivity(intent4);
-                    return true;
-                case R.id.navigation_profile:
-                    toolbarmenu.setTitle("Tài khoản");
-                    Intent intent5 = new Intent(getApplicationContext(),TaiKhoanActivity.class);
-                    startActivity(intent5);
-                    return true;
-            }
-            return false;
-        }
-    };
-
-    private void OnClickconten() {
+    private void OnClickcontent() {
         btndonhang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,9 +81,7 @@ public class TaiKhoanActivity extends AppCompatActivity {
     }
 
     private void GetEmail() {
-        Intent intent = getIntent();
-        String emailtk = intent.getStringExtra("email");
-        txtEmail.setText(emailtk);
+
     }
 
     private void AcctionToolbar() {
@@ -141,5 +114,7 @@ public class TaiKhoanActivity extends AppCompatActivity {
         toolbartk = findViewById(R.id.toolbartaikhoan);
         txtEmail = findViewById(R.id.textviewtenkh);
         btntttk = findViewById(R.id.btnthongtintk);
+        ln_tb = findViewById(R.id.ln_tb);
+        ln_home = findViewById(R.id.ln_home);
     }
 }

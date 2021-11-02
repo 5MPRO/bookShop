@@ -41,6 +41,7 @@ import java.util.Map;
 public class TruyenTranhActivity extends AppCompatActivity {
     Toolbar toolbartt;
     ListView lvtt;
+    LinearLayout ln_home,ln_tk,ln_tb;
     TruyenTranhAdapter truyenTranhAdapter;
     ArrayList<Sanpham> mangtt;
     int idtt = 0;
@@ -59,11 +60,36 @@ public class TruyenTranhActivity extends AppCompatActivity {
             ActionToolbar();
             GetData(page);
             LoadMoreData();
+            OnclickMenu();
         }
         else {
             CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối Internet");
         }
 
+    }
+
+    private void OnclickMenu() {
+        ln_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_tk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_tb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -189,6 +215,9 @@ public class TruyenTranhActivity extends AppCompatActivity {
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         footerview = inflater.inflate(R.layout.progressbar,null);
         mHandler = new mHandler();
+        ln_home = findViewById(R.id.ln_home);
+        ln_tk = findViewById(R.id.ln_tk);
+        ln_tb = findViewById(R.id.ln_tb);
     }
 
     public class mHandler extends Handler{
