@@ -16,11 +16,7 @@
             android:background="@drawable/border_sanphamgiamgia"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <ImageView
-                android:src="@drawable/icon_new"
-                android:layout_gravity="top|right"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+
             <LinearLayout
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -33,22 +29,27 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"/>
                 <TextView
-                    android:gravity="center"
+                    android:gravity="center|top"
                     android:textColor="@color/black"
                     android:text="Tên sản phẩm"
-                    android:textSize="20dp"
+                    android:textSize="12sp"
                     android:id="@+id/textviewtensanpham"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
                     android:id="@+id/textviewgiasanpham"
-                    android:gravity="center"
+                    android:gravity="center|top"
                     android:text="Giá sản phẩm"
                     android:textColor="#f20"
-                    android:textSize="17dp"
+                    android:textSize="12sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
+            <ImageView
+                android:src="@drawable/hot"
+                android:layout_gravity="top|right"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
         </FrameLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

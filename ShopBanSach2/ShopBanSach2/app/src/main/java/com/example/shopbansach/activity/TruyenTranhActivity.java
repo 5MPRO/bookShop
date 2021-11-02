@@ -39,9 +39,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TruyenTranhActivity extends AppCompatActivity {
-    LinearLayout ln_home,ln_tk,ln_tb;
     Toolbar toolbartt;
     ListView lvtt;
+    LinearLayout ln_home,ln_tk,ln_tb;
     TruyenTranhAdapter truyenTranhAdapter;
     ArrayList<Sanpham> mangtt;
     int idtt = 0;
@@ -60,7 +60,7 @@ public class TruyenTranhActivity extends AppCompatActivity {
             ActionToolbar();
             GetData(page);
             LoadMoreData();
-            ClickMenu();
+            OnclickMenu();
         }
         else {
             CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối Internet");
@@ -68,8 +68,7 @@ public class TruyenTranhActivity extends AppCompatActivity {
 
     }
 
-    private void ClickMenu() {
-        ln_home = findViewById(R.id.ln_tt_menu);
+    private void OnclickMenu() {
         ln_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,14 +76,13 @@ public class TruyenTranhActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ln_tk = findViewById(R.id.ln_tt_tk);
         ln_tk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
+                startActivity(intent);
             }
         });
-        ln_tb = findViewById(R.id.ln_tt_tb);
         ln_tb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -194,6 +192,7 @@ public class TruyenTranhActivity extends AppCompatActivity {
     private void ActionToolbar() {
         setSupportActionBar(toolbartt);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbartt.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
         toolbartt.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -216,6 +215,9 @@ public class TruyenTranhActivity extends AppCompatActivity {
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         footerview = inflater.inflate(R.layout.progressbar,null);
         mHandler = new mHandler();
+        ln_home = findViewById(R.id.ln_home);
+        ln_tk = findViewById(R.id.ln_tk);
+        ln_tb = findViewById(R.id.ln_tb);
     }
 
     public class mHandler extends Handler{

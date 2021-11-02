@@ -5,4 +5,6 @@
     <string name="hoten">Họ tên</string>
     <string name="matkhau">Mật khẩu</string>
     <string name="nlmatkhau">Nhập lại mật khẩu</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

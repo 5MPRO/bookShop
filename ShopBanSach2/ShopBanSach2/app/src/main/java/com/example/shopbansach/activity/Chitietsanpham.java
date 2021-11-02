@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.media.Image;
 
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,7 +40,7 @@ public class Chitietsanpham extends AppCompatActivity {
     String HinhanhChitiet = "";
     String MotaChitiet = "";
     int Idsanpham = 0;
-    LinearLayout ln_home,ln_tb,ln_tk;
+    LinearLayout ln_home,ln_tk,ln_tb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,10 +50,10 @@ public class Chitietsanpham extends AppCompatActivity {
         GetInfomation();
         CatchEventSpinner();
         EventButton();
-        Click_Menu();
+        OnclickMenu();
     }
 
-    private void Click_Menu() {
+    private void OnclickMenu() {
         ln_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,20 +61,17 @@ public class Chitietsanpham extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ln_tb= findViewById(R.id.ln_tb_ct4);
-        ln_tb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        ln_tk = findViewById(R.id.ln_tk_ct4);
         ln_tk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_tb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
                 startActivity(intent);
             }
         });
@@ -172,6 +172,8 @@ public class Chitietsanpham extends AppCompatActivity {
         txtmota = findViewById(R.id.textviewmotachitietsp);
         spinner = findViewById(R.id.spinner);
         btndatmua = findViewById(R.id.buttondatmuachitietsp);
-        ln_home = findViewById(R.id.ln_home_ct4);
+        ln_home = findViewById(R.id.ln_home);
+        ln_tk = findViewById(R.id.ln_tk);
+        ln_tb = findViewById(R.id.ln_tb);
     }
 }

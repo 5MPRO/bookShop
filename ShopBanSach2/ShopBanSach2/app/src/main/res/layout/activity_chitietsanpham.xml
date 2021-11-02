@@ -98,6 +98,7 @@
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
+        android:gravity="center_horizontal"
         android:background="@drawable/boder_menu_activity"
         android:weightSum="5"
         android:layout_weight="1"
@@ -105,8 +106,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <LinearLayout
-            android:id="@+id/ln_home_ct4"
-            android:gravity="center|top"
+            android:id="@+id/ln_home"
+            android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -118,13 +119,13 @@
                 android:layout_height="40dp"/>
             <TextView
                 android:textColor="@color/black"
-                android:textSize="17sp"
+                android:textSize="12sp"
                 android:text="Trang chủ"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
-            android:gravity="center|top"
+            android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -137,13 +138,13 @@
                 android:layout_height="40dp"/>
             <TextView
                 android:textColor="@color/black"
-                android:textSize="17sp"
+                android:textSize="12sp"
                 android:text="Danh mục"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
-            android:gravity="center|top"
+            android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -155,14 +156,14 @@
                 android:layout_height="40dp"/>
             <TextView
                 android:textColor="@color/black"
-                android:textSize="17sp"
+                android:textSize="12sp"
                 android:text="Tìm kiếm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/ln_tb_ct4"
-            android:gravity="center|top"
+            android:id="@+id/ln_tb"
+            android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -174,14 +175,14 @@
                 android:layout_height="40dp"/>
             <TextView
                 android:textColor="@color/black"
-                android:textSize="17sp"
+                android:textSize="12sp"
                 android:text="Thông báo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/ln_tk_ct4"
-            android:gravity="center|top"
+            android:id="@+id/ln_tk"
+            android:gravity="center"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -193,7 +194,7 @@
                 android:layout_height="40dp"/>
             <TextView
                 android:textColor="@color/black"
-                android:textSize="17sp"
+                android:textSize="12sp"
                 android:text="Tài khoản"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
