@@ -728,6 +728,7 @@ int color background_material_light 0x7f05001d
 int color bgBottomNavigation 0x7f05001e
 int color black 0x7f05001f
 int color black_overlay 0x7f050020
+int color bookApp 0x7f050092
 int color bright_foreground_disabled_material_dark 0x7f050021
 int color bright_foreground_disabled_material_light 0x7f050022
 int color bright_foreground_inverse_material_dark 0x7f050023
@@ -1400,6 +1401,7 @@ int id listviewvanhoc 0x7f0800b7
 int id ln_home 0x7f0800b8
 int id ln_tb 0x7f0800b9
 int id ln_tk 0x7f0800ba
+int id ln_tk_ct 0x7f080163
 int id masked 0x7f0800bb
 int id menugiohang 0x7f0800bc
 int id message 0x7f0800bd
