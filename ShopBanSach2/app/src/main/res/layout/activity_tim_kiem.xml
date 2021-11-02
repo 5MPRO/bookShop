@@ -5,5 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.TimKiemActivity">
-
+    <android.support.v7.widget.Toolbar
+        app:title="Tiềm kiếm"
+        app:titleTextColor="@color/white"
+        android:background="@color/color_menu"
+        android:id="@+id/toolbartimkiem"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>
