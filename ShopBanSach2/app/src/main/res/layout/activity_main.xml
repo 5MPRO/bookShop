@@ -229,6 +229,7 @@
                     android:layout_height="wrap_content"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/ln_search"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:layout_weight="1"

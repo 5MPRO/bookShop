@@ -19,10 +19,16 @@
         <entry key="..\:/LTDD/AndroidStudioProjects/ShopBanSach21/ShopBanSach2/app/src/main/res/layout/dong_truyentranh.xml" value="0.24635416666666668" />
         <entry key="..\:/LTDD/AndroidStudioProjects/ShopBanSach21/ShopBanSach2/app/src/main/res/layout/dong_vanhoc.xml" value="0.24635416666666668" />
         <entry key="..\:/LTDD/AndroidStudioProjects/ShopBanSach21/ShopBanSach2/app/src/main/res/menu/navigation.xml" value="0.24635416666666668" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/drawable/backgroud_tttk.xml" value="0.9107142857142857" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/drawable/border_btn_thanhtoan.xml" value="0.2361111111111111" />
-        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_giohang.xml" value="0.264" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/drawable/border_button_tttk.xml" value="0.2361111111111111" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_giohang.xml" value="0.25" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_main.xml" value="0.11979166666666667" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_tai_khoan.xml" value="0.25" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_thong_bao.xml" value="0.11979166666666667" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_tim_kiem.xml" value="0.25" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/border_btn_tttk.xml" value="0.25" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/menu/menu_search.xml" value="0.25" />
       </map>
     </option>
   </component>

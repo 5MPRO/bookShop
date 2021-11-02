@@ -24,13 +24,12 @@
         </android.support.v7.widget.Toolbar>
         <LinearLayout
             android:orientation="vertical"
-            android:background="#F3F3F3"
+            android:background="@color/bookApp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="90dp">
 
@@ -47,6 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
+                        android:textColor="#FF2200"
                         android:id="@+id/textviewtenkh"
                         android:text="Email người dùng"
                         android:textSize="20sp"
@@ -54,84 +54,111 @@
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
             </LinearLayout>
-            <Button
-                android:id="@+id/btnthongtintk"
-                android:textAllCaps="false"
-                android:textColor="@color/textcolor"
-                android:drawablePadding="20dp"
-                android:gravity="left|center"
-                android:paddingLeft="20dp"
-                android:drawableStart="@drawable/icon_person"
-                android:text="Thông tin tài khoản"
-                android:layout_marginTop="10dp"
-                android:background="@color/white"
+            <LinearLayout
+                android:gravity="center|top"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/btndonhangcuatoi"
-                android:textAllCaps="false"
-                android:textColor="@color/textcolor"
-                android:drawablePadding="20dp"
-                android:gravity="left|center"
-                android:paddingLeft="20dp"
-                android:drawableStart="@drawable/icon_home"
-                android:text="Đơn hàng của tôi"
-                android:layout_marginTop="5dp"
-                android:background="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:textAllCaps="false"
-                android:textColor="@color/textcolor"
-                android:drawablePadding="20dp"
-                android:gravity="left|center"
-                android:paddingLeft="20dp"
-                android:drawableStart="@drawable/ic_baseline_lock_reset_24"
-                android:text="Đổi mật khẩu"
-                android:layout_marginTop="5dp"
-                android:background="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:textAllCaps="false"
-                android:textColor="@color/textcolor"
-                android:drawablePadding="20dp"
-                android:gravity="left|center"
-                android:paddingLeft="20dp"
-                android:drawableStart="@drawable/ic_baseline_location_on_24"
-                android:text="Địa chỉ giao hàng"
-                android:layout_marginTop="5dp"
-                android:background="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:textAllCaps="false"
-                android:textColor="@color/textcolor"
-                android:drawablePadding="20dp"
-                android:gravity="left|center"
-                android:paddingLeft="20dp"
-                android:drawableStart="@drawable/ic_baseline_support_agent_24"
-                android:text="Hỗ trợ"
-                android:layout_marginTop="5dp"
-                android:background="@color/white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <Button
-                android:id="@+id/buttonDangXuat"
-                android:textColor="@color/color_menu"
-                android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="10dp"
-                android:backgroundTint="#FFFEFE"
-                android:background="@drawable/boder_btn_dangky"
-                android:text="Đăng xuất"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:layout_gravity="center"
-                android:text="Phiên bản 1.20 (20)"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/btnthongtintk"
+                    android:textAllCaps="false"
+                    android:drawableTint="#2640BC"
+                    android:background="@drawable/border_button_tttk"
+                    android:textColor="#2640BC"
+                    android:textStyle="bold"
+                    android:drawablePadding="20dp"
+                    android:gravity="left|center"
+                    android:paddingLeft="20dp"
+                    android:drawableStart="@drawable/icon_person"
+                    android:text="Thông tin tài khoản"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/btndonhangcuatoi"
+                    android:textAllCaps="false"
+                    android:drawableTint="#2640BC"
+                    android:background="@drawable/border_button_tttk"
+                    android:textColor="#2640BC"
+                    android:textStyle="bold"
+                    android:drawablePadding="20dp"
+                    android:gravity="left|center"
+                    android:paddingLeft="20dp"
+                    android:drawableStart="@drawable/icon_home"
+                    android:text="Đơn hàng của tôi"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textAllCaps="false"
+                    android:drawableTint="#2640BC"
+                    android:background="@drawable/border_button_tttk"
+                    android:textColor="#2640BC"
+                    android:textStyle="bold"
+                    android:drawablePadding="20dp"
+                    android:gravity="left|center"
+                    android:paddingLeft="20dp"
+                    android:drawableStart="@drawable/ic_baseline_lock_reset_24"
+                    android:text="Đổi mật khẩu"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textAllCaps="false"
+                    android:drawableTint="#2640BC"
+                    android:background="@drawable/border_button_tttk"
+                    android:textColor="#2640BC"
+                    android:textStyle="bold"
+                    android:drawablePadding="20dp"
+                    android:gravity="left|center"
+                    android:paddingLeft="20dp"
+                    android:drawableStart="@drawable/ic_baseline_location_on_24"
+                    android:text="Địa chỉ giao hàng"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textAllCaps="false"
+                    android:drawableTint="#2640BC"
+                    android:background="@drawable/border_button_tttk"
+                    android:textColor="#2640BC"
+                    android:textStyle="bold"
+                    android:drawablePadding="20dp"
+                    android:gravity="left|center"
+                    android:paddingLeft="20dp"
+                    android:drawableStart="@drawable/ic_baseline_support_agent_24"
+                    android:text="Hỗ trợ"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/buttonDangXuat"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="#C3FF2200"
+                    android:background="@drawable/boder_btn_dangky"
+                    android:text="Đăng xuất"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textColor="#f20"
+                    android:layout_gravity="center"
+                    android:text="Phiên bản 1.20 (20)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
