@@ -150,106 +150,129 @@
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
-        android:gravity="center_horizontal"
-        android:background="@drawable/boder_menu_activity"
-        android:weightSum="5"
-        android:layout_weight="1"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_gravity="end"
+        >
+
         <LinearLayout
             android:id="@+id/ln_home"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
             <ImageView
-                android:tint="@color/black"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/home_menu_activity"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:tint="@color/textcolor"
+                />
+
             <TextView
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:text="Trang chủ"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Trang chủ"
+                android:textColor="@color/textcolor"
+                android:textSize="10sp" />
         </LinearLayout>
+
         <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_weight="1"
+
             android:layout_width="0dp"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
             <ImageView
-                android:tint="@color/black"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/list_menu_activity"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:tint="@color/textcolor" />
+
             <TextView
-                android:textColor="@color/black"
-                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Danh mục"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:textColor="@color/textcolor"
+                android:textSize="10sp" />
         </LinearLayout>
+
         <LinearLayout
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_weight="1"
+            android:id="@+id/ln_tk_ct"
             android:layout_width="0dp"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
             <ImageView
-                android:tint="@color/black"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/search_menu_activity"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:tint="@color/textcolor" />
+
             <TextView
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:text="Tìm kiếm"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Tìm kiếm"
+                android:textColor="@color/textcolor"
+                android:textSize="10sp" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ln_tb"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_weight="1"
+
             android:layout_width="0dp"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
             <ImageView
-                android:tint="#f20"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/bell_menu_activity"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:tint="@color/pirimary" />
+
             <TextView
-                android:textColor="#f20"
-                android:textSize="12sp"
-                android:text="Thông báo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Thông báo"
+                android:textColor="@color/pirimary"
+                android:textSize="10sp" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ln_tk"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
             <ImageView
-                android:tint="@color/black"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/ic_baseline_person_24"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+                android:tint="@color/textcolor" />
+
             <TextView
-                android:textColor="@color/black"
-                android:textSize="12sp"
-                android:text="Tài khoản"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:text="Tài khoản"
+                android:textColor="@color/textcolor"
+                android:textSize="10sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

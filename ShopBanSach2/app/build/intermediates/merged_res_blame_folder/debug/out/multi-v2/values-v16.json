@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\LTDD\\AndroidStudioProjects\\ShopBanSach21\\ShopBanSach2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "D:\\MY FILE\\Documents\\Thien Project\\android\\bookShop\\ShopBanSach2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\4ac3b8c52424f421283f9bc6b514be20\\transformed\\appcompat-v7-28.0.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\VanThien\\.gradle\\caches\\transforms-3\\4ac3b8c52424f421283f9bc6b514be20\\transformed\\appcompat-v7-28.0.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\DELL\\.gradle\\caches\\transforms-3\\d732f4d1d5007e0f8f7829de1b79d464\\transformed\\support-compat-28.0.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\VanThien\\.gradle\\caches\\transforms-3\\d732f4d1d5007e0f8f7829de1b79d464\\transformed\\support-compat-28.0.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
