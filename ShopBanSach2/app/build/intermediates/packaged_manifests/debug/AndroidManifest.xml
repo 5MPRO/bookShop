@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shopbansach"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="31" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.ShopBanSach" >
+        <activity
+            android:name="com.example.shopbansach.activity.ThongtinTaiKhoan"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.Thongtinkhachhang"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.Giohang"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.DangKy"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.TaiKhoanActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.Login"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.Chitietsanpham"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.LienHeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.ThongBaoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.VanHocActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.TruyenTranhActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.shopbansach.activity.MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.shopbansach.com.squareup.picasso"
+            android:exported="false" />
+    </application>
+
+</manifest>
