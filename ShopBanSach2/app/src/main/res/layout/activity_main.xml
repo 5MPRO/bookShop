@@ -8,7 +8,6 @@
     tools:context=".activity.MainActivity"
     android:background="@color/bookApp"
     android:orientation="vertical">
-
     <LinearLayout
         android:weightSum="9"
         android:orientation="vertical"
