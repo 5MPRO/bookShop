@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activity.ThongtinTaiKhoan">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbartttk"
+            app:titleTextColor="@color/white"
+            app:title="Thông tin tài khoản"
+            android:background="@color/color_menu"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"/>
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edt_tk_ht"
+                android:background="@drawable/border_edit_tk"
+                android:layout_marginTop="25dp"
+                android:padding="10dp"
+                android:hint="Họ tên"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/edt_tk_sdt"
+                android:background="@drawable/border_edit_tk"
+                android:layout_marginTop="25dp"
+                android:padding="10dp"
+                android:hint="Số điện thoại"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/edt_tk_em"
+                android:background="@drawable/border_edit_tk"
+                android:layout_marginTop="25dp"
+                android:padding="10dp"
+                android:hint="Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/edt_tk_ngsinh"
+                android:background="@drawable/border_edit_tk"
+                android:layout_marginTop="25dp"
+                android:padding="10dp"
+                android:hint="Ngày sinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/edt_tk_dchi"
+                android:background="@drawable/border_edit_tk"
+                android:layout_marginTop="25dp"
+                android:padding="10dp"
+                android:hint="Địa chỉ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btnUpdate"
+                android:textColor="@color/white"
+                android:background="@drawable/border_btn_tk"
+                android:layout_marginTop="50dp"
+                android:text="Cập nhật tài khoản"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
