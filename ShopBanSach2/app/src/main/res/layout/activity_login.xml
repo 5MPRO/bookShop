@@ -15,7 +15,8 @@
         android:background="@drawable/border_bottom"
         android:gravity="center">
         <ImageView
-            android:background="@drawable/boder_ttkh"
+
+            android:background="@drawable/boder_btn_dangky"
             android:scaleType="fitXY"
             android:src="@drawable/ic_logobook"
             android:layout_width="200dp"
