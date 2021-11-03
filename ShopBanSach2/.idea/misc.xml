@@ -6,11 +6,14 @@
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/drawable/bell_menu_activity.xml" value="0.22962962962962963" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/drawable/border_btn_thanhtoan.xml" value="0.14322916666666666" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/drawable/border_sanphamgiamgia.xml" value="0.14322916666666666" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_giohang.xml" value="0.18981481481481483" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_main.xml" value="0.18703703703703703" />
-        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_thong_bao.xml" value="0.4" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_thong_bao.xml" value="0.2" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_tim_kiem.xml" value="0.12708333333333333" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/dong_giohang.xml" value="0.264" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/dong_sanphamgiamgia.xml" value="0.12708333333333333" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/dong_sanphammoinhat.xml" value="0.264" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/dong_thongbao.xml" value="0.25" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/dong_vanhoc.xml" value="0.25" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/menu/menu.xml" value="0.25" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/menu/menusearch.xml" value="0.12708333333333333" />
