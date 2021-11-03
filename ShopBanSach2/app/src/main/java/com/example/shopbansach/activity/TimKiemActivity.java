@@ -1,11 +1,15 @@
 package com.example.shopbansach.activity;
 
+import android.app.SearchManager;
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -64,6 +68,22 @@ public class TimKiemActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menugiohang:
+                Intent intent = new Intent(getApplicationContext(), com.example.shopbansach.activity.Giohang.class);
+                startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void ActionBar() {
         setSupportActionBar(toolbartk);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -83,28 +103,5 @@ public class TimKiemActivity extends AppCompatActivity {
         ln_tb = findViewById(R.id.ln_tb);
         ln_dm = findViewById(R.id.ln_dm);
         ln_search = findViewById(R.id.ln_search);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menusearch,menu);
-
-        SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-
-                return false;
-            }
-        });
-
-        return super.onCreateOptionsMenu(menu);
     }
 }

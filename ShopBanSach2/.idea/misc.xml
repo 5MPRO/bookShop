@@ -13,7 +13,7 @@
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_main.xml" value="0.18703703703703703" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_tai_khoan.xml" value="0.1712962962962963" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_thong_bao.xml" value="0.2" />
-        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_tim_kiem.xml" value="0.12708333333333333" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_tim_kiem.xml" value="0.264" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_truyen_tranh.xml" value="0.25" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/activity_van_hoc.xml" value="0.25" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/dong_giohang.xml" value="0.264" />
@@ -22,6 +22,7 @@
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/dong_thongbao.xml" value="0.25" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/dong_truyentranh.xml" value="0.12708333333333333" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/dong_vanhoc.xml" value="0.25" />
+        <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/layout/header_menu_navigation.xml" value="0.2109375" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/menu/menu.xml" value="0.25" />
         <entry key="..\:/LTDD/AndroidStudioProjects/bookShop/ShopBanSach2/app/src/main/res/menu/menusearch.xml" value="0.12708333333333333" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/ShopBanSach2/app/src/main/res/layout/activity_main.xml" value="0.1796875" />

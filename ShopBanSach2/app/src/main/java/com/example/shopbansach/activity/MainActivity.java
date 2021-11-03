@@ -148,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
+
                     case 0:
                         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
                             Intent intent= new Intent(MainActivity.this,MainActivity.class);
@@ -298,7 +299,9 @@ public class MainActivity extends AppCompatActivity {
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Server.Duongdanloaisp, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
+
                 if (response != null){
+
                     for (int i = 0;i < response.length();i++){
                         try {
                             JSONObject jsonObject = response.getJSONObject(i);

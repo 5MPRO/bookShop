@@ -207,7 +207,7 @@
                             <android.support.v7.widget.RecyclerView
                                 android:id="@+id/recyclersanphammoinhat"
                                 android:layout_width="match_parent"
-                                android:layout_height="450dp"
+                                android:layout_height="wrap_content"
                                 android:nestedScrollingEnabled="false" />
                         </LinearLayout>
                     </LinearLayout>
@@ -216,11 +216,13 @@
             </ScrollView>
             <android.support.design.widget.NavigationView
                 android:id="@+id/navigationviewmanhinhchinh"
+                app:headerLayout="@layout/header_menu_navigation"
                 android:layout_gravity="start"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true">
                 <ListView
+                    android:layout_marginTop="200dp"
                     android:id="@+id/listviewmanhinhchinh"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

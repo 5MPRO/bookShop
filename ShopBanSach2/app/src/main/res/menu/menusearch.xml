@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/menu_search"
         android:title="@string/search"
+        android:iconTint="@color/white"
         android:icon="@drawable/icon_timkiem"
-        app:showAsAction="always"
-        app:actionViewClass="android.support.v7.widget.SearchView" />
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:enabled="true"/>
 </menu>
