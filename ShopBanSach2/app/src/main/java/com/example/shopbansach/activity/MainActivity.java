@@ -53,7 +53,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     ViewFlipper viewFlipper;
-    LinearLayout ln_tb,ln_tk;
+    LinearLayout ln_tb,ln_tk,ln_search;
     RecyclerView recyclerViewSpkm,recyclerViewSpmn;
     NavigationView navigationView;
     ListView listViewmanhinhchinh;
@@ -99,6 +99,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),TimKiemActivity.class);
                 startActivity(intent);
             }
         });
@@ -368,5 +375,6 @@ public class MainActivity extends AppCompatActivity {
         }
         ln_tb = findViewById(R.id.ln_tb);
         ln_tk = findViewById(R.id.ln_tk);
+        ln_search = findViewById(R.id.ln_search);
     }
 }

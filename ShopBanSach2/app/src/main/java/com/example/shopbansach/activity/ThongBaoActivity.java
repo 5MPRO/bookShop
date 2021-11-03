@@ -12,7 +12,7 @@ import com.example.shopbansach.R;
 
 public class ThongBaoActivity extends AppCompatActivity {
     Toolbar toolbartb;
-    LinearLayout ln_home,ln_tk;
+    LinearLayout ln_home,ln_tk,ln_search;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,12 +37,21 @@ public class ThongBaoActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        ln_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),TimKiemActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void AnhXa() {
         toolbartb = findViewById(R.id.toolbarthongbao);
         ln_home = findViewById(R.id.ln_home);
         ln_tk = findViewById(R.id.ln_tk);
+        ln_search = findViewById(R.id.ln_search);
     }
 
     private void ActionToolbar() {
