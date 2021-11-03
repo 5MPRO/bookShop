@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".activity.ThongtinTaiKhoan">
     <LinearLayout
+        android:background="@color/bookApp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,47 +24,56 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <EditText
                 android:id="@+id/edt_tk_ht"
-                android:background="@drawable/border_edit_tk"
-                android:layout_marginTop="25dp"
-                android:padding="10dp"
-                android:hint="Họ tên"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/border_edit_tk"
+
+                android:hint="Họ tên"
+                android:padding="10dp" />
+
             <EditText
                 android:id="@+id/edt_tk_sdt"
-                android:background="@drawable/border_edit_tk"
-                android:layout_marginTop="25dp"
-                android:padding="10dp"
-                android:hint="Số điện thoại"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/border_edit_tk"
+
+                android:hint="Số điện thoại"
+                android:padding="10dp" />
+
             <EditText
                 android:id="@+id/edt_tk_em"
-                android:background="@drawable/border_edit_tk"
-                android:layout_marginTop="25dp"
-                android:padding="10dp"
-                android:hint="Email"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/border_edit_tk"
+
+                android:hint="Email"
+                android:padding="10dp" />
 
             <EditText
                 android:id="@+id/edt_tk_ngsinh"
-                android:background="@drawable/border_edit_tk"
-                android:layout_marginTop="25dp"
-                android:padding="10dp"
-                android:hint="Ngày sinh"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/border_edit_tk"
+
+                android:hint="Ngày sinh"
+                android:padding="10dp" />
+
             <EditText
                 android:id="@+id/edt_tk_dchi"
-                android:background="@drawable/border_edit_tk"
-                android:layout_marginTop="25dp"
-                android:padding="10dp"
-                android:hint="Địa chỉ"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/border_edit_tk"
+
+                android:hint="Địa chỉ"
+                android:padding="10dp" />
             <Button
                 android:id="@+id/btnUpdate"
                 android:textColor="@color/white"

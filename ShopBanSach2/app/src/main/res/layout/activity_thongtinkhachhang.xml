@@ -7,8 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".activity.Thongtinkhachhang"
     android:orientation="vertical"
-    android:background="#2f4079">
+    android:background="@color/bookApp">
     <LinearLayout
+
         android:orientation="vertical"
         android:gravity="center"
         android:background="@drawable/boder_ttkh"

@@ -9,6 +9,7 @@
     android:weightSum="9">
 
     <LinearLayout
+        android:background="@color/bookApp"
         android:layout_weight="9"
         android:orientation="vertical"
         android:layout_width="match_parent"

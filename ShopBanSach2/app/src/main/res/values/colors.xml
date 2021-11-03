@@ -19,6 +19,9 @@
     <color name="light_blue_A200">#FF40C4FF</color>
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
-    <color name="bookApp" >#e9e3ba</color>
+    <color name="save" >#e9e3ba</color>
     <color name="pirimary">#3F51B5</color>
+    <color name="bookApp" >#F8F3D1</color>
+    <color name="bookAppBold" >#F8F3D1</color>
+
 </resources>

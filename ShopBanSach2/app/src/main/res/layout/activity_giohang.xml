@@ -6,7 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.Giohang">
+    tools:context=".activity.Giohang"
+    android:background="@color/bookApp"
+    >
     <android.support.v7.widget.Toolbar
         app:titleTextColor="@color/white"
         android:background="#005EFF"
