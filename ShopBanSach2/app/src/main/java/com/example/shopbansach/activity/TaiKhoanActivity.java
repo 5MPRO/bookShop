@@ -22,7 +22,7 @@ public class TaiKhoanActivity extends AppCompatActivity {
     Button btndonhang,btndangxuat,btntttk;
     Toolbar toolbartk;
     TextView txtEmail;
-    LinearLayout ln_tb,ln_home;
+    LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,10 +35,18 @@ public class TaiKhoanActivity extends AppCompatActivity {
     }
 
     private void OnclickMenu() {
-        ln_tb.setOnClickListener(new View.OnClickListener() {
+        ln_dm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
+                Intent intent = new Intent(getApplicationContext(),DanhmucActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ln_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),TimKiemActivity.class);
                 startActivity(intent);
             }
         });
@@ -46,6 +54,20 @@ public class TaiKhoanActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_tk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_tb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
                 startActivity(intent);
             }
         });
@@ -114,7 +136,10 @@ public class TaiKhoanActivity extends AppCompatActivity {
         toolbartk = findViewById(R.id.toolbartaikhoan);
         txtEmail = findViewById(R.id.textviewtenkh);
         btntttk = findViewById(R.id.btnthongtintk);
-        ln_tb = findViewById(R.id.ln_tb);
         ln_home = findViewById(R.id.ln_home);
+        ln_tk = findViewById(R.id.ln_tk);
+        ln_tb = findViewById(R.id.ln_tb);
+        ln_dm = findViewById(R.id.ln_dm);
+        ln_search = findViewById(R.id.ln_search);
     }
 }

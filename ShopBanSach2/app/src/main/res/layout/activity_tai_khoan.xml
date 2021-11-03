@@ -157,7 +157,6 @@
         android:paddingBottom="4dp"
         android:layout_gravity="end"
         >
-
         <LinearLayout
             android:id="@+id/ln_home"
             android:layout_width="0dp"
@@ -165,13 +164,11 @@
             android:layout_weight="1"
             android:gravity="center|top"
             android:orientation="vertical">
-
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:tint="@color/textcolor"
                 android:src="@drawable/home_menu_activity" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -181,7 +178,7 @@
         </LinearLayout>
 
         <LinearLayout
-
+            android:id="@+id/ln_dm"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -204,7 +201,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ln_tk_ct"
+            android:id="@+id/ln_search"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

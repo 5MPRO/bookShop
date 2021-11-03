@@ -6,12 +6,142 @@
     android:layout_height="match_parent"
     tools:context=".activity.TimKiemActivity"
     android:background="@color/bookApp"
+    android:orientation="vertical"
+    android:weightSum="9"
     >
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbartimkiem"
+    <LinearLayout
+        android:layout_weight="9"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:title="@string/search"
-        app:titleTextColor="@color/white"
-        android:background="@color/color_menu"/>
+        android:layout_height="0dp">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbartimkiem"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/search"
+            app:titleTextColor="@color/white"
+            android:background="@color/color_menu"/>
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_gravity="end"
+        >
+        <LinearLayout
+            android:id="@+id/ln_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:tint="@color/textcolor"
+                android:src="@drawable/home_menu_activity" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trang chủ"
+                android:textColor="@color/textcolor"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_dm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/list_menu_activity"
+                android:tint="@color/textcolor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh mục"
+                android:textColor="@color/textcolor"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/search_menu_activity"
+                android:tint="@color/pirimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tìm kiếm"
+                android:textColor="@color/pirimary"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_tb"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/bell_menu_activity"
+                android:tint="@color/textcolor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông báo"
+                android:textColor="@color/textcolor"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ln_tk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_person_24"
+                android:tint="@color/textcolor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tài khoản"
+                android:textColor="@color/textcolor"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>
