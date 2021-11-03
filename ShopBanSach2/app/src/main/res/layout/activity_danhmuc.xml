@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.VanHocActivity"
+    android:orientation="vertical"
+    tools:context=".activity.DanhmucActivity"
     android:weightSum="9">
-
     <LinearLayout
         android:background="@color/bookApp"
         android:layout_weight="9"
@@ -16,16 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <android.support.v7.widget.Toolbar
-            app:title="Văn học"
+            app:title="Danh mục"
             android:background="@color/color_menu"
             app:titleTextColor="@color/white"
-            android:id="@+id/toolbarvanhoc"
+            android:id="@+id/toolbardanhmuc"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
 
         </android.support.v7.widget.Toolbar>
         <ListView
-            android:id="@+id/listviewvanhoc"
+            android:id="@+id/listviewdanhmuc"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </ListView>
@@ -34,7 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:gravity="center_vertical"
         android:background="@color/white"
         android:orientation="horizontal"
         android:weightSum="5"
@@ -42,7 +39,6 @@
         android:paddingBottom="4dp"
         android:layout_gravity="end"
         >
-
         <LinearLayout
             android:id="@+id/ln_home"
             android:layout_width="0dp"
@@ -50,18 +46,16 @@
             android:layout_weight="1"
             android:gravity="center|top"
             android:orientation="vertical">
-
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:tint="@color/pirimary"
+                android:tint="@color/textcolor"
                 android:src="@drawable/home_menu_activity" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Trang chủ"
-                android:textColor="@color/color_lightblue"
+                android:textColor="@color/textcolor"
                 android:textSize="10sp" />
         </LinearLayout>
 
@@ -78,13 +72,13 @@
                 android:layout_height="30dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/list_menu_activity"
-                android:tint="@color/textcolor" />
+                android:tint="@color/pirimary" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Danh mục"
-                android:textColor="@color/textcolor"
+                android:textColor="@color/pirimary"
                 android:textSize="10sp" />
         </LinearLayout>
 

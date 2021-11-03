@@ -3,27 +3,32 @@ package com.example.shopbansach.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
 
 import com.example.shopbansach.R;
 
-public class TimKiemActivity extends AppCompatActivity {
-
-    Toolbar toolbartk;
+public class DanhmucActivity extends AppCompatActivity {
+    Toolbar toolbardm;
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tim_kiem);
+        setContentView(R.layout.activity_danhmuc);
         AnhXa();
-        ActionBar();
         OnClickMenu();
+        ActionToolbar();
     }
+
+    private void AnhXa() {
+            toolbardm = findViewById(R.id.toolbardanhmuc);
+            ln_home = findViewById(R.id.ln_home);
+            ln_tk = findViewById(R.id.ln_tk);
+            ln_tb = findViewById(R.id.ln_tb);
+            ln_dm = findViewById(R.id.ln_dm);
+            ln_search = findViewById(R.id.ln_search);
+        }
 
     private void OnClickMenu() {
         ln_dm.setOnClickListener(new View.OnClickListener() {
@@ -64,11 +69,11 @@ public class TimKiemActivity extends AppCompatActivity {
         });
     }
 
-    private void ActionBar() {
-        setSupportActionBar(toolbartk);
+    private void ActionToolbar() {
+        setSupportActionBar(toolbardm);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbartk.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
-        toolbartk.setNavigationOnClickListener(new View.OnClickListener() {
+        toolbardm.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
+        toolbardm.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -76,35 +81,4 @@ public class TimKiemActivity extends AppCompatActivity {
         });
     }
 
-    private void AnhXa() {
-        toolbartk = findViewById(R.id.toolbartimkiem);
-        ln_home = findViewById(R.id.ln_home);
-        ln_tk = findViewById(R.id.ln_tk);
-        ln_tb = findViewById(R.id.ln_tb);
-        ln_dm = findViewById(R.id.ln_dm);
-        ln_search = findViewById(R.id.ln_search);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menusearch,menu);
-
-        SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-
-                return false;
-            }
-        });
-
-        return super.onCreateOptionsMenu(menu);
-    }
 }

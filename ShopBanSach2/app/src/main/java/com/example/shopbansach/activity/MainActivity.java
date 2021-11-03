@@ -53,7 +53,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     ViewFlipper viewFlipper;
-    LinearLayout ln_tb,ln_tk,ln_search;
+    LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     RecyclerView recyclerViewSpkm,recyclerViewSpmn;
     NavigationView navigationView;
     ListView listViewmanhinhchinh;
@@ -88,10 +88,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void OnclickMenu() {
-        ln_tb.setOnClickListener(new View.OnClickListener() {
+        ln_dm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
+                Intent intent = new Intent(getApplicationContext(),DanhmucActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ln_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),TimKiemActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -102,10 +117,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ln_search.setOnClickListener(new View.OnClickListener() {
+        ln_tb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),TimKiemActivity.class);
+                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
                 startActivity(intent);
             }
         });
@@ -373,8 +388,10 @@ public class MainActivity extends AppCompatActivity {
         else {
             manggiohang = new ArrayList<>();
         }
-        ln_tb = findViewById(R.id.ln_tb);
+        ln_home = findViewById(R.id.ln_home);
         ln_tk = findViewById(R.id.ln_tk);
+        ln_tb = findViewById(R.id.ln_tb);
+        ln_dm = findViewById(R.id.ln_dm);
         ln_search = findViewById(R.id.ln_search);
     }
 }
