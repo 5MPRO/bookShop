@@ -1,9 +1,17 @@
 package com.example.shopbansach.activity;
 
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Message;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
@@ -30,12 +38,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DanhmucActivity extends AppCompatActivity {
+    mHandler mHandler;
     Toolbar toolbardm;
     int idsp = 0;
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     ListView lvsp;
+    View footerview;
     AllSanphamAdapter sanphamAdapter;
     ArrayList<Sanpham> mangsp;
+    Boolean isLoading = false,limitadata =false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +56,41 @@ public class DanhmucActivity extends AppCompatActivity {
         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
             ActionToolbar();
             GetData();
+            LoadMoreData();
         }else {
             CheckConnection.ShowToast_Short(getApplicationContext(),"Hãy kiểm tra lại kết nối Internet");
             finish();
         }
 
+    }
+
+
+
+    private void LoadMoreData() {
+        lvsp.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(),Chitietsanpham.class);
+                intent.putExtra("thongtinsanpham",mangsp.get(i));
+                startActivity(intent);
+            }
+        });
+
+        lvsp.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView absListView, int i) {
+
+            }
+
+            @Override
+            public void onScroll(AbsListView absListView, int FirstItem, int VisibleItem, int TotalItem) {
+                if (FirstItem + VisibleItem == TotalItem && TotalItem!= 0 && isLoading == false && limitadata == false){
+                    isLoading = true;
+                    ThreadData threadData = new ThreadData();
+                    threadData.start();
+                }
+            }
+        });
     }
 
     private void GetData() {
@@ -64,7 +105,9 @@ public class DanhmucActivity extends AppCompatActivity {
                 String Hinhanhsp="";
                 String Motasp="";
                 int Idsp=0;
-                if(response!=null){
+                if(response!=null && response.length() != 2){
+
+                    lvsp.removeFooterView(footerview);
                     try {
                         JSONArray jsonArray = new JSONArray(response);
                         for (int i = 0;i<jsonArray.length();i++){
@@ -81,6 +124,11 @@ public class DanhmucActivity extends AppCompatActivity {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+                }
+                else {
+                    limitadata = true;
+                    lvsp.removeFooterView(footerview);
+                    CheckConnection.ShowToast_Short(getApplicationContext(),"Đã hết dữ liệu");
                 }
             }
         }, new Response.ErrorListener() {
@@ -99,6 +147,22 @@ public class DanhmucActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.menugiohang:
+                Intent intent = new Intent(getApplicationContext(), com.example.shopbansach.activity.Giohang.class);
+                startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     private void AnhXa() {
             toolbardm = findViewById(R.id.toolbardanhmuc);
             lvsp = findViewById(R.id.listviewdanhmuc);
@@ -109,7 +173,10 @@ public class DanhmucActivity extends AppCompatActivity {
             ln_tk = findViewById(R.id.ln_tk);
             ln_tb = findViewById(R.id.ln_tb);
             ln_dm = findViewById(R.id.ln_dm);
+            LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
             ln_search = findViewById(R.id.ln_search);
+            footerview = inflater.inflate(R.layout.progressbar,null);
+            mHandler = new mHandler();
 
         }
 
@@ -163,5 +230,37 @@ public class DanhmucActivity extends AppCompatActivity {
             }
         });
     }
+
+    public class mHandler extends Handler{
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            switch (msg.what){
+                case 0:
+                    lvsp.addFooterView(footerview);
+                    break;
+                case 1:
+                    GetData();
+                    isLoading = false;
+                    break;
+            }
+            super.handleMessage(msg);
+        }
+    }
+
+    public class ThreadData extends Thread{
+        @Override
+        public void run() {
+            mHandler.sendEmptyMessage(0);
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Message message = mHandler.obtainMessage(1);
+            mHandler.sendMessage(message);
+            super.run();
+        }
+    }
+
 
 }

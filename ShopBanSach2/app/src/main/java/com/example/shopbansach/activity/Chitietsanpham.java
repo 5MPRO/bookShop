@@ -172,6 +172,7 @@ public class Chitietsanpham extends AppCompatActivity {
     private void ActionToolbar() {
         setSupportActionBar(toolbarChiTiet);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbarChiTiet.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
         toolbarChiTiet.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
