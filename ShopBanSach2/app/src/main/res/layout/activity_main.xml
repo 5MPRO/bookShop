@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity"
-    android:background="@color/bookApp"
+    android:background="@color/bookAppBold"
     android:orientation="vertical">
 
     <LinearLayout
@@ -24,13 +24,13 @@
                 android:layout_height="match_parent"
                 android:fillViewport="true">
                 <LinearLayout
-                    android:background="@color/bookApp"
+                    android:background="@color/bookAppBold"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <android.support.v7.widget.Toolbar
                         android:id="@+id/toolbarmanhinhchinh"
-                        app:titleTextColor="@color/white"
+                        app:titleTextColor="@color/bookAppBold"
                         app:title="Trang chủ"
                         android:background="@color/pirimary"
                         android:layout_width="match_parent"
@@ -51,7 +51,7 @@
                         android:layout_marginTop="0dp"
                         app:cardElevation="10dp"
                         app:cardCornerRadius="30dp"
-                        android:backgroundTint="@color/bookApp"
+                        android:backgroundTint="@color/bookAppBold"
                         >
 
                         <LinearLayout
@@ -165,11 +165,12 @@
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
                     <LinearLayout
+                        android:background="@color/bookAppBold"
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <LinearLayout
-                            android:background="@color/sanPham_grid"
+                            android:background="@color/bookAppBold"
                             android:orientation="vertical"
                             android:layout_marginTop="10dp"
                             android:paddingBottom="10dp"
@@ -195,7 +196,7 @@
                         <LinearLayout
 
 
-                            android:background="@color/sanPham_grid"
+                            android:background="@color/bookAppBold"
                             android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="560dp">
