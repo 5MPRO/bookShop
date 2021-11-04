@@ -28,6 +28,6 @@
     <color name="bookApp" >#ffff</color>
     <color name="bookAppBold" >#f2f2f2</color>
 
-    <color name="sanPham_grid" >#F7F7F7</color>
+    <color name="sanPham_grid" >#f2f2f2</color>
 
 </resources>

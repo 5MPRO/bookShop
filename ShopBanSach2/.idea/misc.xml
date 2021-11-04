@@ -40,11 +40,13 @@
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_chitietsanpham.xml" value="0.1" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_dang_ky.xml" value="0.1796875" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_danhmuc.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_diachigiaohang.xml" value="0.1640625" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_giohang.xml" value="0.1796875" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_lien_he.xml" value="0.1796875" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_login.xml" value="0.1796875" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_tai_khoan.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_them_dia_chi.xml" value="0.1640625" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_thong_bao.xml" value="0.14666666666666667" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_thongtin_tai_khoan.xml" value="0.1" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/activity_thongtinkhachhang.xml" value="0.1796875" />
@@ -58,6 +60,8 @@
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/dong_thongbao.xml" value="0.1796875" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/dong_truyentranh.xml" value="0.1796875" />
         <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/dong_vanhoc.xml" value="0.1796875" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/header_menu_navigation.xml" value="0.22" />
+        <entry key="..\:/MY FILE/Documents/Thien Project/android/bookShop/ShopBanSach2/app/src/main/res/layout/progressbar.xml" value="0.1640625" />
       </map>
     </option>
   </component>

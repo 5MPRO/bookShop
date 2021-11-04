@@ -154,7 +154,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center_vertical"
-        android:background="@color/white"
+        android:background="@color/bookAppBold"
         android:orientation="horizontal"
         android:weightSum="5"
         android:paddingTop="4dp"

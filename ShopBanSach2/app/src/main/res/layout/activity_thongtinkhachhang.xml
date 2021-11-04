@@ -75,8 +75,9 @@
             android:gravity="center">
             <Button
                 android:layout_marginRight="70dp"
-                android:background="#6af1ff"
-                android:textColor="#0004FF"
+                android:backgroundTint="@color/pirimary"
+                android:background="@drawable/boder_btn_dangky"
+                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:padding="10dp"
                 android:id="@+id/buttonxacnhan"
@@ -84,8 +85,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <Button
-                android:background="#6af1ff"
-                android:textColor="#0004FF"
+                android:backgroundTint="#D3D3D3"
+                android:textColor="@color/textcolor"
+                android:background="@drawable/boder_btn_dangky"
                 android:textSize="15sp"
                 android:padding="10dp"
                 android:id="@+id/buttontrove"
