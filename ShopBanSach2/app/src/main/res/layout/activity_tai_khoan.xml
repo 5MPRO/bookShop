@@ -33,7 +33,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                android:background="@color/bookAppBold"
+                android:background="@color/bookApp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -50,17 +50,24 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
-
                     <TextView
                         android:id="@+id/textviewtenkh"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Email người dùng"
+                        android:text="Nguyễn Văn An"
                         android:textSize="20sp" />
+                    <TextView
+                        android:id="@+id/textviewemailkh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="nvan@gmail.com"
+                        android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
 
             <Button
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/btnthongtintk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,6 +82,8 @@
                 android:textColor="@color/textcolor" />
 
             <Button
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/btndonhangcuatoi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,6 +98,9 @@
                 android:textColor="@color/textcolor" />
 
             <Button
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/btndoimatkhau"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -102,6 +114,9 @@
                 android:textColor="@color/textcolor" />
 
             <Button
+                android:id="@+id/btndiachigh"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -115,6 +130,8 @@
                 android:textColor="@color/textcolor" />
 
             <Button
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"

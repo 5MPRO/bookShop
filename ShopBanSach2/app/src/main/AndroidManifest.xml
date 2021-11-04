@@ -14,6 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShopBanSach">
         <activity
+            android:name=".activity.ThemDiaChi"
+            android:exported="false" />
+        <activity
+            android:name=".activity.Diachigiaohang"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DoimatkhauActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.DanhmucActivity"
             android:exported="false" />
         <activity

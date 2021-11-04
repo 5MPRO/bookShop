@@ -19,7 +19,7 @@ import android.widget.TextView;
 import com.example.shopbansach.R;
 
 public class TaiKhoanActivity extends AppCompatActivity {
-    Button btndonhang,btndangxuat,btntttk;
+    Button btndonhang,btndangxuat,btntttk,btndoimk,btndc;
     Toolbar toolbartk;
     TextView txtEmail;
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
@@ -93,10 +93,21 @@ public class TaiKhoanActivity extends AppCompatActivity {
         btntttk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentg = getIntent();
-                String emailtkk = intentg.getStringExtra("email");
                 Intent intent = new Intent(getApplicationContext(),ThongtinTaiKhoan.class);
-                intent.putExtra("email",emailtkk);
+                startActivity(intent);
+            }
+        });
+        btndoimk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),DoimatkhauActivity.class);
+                startActivity(intent);
+            }
+        });
+        btndc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),Diachigiaohang.class);
                 startActivity(intent);
             }
         });
@@ -141,5 +152,7 @@ public class TaiKhoanActivity extends AppCompatActivity {
         ln_tb = findViewById(R.id.ln_tb);
         ln_dm = findViewById(R.id.ln_dm);
         ln_search = findViewById(R.id.ln_search);
+        btndoimk = findViewById(R.id.btndoimatkhau);
+        btndc = findViewById(R.id.btndiachigh);
     }
 }
