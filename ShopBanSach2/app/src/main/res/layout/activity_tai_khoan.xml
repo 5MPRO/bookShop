@@ -151,8 +151,8 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="30dp"
-                android:background="@color/bookAppBold"
-                android:backgroundTint="#FFFEFE"
+                android:background="@drawable/boder_ttkh"
+                android:backgroundTint="@color/bookAppBold"
                 android:text="Đăng xuất"
                 android:textColor="@color/color_menu" />
             <TextView

@@ -13,22 +13,29 @@
         android:layout_weight="9"
         android:layout_width="match_parent"
         android:layout_height="0dp">
+
         <android.support.v7.widget.Toolbar
-            app:title=" "
             android:id="@+id/toolbartimkiem"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:titleTextColor="@color/white"
-            android:background="@color/color_menu">
+            android:background="@color/color_menu"
+            app:title=" "
+            app:titleTextColor="@color/white">
+
             <EditText
-                android:hint="Tìm kiếm"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/textcolor"
-                android:drawableTint="@color/textcolor"
-                android:drawableStart="@drawable/search_menu_activity"
+
+                android:layout_width="240dp"
+                android:layout_height="32dp"
                 android:background="@drawable/border_edit_tk"
-                android:layout_width="200dp"
-                android:layout_height="35dp"/>
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/icon_search"
+                android:padding="2dp"
+                android:textSize="14sp"
+                android:drawableTint="@color/textcolor"
+                android:hint="Tìm kiếm"
+                android:textColor="@color/textcolor"
+
+                />
         </android.support.v7.widget.Toolbar>
     </LinearLayout>
     <LinearLayout

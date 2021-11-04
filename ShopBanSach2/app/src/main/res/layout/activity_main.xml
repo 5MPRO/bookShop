@@ -169,9 +169,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <LinearLayout
-                            android:background="@color/bookApp"
+                            android:background="@color/sanPham_grid"
                             android:orientation="vertical"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingBottom="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
@@ -187,11 +188,14 @@
 
                                 android:id="@+id/recyclerviewsanphamkhuyenmai"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+                                android:layout_height="match_parent">
+
+                            </android.support.v7.widget.RecyclerView>
                         </LinearLayout>
                         <LinearLayout
-                            android:layout_marginTop="5dp"
-                            android:background="@color/bookApp"
+
+
+                            android:background="@color/sanPham_grid"
                             android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="560dp">
@@ -205,6 +209,7 @@
                                 android:layout_height="wrap_content"/>
 
                             <android.support.v7.widget.RecyclerView
+
                                 android:id="@+id/recyclersanphammoinhat"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
