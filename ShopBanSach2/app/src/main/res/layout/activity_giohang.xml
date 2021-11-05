@@ -90,6 +90,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/border_btn_thanhtoan"
             android:text="Thanh toán giỏ hàng"
+            android:backgroundTint="@color/pirimary"
             android:textColor="@color/white"
             android:textSize="20sp" />
         <Button
@@ -100,6 +101,7 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:text="Tiếp tục mua hàng"
+            android:backgroundTint="@color/pirimary"
             android:id="@+id/buttontieptucmuahang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
