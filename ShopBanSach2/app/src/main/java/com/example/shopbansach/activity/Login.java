@@ -3,9 +3,12 @@ package com.example.shopbansach.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -35,6 +38,20 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        ImageView imageViewHidePassword = findViewById(R.id.hide_password);
+        imageViewHidePassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(etPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())){
+                    etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    imageViewHidePassword.setImageResource(R.drawable.eye_hiddent);
+                }else {
+                    etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    imageViewHidePassword.setImageResource(R.drawable.eye_visibility);
+                }
+
+            }
+        });
         email = password = "";
         etEmail = findViewById(R.id.edittextdnemail);
         etPassword =  findViewById(R.id.edittextdnpassword);

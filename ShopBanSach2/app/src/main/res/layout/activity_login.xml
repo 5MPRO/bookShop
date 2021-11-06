@@ -41,20 +41,34 @@
             android:hint="@string/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-        <EditText
-            android:textSize="20sp"
-            android:drawablePadding="20dp"
-            android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
-            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:id="@+id/edittextdnpassword"
-            android:padding="10dp"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <EditText
+                android:textSize="20sp"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+                android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/edittextdnpassword"
+                android:padding="10dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/hide_password"
+                android:layout_width="32dp"
+                android:layout_marginTop="28dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="-55dp"
+                android:layout_toRightOf="@+id/edittextdnpassword"
+                android:background="@drawable/eye_hiddent" />
+        </RelativeLayout>
+
         <Button
             android:onClick="login"
             android:id="@+id/btndangnhap"
