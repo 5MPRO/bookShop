@@ -1,5 +1,4 @@
 <?php
-
     include "connect.php";
     $page = $_GET['page'];
     $idsp = $_POST['idSanPham'];
@@ -27,7 +26,6 @@
             $this->hinhanhsp = $hinhanhsp;
             $this->motasp = $motasp;
             $this->idsanpham = $idsanpham;
-           
         }
     }
 ?>

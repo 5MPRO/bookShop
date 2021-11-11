@@ -1,5 +1,4 @@
 <?php
-
     include "connect.php";
     $mangsanpham = array();
     $query = 'SELECT * FROM sanpham';
@@ -23,7 +22,6 @@
             $this->hinhanhsp = $hinhanhsp;
             $this->motasp = $motasp;
             $this->idsanpham = $idsanpham;
-           
         }
     }
 ?>
