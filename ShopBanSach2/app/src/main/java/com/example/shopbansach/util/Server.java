@@ -2,7 +2,7 @@ package com.example.shopbansach.util;
 
 public class Server
 {
-public static String localhost="192.168.1.109";
+public static String localhost="192.168.43.60";
 public static String Duongdanloaisp = "http://" + localhost + "/BanSach/getloaisanpham.php";
 public static String Duongdanallsp = "http://" + localhost + "/BanSach/getallsanpham.php";
 public static String Duongdansanphammoinhat = "http://" + localhost + "/BanSach/getsanphammoinhat.php";

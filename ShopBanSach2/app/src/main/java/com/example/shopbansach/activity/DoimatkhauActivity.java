@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.example.shopbansach.R;
 
-public class DoimatkhauActivity extends AppCompatActivity {
+public class  DoimatkhauActivity extends AppCompatActivity {
     Toolbar toolbardmm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
