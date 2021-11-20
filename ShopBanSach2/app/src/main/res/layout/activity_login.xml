@@ -15,7 +15,6 @@
         android:background="@drawable/border_bottom"
         android:gravity="center">
         <ImageView
-
             android:background="@drawable/boder_btn_dangky"
             android:scaleType="fitXY"
             android:src="@drawable/ic_logobook"
@@ -117,8 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <Button
-            android:paddingLeft="7dp"
-            android:drawableStart="@drawable/icon_google"
+            android:drawableStart="@drawable/facebook"
             android:id="@+id/btndangnhapgoogle"
             android:textColor="@color/black"
             android:textSize="15sp"
@@ -131,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
-            android:drawableStart="@drawable/icon_facebook"
+            android:drawableStart="@drawable/google"
             android:id="@+id/btndangnhapfacebook"
             android:textColor="@color/black"
             android:textSize="15sp"
@@ -139,7 +137,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
             android:text="Đăng nhập bằng Facebook"
-            android:padding="5dp"
+            android:padding="10dp"
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
