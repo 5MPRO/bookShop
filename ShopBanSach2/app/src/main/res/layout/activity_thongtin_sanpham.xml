@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4E9E9"
+    tools:context=".activity.ThongTinSanPham">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarthongtinsanpham"
+        android:background="@color/color_menu"
+        app:titleTextColor="@color/white"
+        app:title="Thông tin "
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <ImageView
+        android:id="@+id/imgThongTin"
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/txtTenSach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông tin"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="100dp"
+                android:background="@drawable/border_doc_thu">
+
+                <ImageView
+                    android:id="@+id/imgDoc"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/read"/>
+
+                <TextView
+                    android:id="@+id/txtDoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đọc thử"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="40dp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtThongTinChiTiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin chi tiết"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="#B586CD"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txtDanhMuc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh mục"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/txtTenDanhMuc"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="111111"
+                android:layout_marginLeft="124dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txtTacGia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tác giả"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/txtTenTacGia"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="111111"
+                android:layout_marginLeft="145dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="#B586CD"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txtNhaCungCap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhà cung cấp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/txtTenNhaCungCap"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="111111"
+                android:layout_marginLeft="100dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txtCty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Công ty phát hành"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/txtTenCty"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="111111"
+                android:layout_marginLeft="70dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="#B586CD"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/txtNgay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ngày xuất bản"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/txtNgayXB"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="111111"
+                android:layout_marginLeft="100dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnThemGioHang"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:text="Thêm vào giỏ hàng"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:background="@drawable/button_btn_themgiohang"/>
+
+        <LinearLayout
+            android:background="@drawable/boder_menu_activity"
+            android:weightSum="5"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <LinearLayout
+                android:id="@+id/ln_home_ct4"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:tint="@color/black"
+                    android:src="@drawable/home_menu_activity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:text="Trang chủ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:tint="@color/black"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/list_menu_activity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:text="Danh mục"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:tint="@color/black"
+                    android:src="@drawable/search_menu_activity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:text="Tìm kiếm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ln_tb_ct4"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:tint="@color/black"
+                    android:src="@drawable/bell_menu_activity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:text="Thông báo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ln_tk_ct4"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:tint="@color/black"
+                    android:src="@drawable/ic_baseline_person_24"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:text="Tài khoản"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

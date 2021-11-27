@@ -2,20 +2,15 @@ package com.example.shopbansach.activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -53,7 +48,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     ViewFlipper viewFlipper;
-    LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     RecyclerView recyclerViewSpkm,recyclerViewSpmn;
     NavigationView navigationView;
     ListView listViewmanhinhchinh;
@@ -63,7 +57,10 @@ public class MainActivity extends AppCompatActivity {
     LoaispAdapter loaispAdapter;
     SanphamAdapter sanphamAdapter;
     SanPhamGgAdapter sanphamAdapter1;
+    LinearLayout ln_tb_ct,ln_tk_ct;
     public static ArrayList<Giohang> manggiohang;
+    public static ArrayList<TaiKhoan> mangtaikhoan;
+
     int id=0;
     String tenloaisp="";
     String hinhanhloaisp="";
@@ -79,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
             GetDuLieuSanPhamMoiNhat();
             GetDuLieuGiamGia();
             GetOnItemListView();
-            OnclickMenu();
+            OnClickMenu();
+
         }
         else {
             CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
@@ -87,40 +85,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void OnclickMenu() {
-        ln_dm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),DanhmucActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        ln_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),TimKiemActivity.class);
-                startActivity(intent);
-            }
-        });
-        ln_home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
-            }
-        });
-        ln_tk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
-                startActivity(intent);
-            }
-        });
-        ln_tb.setOnClickListener(new View.OnClickListener() {
+    private void OnClickMenu() {
+        ln_tb_ct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
+                startActivity(intent);
+            }
+        });
+        ln_tk_ct = findViewById(R.id.ln_tk_ct);
+        ln_tk_ct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
                 startActivity(intent);
             }
         });
@@ -148,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
-
                     case 0:
                         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
                             Intent intent= new Intent(MainActivity.this,MainActivity.class);
@@ -203,7 +179,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 5:
                         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
-                            Intent intent = new Intent(getApplicationContext(),Login.class);
+                            Intent intent= new Intent(MainActivity.this,TaiKhoanActivity.class);
+
                             startActivity(intent);
                         }
                         else {
@@ -299,9 +276,7 @@ public class MainActivity extends AppCompatActivity {
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Server.Duongdanloaisp, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-
                 if (response != null){
-
                     for (int i = 0;i < response.length();i++){
                         try {
                             JSONObject jsonObject = response.getJSONObject(i);
@@ -316,7 +291,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     mangloaisp.add(3,new Loaisp(0,"Thông báo","https://banner2.cleanpng.com/20190728/plb/kisspng-loudspeaker-megaphone-sound-microphone-audio-power-homepage-mtela-5d3d4082abef47.5598839215642952987043.jpg"));
                     mangloaisp.add(4,new Loaisp(0,"Liên hệ","https://chuakeo.com.vn/wp-content/uploads/2018/07/contact-us.jpg"));
-                    mangloaisp.add(5,new Loaisp(0,"Đăng xuất","https://png.pngtree.com/png-clipart/20190520/original/pngtree-vector-logout-icon-png-image_4276345.jpg"));
+                    mangloaisp.add(5,new Loaisp(0,"Thông tin người dùng","https://growingsmilestx.com/wp-content/uploads/2019/04/206855.png"));
                 }
             }
         }, new Response.ErrorListener() {
@@ -387,14 +362,11 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewSpmn.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerViewSpmn.setAdapter(sanphamAdapter);
         if(manggiohang!=null){
+
         }
         else {
             manggiohang = new ArrayList<>();
         }
-        ln_home = findViewById(R.id.ln_home);
-        ln_tk = findViewById(R.id.ln_tk);
-        ln_tb = findViewById(R.id.ln_tb);
-        ln_dm = findViewById(R.id.ln_dm);
-        ln_search = findViewById(R.id.ln_search);
+        ln_tb_ct = findViewById(R.id.ln_tb_ct);
     }
 }

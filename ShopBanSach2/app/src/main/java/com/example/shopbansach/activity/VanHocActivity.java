@@ -14,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import com.android.volley.AuthFailureError;
@@ -42,7 +41,6 @@ import java.util.Map;
 
 public class VanHocActivity extends AppCompatActivity {
     Toolbar toolbarvh;
-    LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     ListView lvvh;
     VanHocAdapter vanHocAdapter;
     ArrayList<Sanpham> mangvh;
@@ -62,51 +60,11 @@ public class VanHocActivity extends AppCompatActivity {
             ActionToolbar();
             GetData(page);
             LoadMoreData();
-            OnclickMenu();
         }
         else {
             CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại Internet");
         }
 
-    }
-
-    private void OnclickMenu() {
-        ln_dm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),DanhmucActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        ln_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),TimKiemActivity.class);
-                startActivity(intent);
-            }
-        });
-        ln_home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
-            }
-        });
-        ln_tk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
-                startActivity(intent);
-            }
-        });
-        ln_tb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ThongBaoActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -208,7 +166,6 @@ public class VanHocActivity extends AppCompatActivity {
     private void ActionToolbar() {
         setSupportActionBar(toolbarvh);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbarvh.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
         toolbarvh.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -231,11 +188,6 @@ public class VanHocActivity extends AppCompatActivity {
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         footerview = inflater.inflate(R.layout.progressbar,null);
         mHandler = new mHandler();
-        ln_home = findViewById(R.id.ln_home);
-        ln_tk = findViewById(R.id.ln_tk);
-        ln_tb = findViewById(R.id.ln_tb);
-        ln_dm = findViewById(R.id.ln_dm);
-        ln_search = findViewById(R.id.ln_search);
     }
 
     public class mHandler extends Handler {

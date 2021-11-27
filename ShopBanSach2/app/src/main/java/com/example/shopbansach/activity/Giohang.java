@@ -121,7 +121,6 @@ public class Giohang extends AppCompatActivity {
     private void AcctionToolbar() {
         setSupportActionBar(toolbargiohang);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbargiohang.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
         toolbargiohang.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".activity.ThongBaoActivity"
     android:orientation="vertical"
-    android:weightSum="9">
+    android:weightSum="10">
     <LinearLayout
-        android:background="@color/bookApp"
         android:layout_weight="9"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -20,6 +19,7 @@
             android:id="@+id/toolbarthongbao"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
+
         </android.support.v7.widget.Toolbar>
         <ListView
             android:id="@+id/listviewthongbao"
@@ -149,127 +149,106 @@
                 android:layout_height="wrap_content"/>
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center_vertical"
-        android:background="@color/bookAppBold"
-        android:orientation="horizontal"
+        android:background="@drawable/boder_menu_activity"
         android:weightSum="5"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
-        android:layout_gravity="end"
-        >
-
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
         <LinearLayout
-            android:id="@+id/ln_home"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:id="@+id/ln_home_tb"
             android:gravity="center|top"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:tint="@color/black"
                 android:src="@drawable/home_menu_activity"
-                android:tint="@color/textcolor"
-                />
-
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="17sp"
                 android:text="Trang chủ"
-                android:textColor="@color/textcolor"
-                android:textSize="10sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/ln_dm"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center|top"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:tint="@color/black"
                 android:scaleType="fitXY"
                 android:src="@drawable/list_menu_activity"
-                android:tint="@color/textcolor" />
-
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="17sp"
                 android:text="Danh mục"
-                android:textColor="@color/textcolor"
-                android:textSize="10sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/ln_search"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center|top"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:tint="@color/black"
                 android:src="@drawable/search_menu_activity"
-                android:tint="@color/textcolor" />
-
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="17sp"
                 android:text="Tìm kiếm"
-                android:textColor="@color/textcolor"
-                android:textSize="10sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/ln_tb"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="center|top"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:tint="#f20"
                 android:src="@drawable/bell_menu_activity"
-                android:tint="@color/pirimary" />
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:textColor="#f20"
+                android:textSize="17sp"
                 android:text="Thông báo"
-                android:textColor="@color/pirimary"
-                android:textSize="10sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ln_tk"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center|top"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_baseline_person_24"
-                android:tint="@color/textcolor" />
-
-            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ln_tk_tb"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:tint="@color/black"
+                android:src="@drawable/ic_baseline_person_24"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="17sp"
                 android:text="Tài khoản"
-                android:textColor="@color/textcolor"
-                android:textSize="10sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -7,9 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".activity.Thongtinkhachhang"
     android:orientation="vertical"
-    android:background="@color/bookApp">
+    android:background="#2f4079">
     <LinearLayout
-
         android:orientation="vertical"
         android:gravity="center"
         android:background="@drawable/boder_ttkh"
@@ -75,9 +74,8 @@
             android:gravity="center">
             <Button
                 android:layout_marginRight="70dp"
-                android:backgroundTint="@color/pirimary"
-                android:background="@drawable/boder_btn_dangky"
-                android:textColor="@color/white"
+                android:background="#6af1ff"
+                android:textColor="#0004FF"
                 android:textSize="15sp"
                 android:padding="10dp"
                 android:id="@+id/buttonxacnhan"
@@ -85,9 +83,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <Button
-                android:backgroundTint="#D3D3D3"
-                android:textColor="@color/textcolor"
-                android:background="@drawable/boder_btn_dangky"
+                android:background="#6af1ff"
+                android:textColor="#0004FF"
                 android:textSize="15sp"
                 android:padding="10dp"
                 android:id="@+id/buttontrove"
