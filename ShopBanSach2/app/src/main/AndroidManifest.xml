@@ -41,9 +41,6 @@
             android:name=".activity.DangKy"
             android:exported="false" />
         <activity
-            android:name=".activity.TaiKhoanActivity"
-            android:exported="false" />
-        <activity
             android:name=".activity.Login"
             android:exported="false" />
         <activity
