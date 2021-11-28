@@ -10,12 +10,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -42,7 +45,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TimKiemActivity extends AppCompatActivity {
-
+    EditText edtSearch;
     Toolbar toolbartk;
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     mHandler mHandler;
@@ -62,10 +65,40 @@ public class TimKiemActivity extends AppCompatActivity {
             ActionToolbar();
             GetData();
             LoadMoreData();
+            Search();
         }else {
             CheckConnection.ShowToast_Short(getApplicationContext(),"Hãy kiểm tra lại kết nối Internet");
             finish();
         }
+    }
+
+    private void Search() {
+        edtSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
+    }
+
+    private void filter(String text){
+        ArrayList<Sanpham> filteredList = new ArrayList<>();
+        for(Sanpham item: mangsp){
+            if(item.getTensanpham().toLowerCase().contains(text.toLowerCase())){
+                filteredList.add(item);
+            }
+        }
+        sanphamAdapter.filterList(filteredList);
     }
 
     private void OnClickMenu() {
@@ -218,6 +251,7 @@ public class TimKiemActivity extends AppCompatActivity {
         LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         footerview = inflater.inflate(R.layout.progressbar,null);
         mHandler = new mHandler();
+        edtSearch = findViewById(R.id.edt_search);
     }
 
     private void ActionToolbar() {
