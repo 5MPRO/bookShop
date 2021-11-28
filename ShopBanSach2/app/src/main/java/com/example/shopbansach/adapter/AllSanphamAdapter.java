@@ -31,6 +31,11 @@ public class AllSanphamAdapter extends BaseAdapter {
         return arraysanpham.size();
     }
 
+    public void filterList(ArrayList<Sanpham> filteredList) {
+        arraysanpham = filteredList;
+        notifyDataSetChanged();
+    }
+
     @Override
     public Object getItem(int i) {
         return arraysanpham.get(i);
