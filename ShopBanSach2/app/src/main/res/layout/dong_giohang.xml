@@ -65,10 +65,24 @@
                 android:focusable="false"
                 android:text="+"
                 android:id="@+id/buttonplus"
+<<<<<<< HEAD
                 android:layout_marginTop="5dp"
                 android:textSize="30sp"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"/>
+=======
+                android:padding="0dp"
+                android:textSize="15sp"
+                android:layout_width="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="35dp"/>
+            <ImageButton
+                android:src="@drawable/ic_baseline_close_24"
+                android:layout_width="35dp"
+                android:background="@color/black"
+                android:backgroundTint="#FB0000"
+                android:layout_height="35dp" />
+>>>>>>> cb431733edac4b450cf1f51a797865d7d03a3e1d
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
