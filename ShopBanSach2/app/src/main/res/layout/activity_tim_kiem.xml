@@ -21,6 +21,7 @@
             app:title=" "
             app:titleTextColor="@color/white">
             <EditText
+                android:id="@+id/edt_search"
                 android:layout_width="240dp"
                 android:layout_height="32dp"
                 android:background="@drawable/border_edit_tk"
