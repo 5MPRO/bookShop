@@ -19,7 +19,7 @@
     <ImageView
         android:id="@+id/imgThongTin"
         android:layout_width="150dp"
-        android:layout_height="180dp"
+        android:layout_height="135dp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"/>
 
@@ -32,9 +32,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:weightSum="2"
             android:layout_marginLeft="10dp">
 
             <TextView
+                android:layout_weight="1"
                 android:id="@+id/txtTenSach"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,7 +49,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginLeft="100dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
                 android:background="@drawable/border_doc_thu">
 
                 <ImageView
@@ -62,8 +65,8 @@
                     android:layout_height="wrap_content"
                     android:text="Đọc thử"
                     android:textSize="20sp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
                     android:textColor="@color/white"/>
             </LinearLayout>
         </LinearLayout>
@@ -75,14 +78,14 @@
             android:text="Thông tin chi tiết"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:background="#B586CD"
+            android:background="#c3c3c3"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp">
@@ -102,14 +105,14 @@
                 android:id="@+id/txtTenDanhMuc"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="111111"
+                android:text="11111"
                 android:layout_marginLeft="124dp"
                 android:layout_gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="20dp"
             android:orientation="horizontal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -129,7 +132,7 @@
                 android:id="@+id/txtTenTacGia"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="111111"
+                android:text="11111"
                 android:layout_marginLeft="145dp"
                 android:layout_gravity="center"/>
         </LinearLayout>
@@ -138,7 +141,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:background="#B586CD"
+            android:background="#c3c3c3"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp">
@@ -157,14 +160,14 @@
                 android:id="@+id/txtTenNhaCungCap"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="111111"
+                android:text="11111"
                 android:layout_marginLeft="100dp"
                 android:layout_gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="20dp"
             android:orientation="horizontal"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -184,7 +187,7 @@
                 android:id="@+id/txtTenCty"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="111111"
+                android:text="11111"
                 android:layout_marginLeft="70dp"
                 android:layout_gravity="center"/>
         </LinearLayout>
@@ -193,7 +196,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
-            android:background="#B586CD"
+            android:background="#c3c3c3"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp">
@@ -212,20 +215,21 @@
                 android:id="@+id/txtNgayXB"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:text="111111"
+                android:text="11111"
                 android:layout_marginLeft="100dp"
                 android:layout_gravity="center"/>
         </LinearLayout>
 
         <Button
             android:id="@+id/btnThemGioHang"
-            android:layout_width="400dp"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:text="Thêm vào giỏ hàng"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:textColor="@color/white"
             android:layout_gravity="center"
-            android:textSize="20sp"
+            android:textSize="10sp"
             android:background="@drawable/button_btn_themgiohang"/>
 
         <LinearLayout
@@ -249,7 +253,7 @@
                     android:layout_height="40dp"/>
                 <TextView
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="10sp"
                     android:text="Trang chủ"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -268,7 +272,7 @@
                     android:layout_height="40dp"/>
                 <TextView
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="10sp"
                     android:text="Danh mục"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -286,7 +290,7 @@
                     android:layout_height="40dp"/>
                 <TextView
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="10sp"
                     android:text="Tìm kiếm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -305,7 +309,7 @@
                     android:layout_height="40dp"/>
                 <TextView
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="10sp"
                     android:text="Thông báo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -324,7 +328,7 @@
                     android:layout_height="40dp"/>
                 <TextView
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="10sp"
                     android:text="Tài khoản"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
