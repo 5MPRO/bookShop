@@ -24,7 +24,8 @@ public class Giohang extends AppCompatActivity {
     static TextView txttongtien;
     Button btnthanhtoan,btntieptucmua;
     Toolbar toolbargiohang;
-    GioHangAdapter giohangadapter;
+    static GioHangAdapter giohangadapter;
+    static MainActivity mainActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -140,4 +141,10 @@ public class Giohang extends AppCompatActivity {
         giohangadapter = new GioHangAdapter(Giohang.this,MainActivity.manggiohang);
         lvgiohang.setAdapter(giohangadapter);
     }
+
+    public static void delete(int position){
+        mainActivity.manggiohang.remove(position);
+        giohangadapter.notifyDataSetChanged();
+    }
+
 }
