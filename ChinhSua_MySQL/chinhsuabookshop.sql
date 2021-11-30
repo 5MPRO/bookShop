@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 27, 2021 lúc 10:09 AM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.0.13
+-- Thời gian đã tạo: Th10 28, 2021 lúc 10:36 AM
+-- Phiên bản máy phục vụ: 10.4.21-MariaDB
+-- Phiên bản PHP: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `bookshop`
+-- Cơ sở dữ liệu: `chinhsuabookshop`
 --
 
 -- --------------------------------------------------------
@@ -126,6 +126,35 @@ INSERT INTO `sanpham` (`id`, `tenSanPham`, `giaSanPham`, `hinhAnhSanPham`, `moTa
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `thongtinsanpham`
+--
+
+CREATE TABLE `thongtinsanpham` (
+  `DanhMuc` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Id` varchar(10) NOT NULL,
+  `TacGia` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `TenSach` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `NhaCungCap` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `CtyPhatHanh` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `NgayXB` date NOT NULL,
+  `HinhAnh` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `thongtinsanpham`
+--
+
+INSERT INTO `thongtinsanpham` (`DanhMuc`, `Id`, `TacGia`, `TenSach`, `NhaCungCap`, `CtyPhatHanh`, `NgayXB`, `HinhAnh`) VALUES
+('Truyện', '1', 'Đức Anh', 'Thiên thần mù sương', 'Bảo Việt', 'Nhà Xuất bản Văn Học', '2021-11-01', 'https://newshop.vn/public/uploads/products/23812/thien-than-mu-suong-bia.jpg'),
+('Tiểu thuyết', '2', 'Hồng Sakura', 'Xu Xu đừng khóc', 'SBooks', 'Nhà Xuất bản Văn Học', '2021-10-12', 'https://newshop.vn/public/uploads/products/42863/sach-xu-xu-dung-khoc.jpg'),
+('Truyện Thiếu Nhi', '3', 'Fujio Fujiko', 'Doraemon', 'Kim Đồng', 'Nhà xuất bản Kim Đồng', '2021-09-28', 'https://product.hstatic.net/200000343865/product/12_50_db3c02437f61499aa03d3122db720955.jpg'),
+('Tiểu thuyết', '4', 'Minato Kanae', 'Chuộc tội', 'Vương Hải Yến', 'Nhà xuất bản Tiểu thuyết', '2021-08-17', 'https://revelogue.com/wp-content/uploads/2020/02/chuoc-toi-hinh-anh-3-e1633083015326.jpg'),
+('Phiêu Lưu', '5', 'Swami Amar Jyoti', 'Bên rặng Tuyết Sơn', 'Nguyên Phong', 'Nhà xuất bản Hồng Đức', '2021-10-19', 'https://tienvnguyen.net/images/file/YuGoqU0l2AgBADRA/benrangtuyetson-b.jpg'),
+('Bí ẩn, Thám tử', '6', 'Seimaru Amagi', 'Thám tử kindaichi', 'Duy Ngọc', 'Nhà xuất bản Trẻ', '2021-06-15', 'https://vn-test-11.slatic.net/p/e54f8dacb6d9cb88c9cedff0392816a8.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `users`
 --
 
@@ -176,6 +205,12 @@ ALTER TABLE `loaisanpham`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `thongtinsanpham`
+--
+ALTER TABLE `thongtinsanpham`
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Chỉ mục cho bảng `users`
