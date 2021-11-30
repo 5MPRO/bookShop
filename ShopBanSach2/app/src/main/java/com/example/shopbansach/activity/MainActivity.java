@@ -1,21 +1,16 @@
 package com.example.shopbansach.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,10 +32,10 @@ import com.example.shopbansach.adapter.LoaispAdapter;
 import com.example.shopbansach.adapter.SanPhamGgAdapter;
 import com.example.shopbansach.adapter.SanphamAdapter;
 import com.example.shopbansach.model.Giohang;
-import com.example.shopbansach.model.Sanpham;
-import com.example.shopbansach.model.TaiKhoan;
-import com.example.shopbansach.util.CheckConnection;
 import com.example.shopbansach.model.Loaisp;
+import com.example.shopbansach.model.Sanpham;
+import com.example.shopbansach.model.emailLogin;
+import com.example.shopbansach.util.CheckConnection;
 import com.example.shopbansach.util.Server;
 import com.squareup.picasso.Picasso;
 
@@ -63,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     LoaispAdapter loaispAdapter;
     SanphamAdapter sanphamAdapter;
     SanPhamGgAdapter sanphamAdapter1;
+
     public static ArrayList<Giohang> manggiohang;
     int id=0;
     String tenloaisp="";
@@ -80,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             GetDuLieuGiamGia();
             GetOnItemListView();
             OnclickMenu();
+            getEmail(); // lưu danh tính khi đăng nhập
         }
         else {
             CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
@@ -114,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),TaiKhoanActivity.class);
+
                 startActivity(intent);
             }
         });
@@ -360,7 +358,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    private void getEmail(){
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null ){
 
+            emailLogin.email = bundle.getString("email");
+
+
+        }
+    }
     private void AnhXa() {
         toolbar = findViewById(R.id.toolbarmanhinhchinh);
         viewFlipper = findViewById(R.id.viewflipper);
