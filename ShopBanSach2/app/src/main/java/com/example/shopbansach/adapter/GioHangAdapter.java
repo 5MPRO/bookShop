@@ -1,6 +1,10 @@
 package com.example.shopbansach.adapter;
 
+import static com.example.shopbansach.activity.Giohang.EventUltil;
+
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,10 +12,12 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.shopbansach.R;
 import com.example.shopbansach.activity.MainActivity;
 import com.example.shopbansach.model.Giohang;
+
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
@@ -20,6 +26,7 @@ import java.util.ArrayList;
 public class GioHangAdapter extends BaseAdapter {
     Context context;
     ArrayList<Giohang> arraygiohang;
+    com.example.shopbansach.activity.Giohang giohangActive;
 
     public GioHangAdapter(Context context, ArrayList<Giohang> arraygiohang) {
         this.context = context;
@@ -43,7 +50,7 @@ public class GioHangAdapter extends BaseAdapter {
 
     public class ViewHolder{
         public TextView txttengiohang,txtgiagiohang;
-        public ImageView imggiohang;
+        public ImageView imggiohang, btnDelete;
         public Button btnminus,btnvalues,btnplus;
     }
 
@@ -60,6 +67,7 @@ public class GioHangAdapter extends BaseAdapter {
             viewHolder.btnminus = view.findViewById(R.id.buttonminus);
             viewHolder.btnvalues = view.findViewById(R.id.buttonvalues);
             viewHolder.btnplus = view.findViewById(R.id.buttonplus);
+            viewHolder.btnDelete = view.findViewById(R.id.btnDelete);
             view.setTag(viewHolder);
         }
         else {
@@ -97,7 +105,7 @@ public class GioHangAdapter extends BaseAdapter {
                 MainActivity.manggiohang.get(i).setGiasp(giamoinhat);
                 DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
                 viewHolder.txtgiagiohang.setText(decimalFormat.format(giamoinhat)+" Đ");
-                com.example.shopbansach.activity.Giohang.EventUltil();
+                EventUltil();
                 if(slmoinhat > 9){
                     viewHolder.btnplus.setVisibility(View.INVISIBLE);
                     viewHolder.btnminus.setVisibility(View.VISIBLE);
@@ -122,7 +130,7 @@ public class GioHangAdapter extends BaseAdapter {
                 MainActivity.manggiohang.get(i).setGiasp(giamoinhat);
                 DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
                 viewHolder.txtgiagiohang.setText(decimalFormat.format(giamoinhat)+" Đ");
-                com.example.shopbansach.activity.Giohang.EventUltil();
+                EventUltil();
                 if(slmoinhat < 2){
                     viewHolder.btnminus.setVisibility(View.INVISIBLE);
                     viewHolder.btnplus.setVisibility(View.VISIBLE);
@@ -133,6 +141,29 @@ public class GioHangAdapter extends BaseAdapter {
                     viewHolder.btnplus.setVisibility(View.VISIBLE);
                     viewHolder.btnvalues.setText(String.valueOf(slmoinhat));
                 }
+            }
+        });
+        viewHolder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which){
+                            case DialogInterface.BUTTON_POSITIVE:{
+                                com.example.shopbansach.activity.Giohang.delete(i);
+                                EventUltil();
+                            }
+                                break;
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                return;
+                        }
+                    }
+                };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setMessage("Bạn có chắc chắn muốn xóa sản phẩm này?").setPositiveButton("Yes", dialogClickListener)
+                        .setNegativeButton("No", dialogClickListener).show();
             }
         });
         return view;
