@@ -361,10 +361,7 @@ public class MainActivity extends AppCompatActivity {
     private void getEmail(){
         Bundle bundle = getIntent().getExtras();
         if(bundle != null ){
-
             emailLogin.email = bundle.getString("email");
-
-
         }
     }
     private void AnhXa() {
