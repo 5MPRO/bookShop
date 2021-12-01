@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     SanphamAdapter sanphamAdapter;
     SanPhamGgAdapter sanphamAdapter1;
     GioHangAdapter gioHangAdapter;
+  
     public static ArrayList<Giohang> manggiohang;
     int id=0;
     String tenloaisp="";
@@ -362,10 +363,7 @@ public class MainActivity extends AppCompatActivity {
     private void getEmail(){
         Bundle bundle = getIntent().getExtras();
         if(bundle != null ){
-
             emailLogin.email = bundle.getString("email");
-
-
         }
     }
     private void AnhXa() {
