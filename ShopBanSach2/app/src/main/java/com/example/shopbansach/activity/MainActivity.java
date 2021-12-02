@@ -28,6 +28,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.shopbansach.R;
+import com.example.shopbansach.adapter.GioHangAdapter;
 import com.example.shopbansach.adapter.LoaispAdapter;
 import com.example.shopbansach.adapter.SanPhamGgAdapter;
 import com.example.shopbansach.adapter.SanphamAdapter;
@@ -58,7 +59,8 @@ public class MainActivity extends AppCompatActivity {
     LoaispAdapter loaispAdapter;
     SanphamAdapter sanphamAdapter;
     SanPhamGgAdapter sanphamAdapter1;
-
+    GioHangAdapter gioHangAdapter;
+  
     public static ArrayList<Giohang> manggiohang;
     int id=0;
     String tenloaisp="";

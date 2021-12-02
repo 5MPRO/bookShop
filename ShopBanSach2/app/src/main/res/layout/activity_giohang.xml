@@ -23,15 +23,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <FrameLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent">
-            <TextView
-                android:layout_gravity="center"
-                android:id="@+id/textviewthongbao"
-                android:textSize="30sp"
-                android:text="Giỏ hàng bạn đang trống"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/cart_no"
+                android:layout_width="match_parent"
+                android:background="@drawable/no_cart"
+                android:layout_height="match_parent"/>
             <ListView
                 android:id="@+id/listviewgiohang"
                 android:layout_width="match_parent"
