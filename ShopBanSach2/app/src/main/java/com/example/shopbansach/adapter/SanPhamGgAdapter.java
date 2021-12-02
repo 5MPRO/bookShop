@@ -62,6 +62,7 @@ import java.util.ArrayList;
             imghinhsanpham = itemView.findViewById(R.id.imageviewsanpham);
             txtTensanpham = itemView.findViewById(R.id.textviewtensanpham);
             txtGiasanpham = itemView.findViewById(R.id.textviewgiasanpham);
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

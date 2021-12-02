@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
     int id=0;
     String tenloaisp="";
     String hinhanhloaisp="";
+    public static String emailSe;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -361,10 +362,7 @@ public class MainActivity extends AppCompatActivity {
     private void getEmail(){
         Bundle bundle = getIntent().getExtras();
         if(bundle != null ){
-
             emailLogin.email = bundle.getString("email");
-
-
         }
     }
     private void AnhXa() {

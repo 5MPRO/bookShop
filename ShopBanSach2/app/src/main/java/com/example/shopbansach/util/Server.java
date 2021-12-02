@@ -14,4 +14,5 @@ public static String Đuongdandangnhap = "http://"+localhost+"/LoginBook/login.p
 public static String Đuongdandangky = "http://"+localhost+"/LoginBook/register.php";
 public static String Duongdaninfor = "http://"+localhost+"/BanSach/getinfor.php";
 public static String Duonganundateinfor ="http://"+localhost+"/BanSach/insertinfor.php";
+public static String DuongdanresetPass="http://"+localhost+"/LoginBook/resetPass.php";
         }
