@@ -7,7 +7,7 @@ public class TaiKhoan implements Serializable {
     public String tenKh;
     public String email;
 
-    public TaiKhoan(String tenKh, String email, String idTk) {
+    public TaiKhoan(String tenKh, String email) {
         this.idtk = idtk;
         this.tenKh = tenKh;
         this.email = email;

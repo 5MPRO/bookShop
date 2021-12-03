@@ -56,7 +56,10 @@ public class DangKy extends AppCompatActivity {
         toolbardki.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+
+                Intent intent = new Intent(getApplicationContext(),Login.class);
+                startActivity(intent);
+
             }
         });
     }
