@@ -1,6 +1,4 @@
 <?php
-
-
     if(isset($_POST['email'])&&isset($_POST['password'])){
         require_once "conn.php";
         require_once "validate.php";
@@ -12,7 +10,6 @@
             echo "success" ;
         } else {
             echo "failure";
-        }   
+        }
     }
-
 ?>

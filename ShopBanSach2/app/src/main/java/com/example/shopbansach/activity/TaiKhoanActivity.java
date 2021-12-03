@@ -1,22 +1,27 @@
 package com.example.shopbansach.activity;
 
+import static com.example.shopbansach.activity.Login.personEmail;
+import static com.example.shopbansach.activity.Login.personName;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import com.example.shopbansach.R;
 
 public class TaiKhoanActivity extends AppCompatActivity {
     Button btndonhang,btndangxuat,btntttk,btndoimk,btndc;
     Toolbar toolbartk;
-    TextView txtEmail;
+    TextView txtEmail, txtName;
 
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     @Override
@@ -112,7 +117,8 @@ public class TaiKhoanActivity extends AppCompatActivity {
     }
 
     private void GetEmail() {
-
+        txtEmail.setText(personEmail);
+        txtName.setText(personName);
     }
 
     private void AcctionToolbar() {
@@ -143,7 +149,8 @@ public class TaiKhoanActivity extends AppCompatActivity {
         btndonhang = findViewById(R.id.btndonhangcuatoi);
         btndangxuat = findViewById(R.id.buttonDangXuat);
         toolbartk = findViewById(R.id.toolbartaikhoan);
-        txtEmail = findViewById(R.id.textviewtenkh);
+        txtName = findViewById(R.id.textviewtenkh);
+        txtEmail = findViewById(R.id.textviewemailkh);
         btntttk = findViewById(R.id.btnthongtintk);
         ln_home = findViewById(R.id.ln_home);
         ln_tk = findViewById(R.id.ln_tk);

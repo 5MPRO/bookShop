@@ -1,5 +1,4 @@
 <?php
-
     include "connect.php";
     $tenkhachhang = $_POST['tenKhachHang'];
     $sodienthoai = $_POST['soDienThoai'];
@@ -16,5 +15,4 @@
     } else {
         echo "Bạn hãy kiểm tra lại các dữ liệu";
 }
-            
 ?>

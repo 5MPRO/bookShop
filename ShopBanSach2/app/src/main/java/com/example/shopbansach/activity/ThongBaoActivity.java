@@ -1,12 +1,12 @@
 package com.example.shopbansach.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import android.support.v7.widget.Toolbar;
 import android.widget.ListView;
 
 import com.example.shopbansach.R;
