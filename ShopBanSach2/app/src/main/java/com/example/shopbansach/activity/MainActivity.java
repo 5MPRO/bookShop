@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     int id=0;
     String tenloaisp="";
     String hinhanhloaisp="";
-
+    public static String emailSe;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
         listViewmanhinhchinh.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i){
+                switch (i){ /////////////// click vào item navigation
 
                     case 0:
                         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
@@ -302,7 +302,7 @@ public class MainActivity extends AppCompatActivity {
         requestQueue.add(jsonArrayRequest);
     }
 
-    private void GetDuLieuLoaiSP() {
+    private void GetDuLieuLoaiSP() { /// đổ data navigation
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Server.Duongdanloaisp, new Response.Listener<JSONArray>() {
             @Override
@@ -318,7 +318,7 @@ public class MainActivity extends AppCompatActivity {
                             hinhanhloaisp = jsonObject.getString("hinhanhloaisp");
                             mangloaisp.add(new Loaisp(id,tenloaisp,hinhanhloaisp));
                             loaispAdapter.notifyDataSetChanged();
-                        } catch (JSONException e) {
+                        } catch (JSONException e){
                             e.printStackTrace();
                         }
                     }
@@ -371,10 +371,7 @@ public class MainActivity extends AppCompatActivity {
     private void getEmail(){
         Bundle bundle = getIntent().getExtras();
         if(bundle != null ){
-
             emailLogin.email = bundle.getString("email");
-
-
         }
     }
     private void AnhXa() {
@@ -387,8 +384,12 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerlayout);
         mangloaisp = new ArrayList<>();
         mangloaisp.add(0,new Loaisp(0,"Trang chính","https://indianewengland.com/wp-content/uploads/2016/04/Home-iage.png"));
-        loaispAdapter = new LoaispAdapter(mangloaisp,getApplicationContext());
+
+      // Khởi tạo adapter navigation
+        loaispAdapter = new  LoaispAdapter(mangloaisp,getApplicationContext());
         listViewmanhinhchinh.setAdapter(loaispAdapter);
+
+
         mangsanpham = new ArrayList<>();
         mangsanpham1 = new ArrayList<>();
         sanphamAdapter = new SanphamAdapter(getApplicationContext(),mangsanpham);

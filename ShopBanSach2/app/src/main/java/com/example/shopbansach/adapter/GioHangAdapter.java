@@ -1,5 +1,7 @@
 package com.example.shopbansach.adapter;
 
+import static com.example.shopbansach.activity.Giohang.EventUltil;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -103,7 +105,7 @@ public class GioHangAdapter extends BaseAdapter {
                 MainActivity.manggiohang.get(i).setGiasp(giamoinhat);
                 DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
                 viewHolder.txtgiagiohang.setText(decimalFormat.format(giamoinhat)+" Đ");
-                com.example.shopbansach.activity.Giohang.EventUltil();
+                EventUltil();
                 if(slmoinhat > 9){
                     viewHolder.btnplus.setVisibility(View.INVISIBLE);
                     viewHolder.btnminus.setVisibility(View.VISIBLE);
@@ -128,7 +130,7 @@ public class GioHangAdapter extends BaseAdapter {
                 MainActivity.manggiohang.get(i).setGiasp(giamoinhat);
                 DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
                 viewHolder.txtgiagiohang.setText(decimalFormat.format(giamoinhat)+" Đ");
-                com.example.shopbansach.activity.Giohang.EventUltil();
+                EventUltil();
                 if(slmoinhat < 2){
                     viewHolder.btnminus.setVisibility(View.INVISIBLE);
                     viewHolder.btnplus.setVisibility(View.VISIBLE);
@@ -148,8 +150,10 @@ public class GioHangAdapter extends BaseAdapter {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which){
-                            case DialogInterface.BUTTON_POSITIVE:
-                                    com.example.shopbansach.activity.Giohang.delete(i);
+                            case DialogInterface.BUTTON_POSITIVE:{
+                                com.example.shopbansach.activity.Giohang.delete(i);
+                                EventUltil();
+                            }
                                 break;
                             case DialogInterface.BUTTON_NEGATIVE:
                                 return;

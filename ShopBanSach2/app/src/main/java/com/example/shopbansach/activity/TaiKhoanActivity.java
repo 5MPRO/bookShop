@@ -15,14 +15,28 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.shopbansach.R;
+import com.example.shopbansach.model.emailLogin;
+import com.example.shopbansach.util.Server;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class TaiKhoanActivity extends AppCompatActivity {
     Button btndonhang,btndangxuat,btntttk,btndoimk,btndc;
     Toolbar toolbartk;
     TextView txtEmail, txtName;
-
+    TextView txtTen;
+    int idUser;
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +47,36 @@ public class TaiKhoanActivity extends AppCompatActivity {
         OnClickcontent();
         AcctionToolbar();
         OnclickMenu();
+        readJson(Server.Duongdaninfor +"?email="+ emailLogin.email.trim());
+    }
 
+    private void readJson(String url){
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url,null,
+                new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray response) {
+
+                        try {
+                            JSONObject jsonObject = response.getJSONObject(0);
+                            idUser = jsonObject.getInt("id");
+                            txtTen.setText(jsonObject.getString("name"));
+                            txtEmail.setText(jsonObject.getString("email"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(),error.toString(),Toast.LENGTH_SHORT).show();
+
+                    }
+                }
+        );
+        requestQueue.add(jsonArrayRequest);
     }
 
     private void OnclickMenu() {
@@ -159,5 +202,6 @@ public class TaiKhoanActivity extends AppCompatActivity {
         ln_search = findViewById(R.id.ln_search);
         btndoimk = findViewById(R.id.btndoimatkhau);
         btndc = findViewById(R.id.btndiachigh);
+        txtTen = findViewById(R.id.textviewtenkh);
     }
 }

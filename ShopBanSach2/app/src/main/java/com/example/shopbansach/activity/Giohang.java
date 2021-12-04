@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -21,7 +22,7 @@ import java.text.DecimalFormat;
 
 public class Giohang extends AppCompatActivity {
     ListView lvgiohang;
-    TextView txtthongbao;
+    static ImageView cartNo;
     static TextView txttongtien;
     Button btnthanhtoan,btntieptucmua;
     Toolbar toolbargiohang;
@@ -70,15 +71,15 @@ public class Giohang extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         if(MainActivity.manggiohang.size() <= 0){
-                            txtthongbao.setVisibility(View.VISIBLE);
+                            cartNo.setVisibility(View.VISIBLE);
                         }else {
                             MainActivity.manggiohang.remove(position);
                             giohangadapter.notifyDataSetChanged();
                             EventUltil();
                             if(MainActivity.manggiohang.size() <=0){
-                                txtthongbao.setVisibility(View.VISIBLE);
+                                cartNo.setVisibility(View.VISIBLE);
                             }else {
-                                txtthongbao.setVisibility(View.INVISIBLE);
+                                cartNo.setVisibility(View.INVISIBLE);
                                 giohangadapter.notifyDataSetChanged();
                                 EventUltil();
                             }
@@ -103,6 +104,14 @@ public class Giohang extends AppCompatActivity {
         for(int i = 0 ; i<MainActivity.manggiohang.size();i++){
             tongtien += MainActivity.manggiohang.get(i).getGiasp();
         }
+
+        if(MainActivity.manggiohang.size() == 0) {
+            cartNo.setVisibility(View.VISIBLE);
+        }else {
+            cartNo.setVisibility(View.INVISIBLE);
+            giohangadapter.notifyDataSetChanged();
+        }
+
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         txttongtien.setText(decimalFormat.format(tongtien)+" Đ");
     }
@@ -110,12 +119,12 @@ public class Giohang extends AppCompatActivity {
     private void CheckData() {
         if(MainActivity.manggiohang.size()<=0){
             giohangadapter.notifyDataSetChanged();
-            txtthongbao.setVisibility(View.VISIBLE);
+           cartNo.setVisibility(View.VISIBLE);
             lvgiohang.setVisibility(View.INVISIBLE);
         }
         else {
             giohangadapter.notifyDataSetChanged();
-            txtthongbao.setVisibility(View.INVISIBLE);
+            cartNo.setVisibility(View.INVISIBLE);
             lvgiohang.setVisibility(View.VISIBLE);
         }
     }
@@ -134,7 +143,7 @@ public class Giohang extends AppCompatActivity {
 
     private void AnhXa() {
         lvgiohang = findViewById(R.id.listviewgiohang);
-        txtthongbao = findViewById(R.id.textviewthongbao);
+        cartNo = findViewById(R.id.cart_no);
         txttongtien = findViewById(R.id.textviewtongtien);
         btnthanhtoan = findViewById(R.id.buttonthanhtoangiohang);
         btntieptucmua = findViewById(R.id.buttontieptucmuahang);

@@ -36,14 +36,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="?attr/actionBarSize"/>
                     <ViewFlipper
-
                         android:id="@+id/viewflipper"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"/>
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-
                     </RelativeLayout>
                     <androidx.appcompat.widget.Toolbar
                         android:layout_width="match_parent"
@@ -184,7 +182,6 @@
                                 android:text="Siêu khuyến mãi"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"/>
-
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/recyclerviewsanphamkhuyenmai"
                                 android:layout_width="match_parent"
@@ -193,8 +190,6 @@
                             </androidx.recyclerview.widget.RecyclerView>
                         </LinearLayout>
                         <LinearLayout
-
-
                             android:background="@color/bookAppBold"
                             android:orientation="vertical"
                             android:layout_width="match_parent"
@@ -216,7 +211,97 @@
                                 android:nestedScrollingEnabled="false" />
                         </LinearLayout>
                     </LinearLayout>
-
+                    <LinearLayout
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:textColor="@color/textcolor"
+                            android:textSize="16sp"
+                            android:text="Mọi chi tiết xin liên hệ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp"
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:padding="10dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:background="#f20"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textSize="16sp"
+                                    android:textColor="@color/white"
+                                    android:text="0961640909"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/white"
+                                    android:text="Hotline mua hàng online"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:padding="10dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:background="#f20"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textSize="16sp"
+                                    android:textColor="@color/white"
+                                    android:text="0362399217"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:textAlignment="center"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/white"
+                                    android:text="Hotline mua hàng online"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:textAlignment="center"
+                            android:textColor="@color/textcolor"
+                            android:textSize="16sp"
+                            android:text="Thời gian làm việc từ 8:00 đến 20:00"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/textcolor"
+                            android:textSize="16sp"
+                            android:text="BOOKSHOP.VN - KÊNH MUA SẮM TRỰC TUYẾN"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/textcolor"
+                            android:textSize="16sp"
+                            android:text="Địa chỉ giao dịch tại: 02 Thanh Sơn - Hải Châu - Đà Nẵng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
                 </LinearLayout>
             </ScrollView>
             <com.google.android.material.navigation.NavigationView
@@ -230,12 +315,10 @@
                     android:layout_marginTop="200dp"
                     android:id="@+id/listviewmanhinhchinh"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
                 </ListView>
             </com.google.android.material.navigation.NavigationView>
         </androidx.drawerlayout.widget.DrawerLayout>
-
         <LinearLayout
             android:outlineAmbientShadowColor="@color/black"
             android:outlineSpotShadowColor="@color/black"

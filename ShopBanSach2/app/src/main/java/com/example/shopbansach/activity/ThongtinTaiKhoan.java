@@ -44,6 +44,7 @@ public class ThongtinTaiKhoan extends AppCompatActivity {
 
        // Toast.makeText(getApplicationContext(), emailLogin.email, Toast.LENGTH_SHORT).show();
 //        readJson(Server.Duongdaninfor +"?email="+ emailLogin.email.trim());
+        readJson(Server.Duongdaninfor +"?email="+ emailLogin.email.trim());
         ActionToolbar();
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override

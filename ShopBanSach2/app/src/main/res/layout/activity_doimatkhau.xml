@@ -20,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <EditText
+            android:id="@+id/editOldPass"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:hint="Mật khẩu cũ"
@@ -27,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
+            android:id="@+id/editNewPass"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:hint="Mật khẩu mới"
@@ -35,6 +37,7 @@
             android:layout_height="wrap_content"/>
 
         <Button
+            android:id="@+id/btnResetPass"
             android:textColor="@color/white"
             android:backgroundTint="@color/color_menu"
             android:layout_marginTop="40dp"
