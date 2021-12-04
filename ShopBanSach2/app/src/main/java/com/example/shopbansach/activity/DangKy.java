@@ -91,8 +91,8 @@ public class DangKy extends AppCompatActivity {
                         etReneterPassword.setText("");
                         tvStatus.setText("Tạo tài khoản thành công!");
                         btnRegister.setClickable(false);
-                    } else if (response.contains("failute")) {
-                        tvStatus.setText("Tạo tài khoản thất bại!");
+                    } else if (response.contains("failure")) {
+                        tvStatus.setText("Email đã tồn tại");
                     }
                 }
             }, new Response.ErrorListener() {
