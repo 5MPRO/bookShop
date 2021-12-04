@@ -1,6 +1,6 @@
 <?php
     include "connect.php";
-    $query = "SELECT * FROM sanpham ORDER BY id DESC LIMIT 4";
+    $query = "SELECT * FROM sanpham ORDER BY id DESC LIMIT 8";
     $data = mysqli_query($conn, $query);
     $mangspmoinhat = array();
     while($row = mysqli_fetch_assoc($data)){
