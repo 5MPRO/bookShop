@@ -384,12 +384,9 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerlayout);
         mangloaisp = new ArrayList<>();
         mangloaisp.add(0,new Loaisp(0,"Trang chính","https://indianewengland.com/wp-content/uploads/2016/04/Home-iage.png"));
-
       // Khởi tạo adapter navigation
         loaispAdapter = new  LoaispAdapter(mangloaisp,getApplicationContext());
         listViewmanhinhchinh.setAdapter(loaispAdapter);
-
-
         mangsanpham = new ArrayList<>();
         mangsanpham1 = new ArrayList<>();
         sanphamAdapter = new SanphamAdapter(getApplicationContext(),mangsanpham);
@@ -397,7 +394,6 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerViewSpkm.setHasFixedSize(true);
-
         recyclerViewSpkm.setLayoutManager(layoutManager);
         recyclerViewSpkm.setAdapter(sanphamAdapter1);
         recyclerViewSpmn.setHasFixedSize(true);
