@@ -21,50 +21,13 @@
             app:title="Địa chỉ giao hàng"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"/>
-        <LinearLayout
-            android:layout_marginTop="20dp"
-            android:orientation="vertical"
+
+        <ListView
+            android:id="@+id/listViewDiaChi"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:text="Nhà riêng:"
-                android:textSize="30dp"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <LinearLayout
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"/>
-            <LinearLayout
-                android:layout_marginLeft="20dp"
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:textColor="@color/textcolor"
-                    android:textSize="20sp"
-                    android:text="Tên: Nguyễn Văn An"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:textColor="@color/textcolor"
-                    android:textSize="20sp"
-                    android:text="Địa chỉ: 28, Ngô Mây, Kon Tum"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:layout_marginBottom="20dp"
-                    android:textColor="@color/textcolor"
-                    android:textSize="20sp"
-                    android:text="Số điện thoại: 0961640909"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </LinearLayout>
+
+        </ListView>
     </LinearLayout>
     <LinearLayout
         android:background="@color/bookAppBold"

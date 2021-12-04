@@ -5,15 +5,47 @@ import android.os.Bundle;
 import android.view.View;
 
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.shopbansach.R;
+import com.example.shopbansach.adapter.DiaChiAdapter;
+import com.example.shopbansach.adapter.TruyenTranhAdapter;
+import com.example.shopbansach.model.Sanpham;
+import com.example.shopbansach.model.diachi;
+import com.example.shopbansach.model.emailLogin;
+import com.example.shopbansach.util.CheckConnection;
+import com.example.shopbansach.util.Server;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Diachigiaohang extends AppCompatActivity {
     Button btnthemdc;
     Toolbar toolbardc;
+    TextView txtSoDienThoai, txtDiaChi, txtTenNguoiDung, txtTenDiaChi;
+
+    DiaChiAdapter diaChiAdapter;
+    ListView listView;
+    ArrayList<diachi> diachiArrayList;
+    String  soDienThoai="abc" , tenDiaChi, diaChi ,email ,  tenNguoiDung ="abc";
+    int id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +53,52 @@ public class Diachigiaohang extends AppCompatActivity {
         AnhXa();
         ActionToolbar();
         BtnThemDc();
+        GetData();
     }
+    private void GetData() {
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        String duongdan = Server.Duongdanalldiachi;
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, duongdan, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(response != null && response.length() != 2   ){
+                  //  txtSoDienThoai, txtDiaChi, txtTenNguoiDung, txtTenDiaChi
+                    try {
+                        JSONArray jsonArray = new JSONArray(response);
+                        for (int i = 0;i<jsonArray.length();i++){
+                            JSONObject jsonObject = jsonArray.getJSONObject(i);
+                            id = jsonObject.getInt("idDiaChi");
+                            email = jsonObject.getString("email");
+                            diaChi =  jsonObject.getString("diaChi");
+                            tenDiaChi =   (jsonObject.getString("tenDiaChi"));
+                            soDienThoai = (jsonObject.getString("soDienThoaiDc"));
+                            tenNguoiDung = (jsonObject.getString("tenNguoiNhan"));
+                            diachiArrayList.add(new diachi(tenDiaChi, diaChi, tenNguoiDung, soDienThoai));
+                            diaChiAdapter.notifyDataSetChanged();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else {
 
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String> param = new HashMap<String,String>();
+                param.put("email",String.valueOf(emailLogin.email));
+                return param;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
     private void BtnThemDc() {
         btnthemdc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +121,15 @@ public class Diachigiaohang extends AppCompatActivity {
         });
     }
     private void AnhXa() {
+//        txtSoDienThoai = findViewById(R.id.txtSoDienThoai);
+//        txtDiaChi =findViewById(R.id.txtDiaChi);
+//        txtTenNguoiDung = findViewById(R.id.txtTenNguoiDung);
+//        txtTenDiaChi = findViewById(R.id.txtTenDiaChi);
         btnthemdc = findViewById(R.id.btnthemdchi);
         toolbardc = findViewById(R.id.toolbardiachi);
+        listView = findViewById(R.id.listViewDiaChi);
+        diachiArrayList = new ArrayList<>();
+        diaChiAdapter = new DiaChiAdapter(diachiArrayList,getApplicationContext());
+        listView.setAdapter(diaChiAdapter);
     }
 }
