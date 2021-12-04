@@ -116,8 +116,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <Button
-            android:drawableStart="@drawable/facebook"
-            android:id="@+id/btndangnhapgoogle"
+            android:drawableStart="@drawable/google"
+            android:id="@+id/sign_in_button"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:background="@drawable/border_dangnhapvoi"
@@ -128,8 +128,12 @@
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+<!--        <com.google.android.gms.common.SignInButton-->
+<!--            android:id="@+id/sign_in_button"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content" />-->
         <Button
-            android:drawableStart="@drawable/google"
+            android:drawableStart="@drawable/facebook"
             android:id="@+id/btndangnhapfacebook"
             android:textColor="@color/black"
             android:textSize="15sp"

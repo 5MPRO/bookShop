@@ -1,16 +1,10 @@
 package com.example.shopbansach.activity;
 
+import static com.example.shopbansach.activity.Login.personEmail;
+import static com.example.shopbansach.activity.Login.personName;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +15,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ViewFlipper;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.widget.*;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -38,6 +42,7 @@ import com.example.shopbansach.model.Sanpham;
 import com.example.shopbansach.model.emailLogin;
 import com.example.shopbansach.util.CheckConnection;
 import com.example.shopbansach.util.Server;
+import com.google.android.material.navigation.NavigationView;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -60,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
     SanphamAdapter sanphamAdapter;
     SanPhamGgAdapter sanphamAdapter1;
     GioHangAdapter gioHangAdapter;
-  
     public static ArrayList<Giohang> manggiohang;
     int id=0;
     String tenloaisp="";
@@ -107,6 +111,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                Bundle bundle = getIntent().getExtras();
+                personEmail = bundle.getString("Email");
+                personName = bundle.getString("Name");
                 startActivity(intent);
             }
         });
@@ -148,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
         listViewmanhinhchinh.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i){
+                switch (i){ /////////////// click vào item navigation
 
                     case 0:
                         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
@@ -295,7 +302,7 @@ public class MainActivity extends AppCompatActivity {
         requestQueue.add(jsonArrayRequest);
     }
 
-    private void GetDuLieuLoaiSP() {
+    private void GetDuLieuLoaiSP() { /// đổ data navigation
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Server.Duongdanloaisp, new Response.Listener<JSONArray>() {
             @Override
@@ -311,7 +318,7 @@ public class MainActivity extends AppCompatActivity {
                             hinhanhloaisp = jsonObject.getString("hinhanhloaisp");
                             mangloaisp.add(new Loaisp(id,tenloaisp,hinhanhloaisp));
                             loaispAdapter.notifyDataSetChanged();
-                        } catch (JSONException e) {
+                        } catch (JSONException e){
                             e.printStackTrace();
                         }
                     }
@@ -377,8 +384,12 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerlayout);
         mangloaisp = new ArrayList<>();
         mangloaisp.add(0,new Loaisp(0,"Trang chính","https://indianewengland.com/wp-content/uploads/2016/04/Home-iage.png"));
-        loaispAdapter = new LoaispAdapter(mangloaisp,getApplicationContext());
+
+      // Khởi tạo adapter navigation
+        loaispAdapter = new  LoaispAdapter(mangloaisp,getApplicationContext());
         listViewmanhinhchinh.setAdapter(loaispAdapter);
+
+
         mangsanpham = new ArrayList<>();
         mangsanpham1 = new ArrayList<>();
         sanphamAdapter = new SanphamAdapter(getApplicationContext(),mangsanpham);

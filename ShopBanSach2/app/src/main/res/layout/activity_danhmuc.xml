@@ -13,7 +13,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             app:title="Danh mục"
             android:background="@color/color_menu"
             app:titleTextColor="@color/white"
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
 
-        </android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
         <ListView
             android:id="@+id/listviewdanhmuc"
             android:layout_width="match_parent"

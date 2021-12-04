@@ -1,6 +1,17 @@
 -- phpMyAdmin SQL Dump
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
+<<<<<<< HEAD
+<<<<<<< HEAD
+--
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th10 27, 2021 lúc 10:09 AM
+-- Phiên bản máy phục vụ: 10.4.22-MariaDB
+-- Phiên bản PHP: 8.0.13
+=======
+>>>>>>> register
+=======
+>>>>>>> f70bb103e253c0905c8b87aa52b11f196797ba2f
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;

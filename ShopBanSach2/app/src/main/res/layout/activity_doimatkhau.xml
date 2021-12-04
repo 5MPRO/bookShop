@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".activity.DoimatkhauActivity"
     android:background="@color/bookApp">
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbardmm"
         app:titleTextColor="@color/white"
         app:title="Đổi mật khẩu"

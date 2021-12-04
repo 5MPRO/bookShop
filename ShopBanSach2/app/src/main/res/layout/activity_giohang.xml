@@ -9,7 +9,7 @@
     tools:context=".activity.Giohang"
     android:background="@color/bookApp"
     >
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         app:titleTextColor="@color/white"
         android:background="#005EFF"
         app:title="Giỏ hàng"
@@ -17,7 +17,7 @@
         android:id="@+id/toolbargiohang"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
     <LinearLayout
         android:layout_weight="7"
         android:layout_width="match_parent"

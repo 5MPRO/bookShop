@@ -13,27 +13,27 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             app:title="Thông báo"
             android:background="@color/color_menu"
             app:titleTextColor="@color/white"
             android:id="@+id/toolbarthongbao"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
-        </android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
         <ListView
             android:id="@+id/listviewthongbao"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </ListView>
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbartaikhoan"
             app:title="Tài khoản"
             app:titleTextColor="@color/white"
             android:background="@color/color_menu"
             android:layout_width="match_parent"
             android:layout_height="70dp">
-        </android.support.v7.widget.Toolbar>
+        </androidx.appcompat.widget.Toolbar>
         <LinearLayout
             android:orientation="vertical"
             android:background="#F3F3F3"
@@ -45,7 +45,7 @@
                 android:background="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="90dp">
-                <android.support.design.widget.FloatingActionButton
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:layout_marginLeft="10dp"
                     android:backgroundTint="@color/color_menu"
                     android:src="@drawable/icon_user"

@@ -14,7 +14,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbardiachi"
             app:titleTextColor="@color/white"
             android:background="@color/color_menu"

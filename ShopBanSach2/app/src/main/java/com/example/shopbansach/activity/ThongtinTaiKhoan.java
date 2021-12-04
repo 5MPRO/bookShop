@@ -2,8 +2,8 @@ package com.example.shopbansach.activity;
 
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,6 +43,7 @@ public class ThongtinTaiKhoan extends AppCompatActivity {
         AnhXa();
 
        // Toast.makeText(getApplicationContext(), emailLogin.email, Toast.LENGTH_SHORT).show();
+//        readJson(Server.Duongdaninfor +"?email="+ emailLogin.email.trim());
         readJson(Server.Duongdaninfor +"?email="+ emailLogin.email.trim());
         ActionToolbar();
         btnUpdate.setOnClickListener(new View.OnClickListener() {
