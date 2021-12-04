@@ -9,7 +9,6 @@
     android:orientation="vertical"
     android:background="@color/bookApp">
     <LinearLayout
-
         android:orientation="vertical"
         android:gravity="center"
         android:background="@drawable/boder_ttkh"
@@ -49,7 +48,7 @@
                 android:layout_margin="5dp"
                 android:id="@+id/edittextsodienthoai"
                 android:inputType="phone"
-                android:hint="Nhập vào số điẹn thoại"
+                android:hint="Nhập vào số điện thoại"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
@@ -57,13 +56,25 @@
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <EditText
                 android:id="@+id/edittextemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:hint="Nhập email"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edittextaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Nhập địa chỉ"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
         <LinearLayout
