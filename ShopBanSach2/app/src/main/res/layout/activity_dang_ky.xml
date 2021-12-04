@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".activity.DangKy"
     android:orientation="vertical">
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbardangky"
         app:titleTextColor="@color/white"
         app:title="Đăng ký"
         android:background="@color/color_menu"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
     <EditText
         android:id="@+id/etName"
         android:layout_marginTop="20dp"
@@ -30,23 +30,52 @@
         android:padding="25dp"
         android:hint="Email"
         android:layout_width="match_parent"
+        android:textColorHighlight="@color/colorPrimary"
         android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:padding="25dp"
-        android:hint="@string/matkhau"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <EditText
-        android:id="@+id/etReneterPassword"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:padding="25dp"
-        android:hint="@string/nlmatkhau"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="25dp"
+            android:hint="@string/matkhau"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/hide_password_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="-55dp"
+            android:layout_marginTop="28dp"
+            android:layout_toRightOf="@+id/edittextdnpassword"
+            android:background="@drawable/eye_hiddent" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/etReneterPassword"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="25dp"
+            android:hint="@string/nlmatkhau"
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/hide_password_re"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="-55dp"
+            android:layout_marginTop="28dp"
+            android:layout_toRightOf="@+id/edittextdnpassword"
+            android:background="@drawable/eye_hiddent" />
+    </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

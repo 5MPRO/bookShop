@@ -1,7 +1,8 @@
 package com.example.shopbansach.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,11 +30,13 @@ import java.util.Map;
 public class Thongtinkhachhang extends AppCompatActivity {
     EditText edttenkhachhang,edtemail,edtsdt;
     Button btnxacnhan,btntrove;
+    String email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thongtinkhachhang);
         Anhxa();
+        getEmail();
         btntrove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,6 +48,13 @@ public class Thongtinkhachhang extends AppCompatActivity {
         }
         else {
             CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nói");
+        }
+    }
+    private void getEmail(){
+        Bundle bundle = getIntent().getExtras();
+        if(bundle != null ){
+            email = bundle.getString("email");
+
         }
     }
     private void EventButton() {

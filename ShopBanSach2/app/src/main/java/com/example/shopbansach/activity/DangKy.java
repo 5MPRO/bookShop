@@ -1,15 +1,20 @@
 package com.example.shopbansach.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -27,6 +32,7 @@ import java.util.Map;
 public class DangKy extends AppCompatActivity {
     private EditText etName,etPassword,etEmail,etReneterPassword;
     private TextView tvStatus;
+    private ImageView btnEye1,btnEye2;
     private Button btnRegister;
     private String name, email,password,reneterPassword;
     Toolbar toolbardki;
@@ -36,6 +42,30 @@ public class DangKy extends AppCompatActivity {
         setContentView(R.layout.activity_dang_ky);
         AnhXa();
         AcctionToolbar();
+        btnEye1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(etPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())){
+                    etPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    btnEye1.setImageResource(R.drawable.eye_hiddent);
+                }else {
+                    etPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    btnEye1.setImageResource(R.drawable.eye_visibility);
+                }
+            }
+        });
+        btnEye2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(etReneterPassword.getTransformationMethod().equals(HideReturnsTransformationMethod.getInstance())){
+                    etReneterPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    btnEye2.setImageResource(R.drawable.eye_hiddent);
+                }else {
+                    etReneterPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    btnEye2.setImageResource(R.drawable.eye_visibility);
+                }
+            }
+        });
     }
 
     private void AnhXa() {
@@ -47,6 +77,9 @@ public class DangKy extends AppCompatActivity {
         btnRegister =  findViewById(R.id.btnRegister);
         name = email = password = reneterPassword = "";
         toolbardki = findViewById(R.id.toolbardangky);
+        btnEye1 = findViewById(R.id.hide_password_1);
+        btnEye2 = findViewById(R.id.hide_password_re);
+
     }
 
     private void AcctionToolbar() {
@@ -90,8 +123,12 @@ public class DangKy extends AppCompatActivity {
                         etReneterPassword.setText("");
                         tvStatus.setText("Tạo tài khoản thành công!");
                         btnRegister.setClickable(false);
-                    } else if (response.contains("failute")) {
-                        tvStatus.setText("Tạo tài khoản thất bại!");
+                    } else if (response.contains("failure")) {
+                        tvStatus.setText("Email đã tồn tại");
+                        tvStatus.setTextColor(Color.parseColor("#950000"));
+                        etEmail.setTextColor(Color.parseColor("#950000"));
+                        etEmail.requestFocus();
+                        etEmail.requestFocus();
                     }
                 }
             }, new Response.ErrorListener() {
