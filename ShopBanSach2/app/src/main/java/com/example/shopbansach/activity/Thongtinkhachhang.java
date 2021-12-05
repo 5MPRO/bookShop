@@ -70,7 +70,7 @@ public class Thongtinkhachhang extends AppCompatActivity {
     private void setbtnAddress(){
         btnAddress.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 Intent intent = new Intent(getApplicationContext(),Diachigiaohang.class);
                 startActivityForResult(intent,REQUEST_ADDRESS);
             }
@@ -83,7 +83,7 @@ public class Thongtinkhachhang extends AppCompatActivity {
                 diachi dc = (diachi) data.getSerializableExtra("DIACHI");
             edttenkhachhang.setText(dc.getTenNguoiDung());
             edtsdt.setText(dc.getSoDienThoai());
-            edtaddress.setText(dc.getTenDiaChi());
+            edtaddress.setText(dc.getDiaChi());
         }
 
         super.onActivityResult(requestCode, resultCode, data);

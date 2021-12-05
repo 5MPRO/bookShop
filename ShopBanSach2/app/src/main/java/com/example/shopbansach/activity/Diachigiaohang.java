@@ -44,7 +44,7 @@ public class Diachigiaohang extends AppCompatActivity {
     DiaChiAdapter diaChiAdapter;
     ListView listView;
     ArrayList<diachi> diachiArrayList;
-
+    int REQUEST;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,6 @@ public class Diachigiaohang extends AppCompatActivity {
         ActionToolbar();
         GetData();
         btnthemdiachi();
-
     }
 
 
@@ -111,9 +110,17 @@ public class Diachigiaohang extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(),ThemDiaChi.class);
-                startActivity(intent);
+                startActivityForResult(intent,REQUEST);
             }
         });
+    }
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(REQUEST == requestCode){
+            GetData();
+        }
+        else
+           // Toast.makeText(getApplicationContext(), "kkkkk", Toast.LENGTH_SHORT).show();
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void ActionToolbar() {
@@ -127,6 +134,7 @@ public class Diachigiaohang extends AppCompatActivity {
             }
         });
     }
+
     public void deleteAddress(int iddc){
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.DuongdandeleteAdress, new Response.Listener<String>() {

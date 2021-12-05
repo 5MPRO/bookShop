@@ -21,6 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.shopbansach.R;
+import com.example.shopbansach.model.diachi;
 import com.example.shopbansach.model.emailLogin;
 import com.example.shopbansach.util.Server;
 
@@ -50,10 +51,10 @@ public class ThemDiaChi extends AppCompatActivity {
                         editReceiver.getText().toString().trim().isEmpty()
                 ){
                     Toast.makeText(getApplicationContext(), "Bạn phải điền đầy đủ thông tin !", Toast.LENGTH_SHORT).show();
-
                 }
                 else {
                     addAddress();
+                    finish();
                 }
 
             }
@@ -73,11 +74,16 @@ public class ThemDiaChi extends AppCompatActivity {
             public void onResponse(String response) {
                 if(response.trim().equals("success")){
                     Toast.makeText(getApplicationContext(), "Đã thêm địa chỉ mới !", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(),Diachigiaohang.class));
+
+                    Intent intent = new Intent();
+                    intent.putExtra("DIACHI",";;;;");
+                    setResult(RESULT_OK,intent);
+                    finish();
+                    //Intent intent = new Intent();
+                   // startActivity(new Intent(getApplicationContext(),Diachigiaohang.class));
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "Xảy ra lỗi chèn!", Toast.LENGTH_SHORT).show();
-
                 }
 
             }

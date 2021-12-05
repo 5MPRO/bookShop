@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.example.shopbansach.R;
 import com.example.shopbansach.activity.Diachigiaohang;
+import com.example.shopbansach.activity.Thongtinkhachhang;
 import com.example.shopbansach.model.Sanpham;
 import com.example.shopbansach.model.diachi;
 import com.squareup.picasso.Picasso;
@@ -88,11 +89,12 @@ public class DiaChiAdapter extends BaseAdapter {
         viewHolder.linearLayoutDc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(context, Thongtinkhachhang.class);
                 diachi dc = diachiArrayList.get(i);
                 intent.putExtra("DIACHI",dc);
                 context.setResult(RESULT_OK,intent);
                 context.finish();
+
             }
         });
         return view;
