@@ -1,6 +1,8 @@
 package com.example.shopbansach.activity;
 
 import android.content.Intent;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.os.Bundle;
@@ -19,6 +21,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.shopbansach.R;
+import com.example.shopbansach.model.diachi;
 import com.example.shopbansach.model.emailLogin;
 import com.example.shopbansach.util.CheckConnection;
 import com.example.shopbansach.util.Server;
@@ -32,9 +35,10 @@ import java.util.Map;
 
 public class Thongtinkhachhang extends AppCompatActivity {
     EditText edttenkhachhang,edtemail,edtsdt,edtaddress;
-    Button btnxacnhan,btntrove;
+    Button btnxacnhan,btntrove, btnAddress;
     String email;
     int idUser;
+    int REQUEST_ADDRESS;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,14 +58,37 @@ public class Thongtinkhachhang extends AppCompatActivity {
         else {
             CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nói");
         }
+        setbtnAddress();
     }
     private void getEmail(){
         Bundle bundle = getIntent().getExtras();
         if(bundle != null ){
             email = bundle.getString("email");
-
         }
     }
+
+    private void setbtnAddress(){
+        btnAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Diachigiaohang.class);
+                startActivityForResult(intent,REQUEST_ADDRESS);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(REQUEST_ADDRESS == requestCode && resultCode == RESULT_OK & data != null){
+                diachi dc = (diachi) data.getSerializableExtra("DIACHI");
+            edttenkhachhang.setText(dc.getTenNguoiDung());
+            edtsdt.setText(dc.getSoDienThoai());
+            edtaddress.setText(dc.getTenDiaChi());
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
     private void readJson(String url){
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url,null,
@@ -177,6 +204,7 @@ public class Thongtinkhachhang extends AppCompatActivity {
     }
 
     private void Anhxa() {
+        btnAddress = findViewById(R.id.btnAddress);
         edttenkhachhang = findViewById(R.id.edittexttenkhachang);
         edtemail = findViewById(R.id.edittextemail);
         edtsdt = findViewById(R.id.edittextsodienthoai);
