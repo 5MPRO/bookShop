@@ -6,21 +6,47 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ListView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.shopbansach.R;
+import com.example.shopbansach.adapter.LoaispAdapter;
+import com.example.shopbansach.model.Loaisp;
+import com.example.shopbansach.util.CheckConnection;
+import com.example.shopbansach.util.Server;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class DanhmucActivity extends AppCompatActivity {
     Toolbar toolbardm;
+    ListView lvdm;
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
+    LoaispAdapter loaispAdapter;
+    ArrayList<Loaisp> mangloaisp;
+    public static ArrayList<Giohang> manggiohang;
+    int id=0;
+    String tenloaisp="";
+    String hinhanhloaisp="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_danhmuc);
         AnhXa();
         OnClickMenu();
+        GetDuLieuLoaiSP();
     }
 
     @Override
@@ -40,14 +66,16 @@ public class DanhmucActivity extends AppCompatActivity {
     }
 
     private void AnhXa() {
-            toolbardm = findViewById(R.id.toolbardanhmuc);
-            ln_home = findViewById(R.id.ln_home);
-            ln_tk = findViewById(R.id.ln_tk);
-            ln_tb = findViewById(R.id.ln_tb);
-            ln_dm = findViewById(R.id.ln_dm);
-            ln_search = findViewById(R.id.ln_search);
-
-        }
+        toolbardm = findViewById(R.id.toolbardanhmuc);
+        ln_home = findViewById(R.id.ln_home);
+        ln_tk = findViewById(R.id.ln_tk);
+        ln_tb = findViewById(R.id.ln_tb);
+        ln_dm = findViewById(R.id.ln_dm);
+        ln_search = findViewById(R.id.ln_search);
+        mangloaisp = new ArrayList<>();
+        loaispAdapter = new LoaispAdapter(mangloaisp,getApplicationContext());
+        lvdm = findViewById(R.id.listviewdanhmuc);
+    }
 
     private void OnClickMenu() {
         ln_dm.setOnClickListener(new View.OnClickListener() {
@@ -88,4 +116,36 @@ public class DanhmucActivity extends AppCompatActivity {
         });
     }
 
+    private void GetDuLieuLoaiSP() {
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Server.Duongdanloaisp, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+
+                if (response != null){
+
+                    for (int i = 0;i < response.length();i++){
+                        try {
+                            JSONObject jsonObject = response.getJSONObject(i);
+                            id = jsonObject.getInt("id");
+                            tenloaisp = jsonObject.getString("tenloaisp");
+                            hinhanhloaisp = jsonObject.getString("hinhanhloaisp");
+                            mangloaisp.add(new Loaisp(id,tenloaisp,hinhanhloaisp));
+                            loaispAdapter.notifyDataSetChanged();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                CheckConnection.ShowToast_Short(getApplicationContext(),error.toString());
+            }
+        });
+        requestQueue.add(jsonArrayRequest);
+        lvdm.setAdapter(loaispAdapter);
+    }
 }
