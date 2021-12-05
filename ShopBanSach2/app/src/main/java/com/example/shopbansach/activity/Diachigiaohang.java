@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -38,13 +41,10 @@ import java.util.Map;
 public class Diachigiaohang extends AppCompatActivity {
     Button btnthemdc;
     Toolbar toolbardc;
-    TextView txtSoDienThoai, txtDiaChi, txtTenNguoiDung, txtTenDiaChi;
-
     DiaChiAdapter diaChiAdapter;
     ListView listView;
     ArrayList<diachi> diachiArrayList;
-    String  soDienThoai="abc" , tenDiaChi, diaChi ,email ,  tenNguoiDung ="abc";
-    int id;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,17 +52,23 @@ public class Diachigiaohang extends AppCompatActivity {
         setContentView(R.layout.activity_diachigiaohang);
         AnhXa();
         ActionToolbar();
-        BtnThemDc();
         GetData();
+        btnthemdiachi();
+
     }
-    private void GetData() {
+
+
+
+    public void GetData() {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         String duongdan = Server.Duongdanalldiachi;
         StringRequest stringRequest = new StringRequest(Request.Method.POST, duongdan, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                if(response != null && response.length() != 2   ){
-                  //  txtSoDienThoai, txtDiaChi, txtTenNguoiDung, txtTenDiaChi
+                diachiArrayList.clear();
+                String  soDienThoai , tenDiaChi, diaChi ,email ,  tenNguoiDung;
+                int id;
+                if(response != null && response.length() != 2  ){
                     try {
                         JSONArray jsonArray = new JSONArray(response);
                         for (int i = 0;i<jsonArray.length();i++){
@@ -73,7 +79,7 @@ public class Diachigiaohang extends AppCompatActivity {
                             tenDiaChi =   (jsonObject.getString("tenDiaChi"));
                             soDienThoai = (jsonObject.getString("soDienThoaiDc"));
                             tenNguoiDung = (jsonObject.getString("tenNguoiNhan"));
-                            diachiArrayList.add(new diachi(tenDiaChi, diaChi, tenNguoiDung, soDienThoai));
+                            diachiArrayList.add(new diachi(id,tenDiaChi, diaChi, tenNguoiDung, soDienThoai));
                             diaChiAdapter.notifyDataSetChanged();
                         }
                     } catch (JSONException e) {
@@ -99,10 +105,11 @@ public class Diachigiaohang extends AppCompatActivity {
         };
         requestQueue.add(stringRequest);
     }
-    private void BtnThemDc() {
+
+    private void btnthemdiachi(){
         btnthemdc.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view){
                 Intent intent = new Intent(getApplicationContext(),ThemDiaChi.class);
                 startActivity(intent);
             }
@@ -120,16 +127,47 @@ public class Diachigiaohang extends AppCompatActivity {
             }
         });
     }
+    public void deleteAddress(int iddc){
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.DuongdandeleteAdress, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                    if(response.toString().trim().equals("success")){
+                        Toast.makeText(getApplicationContext(), "Xóa địa chỉ thành công", Toast.LENGTH_SHORT).show();
+                        GetData();
+                    }
+                   else if(response.toString().trim().equals("error")){
+                        Toast.makeText(getApplicationContext(), "Xóa địa chỉ thất bại", Toast.LENGTH_SHORT).show();
+
+                    }
+                   else
+                        Toast.makeText(getApplicationContext(), "Xóa k dc", Toast.LENGTH_SHORT).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> paramas = new HashMap<>();
+                paramas.put("email",emailLogin.email);
+                paramas.put("idDiaChi",String.valueOf(iddc));
+                return paramas;
+            }
+        };
+        requestQueue.add(stringRequest);
+
+    }
     private void AnhXa() {
-//        txtSoDienThoai = findViewById(R.id.txtSoDienThoai);
-//        txtDiaChi =findViewById(R.id.txtDiaChi);
-//        txtTenNguoiDung = findViewById(R.id.txtTenNguoiDung);
-//        txtTenDiaChi = findViewById(R.id.txtTenDiaChi);
-        btnthemdc = findViewById(R.id.btnthemdchi);
+        btnthemdc = findViewById(R.id.btnthemdiachi);
         toolbardc = findViewById(R.id.toolbardiachi);
         listView = findViewById(R.id.listViewDiaChi);
         diachiArrayList = new ArrayList<>();
-        diaChiAdapter = new DiaChiAdapter(diachiArrayList,getApplicationContext());
+        diaChiAdapter = new DiaChiAdapter(diachiArrayList,Diachigiaohang.this);
         listView.setAdapter(diaChiAdapter);
     }
 }
