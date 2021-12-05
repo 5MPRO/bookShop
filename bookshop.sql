@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 05, 2021 at 01:46 PM
+-- Generation Time: Dec 05, 2021 at 05:22 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -33,21 +33,22 @@ CREATE TABLE `chitietdonhang` (
   `maSanPham` int(11) NOT NULL,
   `tenSanPham` varchar(10000) COLLATE utf8_unicode_ci NOT NULL,
   `giaSanPham` int(11) NOT NULL,
-  `soLuongSanPham` int(11) NOT NULL
+  `soLuongSanPham` int(11) NOT NULL,
+  `trangThai` varchar(10) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `chitietdonhang`
 --
 
-INSERT INTO `chitietdonhang` (`id`, `maDonHang`, `maSanPham`, `tenSanPham`, `giaSanPham`, `soLuongSanPham`) VALUES
-(1, 15, 2, 'Thám Tử Kindaichi R - Tập 1', 22000, 1),
-(2, 16, 1, 'Pokemon Pippi trọn bộ 14 tập', 1172000, 4),
-(3, 16, 6, 'CHUỘC TỘI', 291000, 3),
-(4, 17, 1, 'Pokemon Pippi trọn bộ 14 tập', 293000, 1),
-(5, 18, 2, 'Thám Tử Kindaichi ', 22000, 1),
-(6, 21, 12, 'Mối tình đầu', 1404000, 6),
-(7, 22, 2, 'Thám Tử Kindaichi ', 22000, 1);
+INSERT INTO `chitietdonhang` (`id`, `maDonHang`, `maSanPham`, `tenSanPham`, `giaSanPham`, `soLuongSanPham`, `trangThai`) VALUES
+(1, 15, 2, 'Thám Tử Kindaichi R - Tập 1', 22000, 1, 'đã giao'),
+(2, 16, 1, 'Pokemon Pippi trọn bộ 14 tập', 1172000, 4, 'đã giao'),
+(3, 16, 6, 'CHUỘC TỘI', 291000, 3, 'đã giao'),
+(4, 20, 1, 'Pokemon Pippi trọn bộ 14 tập', 293000, 1, 'đã giao'),
+(5, 18, 2, 'Thám Tử Kindaichi ', 22000, 1, 'đã giao'),
+(6, 19, 12, 'Mối tình đầu', 1404000, 6, 'đã giao'),
+(7, 22, 2, 'Thám Tử Kindaichi ', 22000, 1, 'đã giao');
 
 -- --------------------------------------------------------
 
@@ -69,8 +70,8 @@ CREATE TABLE `diachigiaohang` (
 --
 
 INSERT INTO `diachigiaohang` (`tenDiaChi`, `diaChi`, `email`, `idDiaChi`, `soDienThoaiDc`, `tenNguoiNhan`) VALUES
-('Văn Phòng', 'Tam anh nam, Núi Thành, Quảng Nam', '2', 11, '84359', 'thien'),
-('Nhà riêng', '02 Thanh Sơn, Hải Châu, Đà Nẵng', '2', 28, 'nhan', 'nhan');
+('Văn Phòng', 'Tam anh nam, Núi Thành, Quảng Nam', 'admin', 11, '84359', 'thien'),
+('Nhà riêng', '02 Thanh Sơn, Hải Châu, Đà Nẵng', 'admin', 28, 'nhan', 'nhan');
 
 -- --------------------------------------------------------
 
@@ -96,9 +97,9 @@ INSERT INTO `donhang` (`id`, `tenKhachHang`, `soDienThoai`, `email`, `diaChi`) V
 (15, '1', 1, '1', ''),
 (16, '1', 1, '1', ''),
 (17, '2', 2, '2', ''),
-(18, 'vanthien.zip', 63, 'fggg', ''),
-(19, 'thiên', 83647, 'Tam Anh Nam', ''),
-(20, 'thiên', 83647, 'Tam Anh Nam', ''),
+(18, 'vanthien.zip', 63, 'admin', ''),
+(19, 'thiên', 83647, 'admin', ''),
+(20, 'thiên', 83647, 'admin', ''),
 (21, 'thiên', 83647, '1', 'Tam Anh Nam'),
 (22, '4', 0, '2', 'f');
 
@@ -271,7 +272,7 @@ ALTER TABLE `chitietdonhang`
 -- AUTO_INCREMENT for table `diachigiaohang`
 --
 ALTER TABLE `diachigiaohang`
-  MODIFY `idDiaChi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `idDiaChi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `donhang`
