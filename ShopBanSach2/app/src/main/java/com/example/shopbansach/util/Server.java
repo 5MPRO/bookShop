@@ -16,7 +16,11 @@ public static String Đuongdandangky = "http://"+localhost+"/LoginBook/register.
 public static String Duongdaninfor = "http://"+localhost+"/BanSach/getinfor.php";
 public static String Duonganundateinfor ="http://"+localhost+"/BanSach/insertinfor.php";
 public static String Duongdanalldiachi ="http://"+localhost+"/BanSach/getAlldiachigiaohang.php";
-        public static String DuongdanItemdiachi ="http://"+localhost+"/BanSach/getItemdiachigiaohang.php";
+public static String DuongdanItemdiachi ="http://"+localhost+"/BanSach/getItemdiachigiaohang.php";
 public static String DuongdanresetPass="http://"+localhost+"/LoginBook/resetPass.php";
+public static String DuongdaninsertAddress="http://"+localhost+"/BanSach/insertAddress.php";
+public static String DuongdandeleteAdress="http://"+localhost+"/BanSach/deleteAdress.php";
+
+
         }
 

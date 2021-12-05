@@ -1,16 +1,28 @@
 package com.example.shopbansach.model;
 
-public class diachi {
+import java.io.Serializable;
+
+public class diachi implements Serializable {
+    private int idDc;
     private String tenDiaChi;
     private String diaChi;
     private String tenNguoiDung;
     private String soDienThoai;
 
-    public diachi(String tenDiaChi, String diaChi, String tenNguoiDung, String soDienThoai) {
+    public diachi(int idDc, String tenDiaChi, String diaChi, String tenNguoiDung, String soDienThoai) {
+        this.idDc = idDc;
         this.tenDiaChi = tenDiaChi;
         this.diaChi = diaChi;
         this.tenNguoiDung = tenNguoiDung;
         this.soDienThoai = soDienThoai;
+    }
+
+    public int getIdDc() {
+        return idDc;
+    }
+
+    public void setIdDc(int idDc) {
+        this.idDc = idDc;
     }
 
     public String getTenDiaChi() {
