@@ -5,6 +5,7 @@
     android:orientation="horizontal"
     android:weightSum="5"
     android:id="@+id/linearLayoutDc"
+    android:background="#F4F4F4"
     >
     <LinearLayout
         android:layout_weight="4"

@@ -20,6 +20,9 @@
             android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.DonHangActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ThemDiaChi"
             android:exported="false" />
         <activity

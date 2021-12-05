@@ -20,4 +20,5 @@ public static String DuongdanItemdiachi ="http://"+localhost+"/BanSach/getItemdi
 public static String DuongdanresetPass="http://"+localhost+"/LoginBook/resetPass.php";
 public static String DuongdaninsertAddress="http://"+localhost+"/BanSach/insertAddress.php";
 public static String DuongdandeleteAdress="http://"+localhost+"/BanSach/deleteAdress.php";
+    public static String DuongdangetDonHang="http://"+localhost+"/BanSach/getdonhang.php";
 }
