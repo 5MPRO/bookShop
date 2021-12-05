@@ -41,7 +41,7 @@ public class TruyenTranhAdapter extends BaseAdapter {
     }
 
     public class ViewHolder{
-        public TextView txttentruyentranh,txtgiatruyentranh,txtmotatruyentranh;
+        public TextView txttentruyentranh, txtgiatruyentranh, txtmotatruyentranh;
         public ImageView imgtruyentranh;
     }
 

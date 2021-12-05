@@ -42,7 +42,7 @@ public class VanHocAdapter extends BaseAdapter {
     }
 
     public class ViewHolder{
-        public TextView txttenvanhoc,txtgiavanhoc,txtmotavanhoc;
+        public TextView txttenvanhoc, txtgiavanhoc, txtmotavanhoc;
         public ImageView imgvanhoc;
     }
 

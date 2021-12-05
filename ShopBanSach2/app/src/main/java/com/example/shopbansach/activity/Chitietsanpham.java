@@ -1,12 +1,8 @@
 package com.example.shopbansach.activity;
 
 import android.content.Intent;
-import android.media.Image;
 
 import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +17,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.shopbansach.R;
-import com.example.shopbansach.model.Giohang;
+import com.example.shopbansach.model.GioHang;
 import com.example.shopbansach.model.Sanpham;
 import com.squareup.picasso.Picasso;
 
@@ -130,13 +126,13 @@ public class Chitietsanpham extends AppCompatActivity {
                     if(exists==false){
                         int soluong = Integer.parseInt(spinner.getSelectedItem().toString());
                         long Giamoi = soluong * GiaChitiet;
-                        MainActivity.manggiohang.add(new Giohang(id,TenChitiet,Giamoi,HinhanhChitiet,soluong));
+                        MainActivity.manggiohang.add(new GioHang(id,TenChitiet,Giamoi,HinhanhChitiet,soluong));
 
                     }
                 }else {
                     int soluong = Integer.parseInt(spinner.getSelectedItem().toString());
                     long Giamoi = soluong * GiaChitiet;
-                    MainActivity.manggiohang.add(new Giohang(id,TenChitiet,Giamoi,HinhanhChitiet,soluong));
+                    MainActivity.manggiohang.add(new GioHang(id,TenChitiet,Giamoi,HinhanhChitiet,soluong));
                 }
                 Intent intent = new Intent(getApplicationContext(), com.example.shopbansach.activity.Giohang.class);
                 startActivity(intent);

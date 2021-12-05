@@ -1,25 +1,66 @@
 package com.example.shopbansach.activity;
 
 import android.content.Intent;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.support.v7.widget.Toolbar;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.shopbansach.R;
+import com.example.shopbansach.adapter.LoaispAdapter;
+import com.example.shopbansach.model.GioHang;
+import com.example.shopbansach.model.Loaisp;
+import com.example.shopbansach.model.Sanpham;
+import com.example.shopbansach.util.CheckConnection;
+import com.example.shopbansach.util.Server;
+import com.squareup.picasso.Picasso;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DanhmucActivity extends AppCompatActivity {
     Toolbar toolbardm;
+    ListView lvdm;
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
+    LoaispAdapter loaispAdapter;
+    ArrayList<Loaisp> mangloaisp;
+    public static ArrayList<GioHang> manggiohang;
+    int id=0;
+    String tenloaisp="";
+    String hinhanhloaisp="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_danhmuc);
         AnhXa();
         OnClickMenu();
+        GetDuLieuLoaiSP();
     }
 
     @Override
@@ -45,7 +86,9 @@ public class DanhmucActivity extends AppCompatActivity {
             ln_tb = findViewById(R.id.ln_tb);
             ln_dm = findViewById(R.id.ln_dm);
             ln_search = findViewById(R.id.ln_search);
-
+            mangloaisp = new ArrayList<>();
+            loaispAdapter = new LoaispAdapter(mangloaisp,getApplicationContext());
+            lvdm = findViewById(R.id.listviewdanhmuc);
         }
 
     private void OnClickMenu() {
@@ -87,4 +130,36 @@ public class DanhmucActivity extends AppCompatActivity {
         });
     }
 
+    private void GetDuLieuLoaiSP() {
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Server.Duongdanloaisp, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+
+                if (response != null){
+
+                    for (int i = 0;i < response.length();i++){
+                        try {
+                            JSONObject jsonObject = response.getJSONObject(i);
+                            id = jsonObject.getInt("id");
+                            tenloaisp = jsonObject.getString("tenloaisp");
+                            hinhanhloaisp = jsonObject.getString("hinhanhloaisp");
+                            mangloaisp.add(new Loaisp(id,tenloaisp,hinhanhloaisp));
+                            loaispAdapter.notifyDataSetChanged();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                CheckConnection.ShowToast_Short(getApplicationContext(),error.toString());
+            }
+        });
+        requestQueue.add(jsonArrayRequest);
+        lvdm.setAdapter(loaispAdapter);
+    }
 }

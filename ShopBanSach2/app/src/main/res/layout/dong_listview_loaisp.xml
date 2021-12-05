@@ -21,7 +21,6 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:src="@mipmap/ic_launcher"
-
                 android:id="@+id/imageviewloaisp"
                 android:scaleType="fitXY"
                 android:layout_width="40dp"

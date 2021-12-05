@@ -15,8 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.shopbansach.R;
+import com.example.shopbansach.activity.Giohang;
 import com.example.shopbansach.activity.MainActivity;
-import com.example.shopbansach.model.Giohang;
+import com.example.shopbansach.model.GioHang;
 
 import com.squareup.picasso.Picasso;
 
@@ -25,10 +26,10 @@ import java.util.ArrayList;
 
 public class GioHangAdapter extends BaseAdapter {
     Context context;
-    ArrayList<Giohang> arraygiohang;
+    ArrayList<GioHang> arraygiohang;
     com.example.shopbansach.activity.Giohang giohangActive;
 
-    public GioHangAdapter(Context context, ArrayList<Giohang> arraygiohang) {
+    public GioHangAdapter(Context context, ArrayList<GioHang> arraygiohang) {
         this.context = context;
         this.arraygiohang = arraygiohang;
     }
@@ -73,7 +74,7 @@ public class GioHangAdapter extends BaseAdapter {
         else {
             viewHolder = (ViewHolder) view.getTag();
         }
-        Giohang gioHang = (Giohang) getItem(i);
+        GioHang gioHang = (GioHang) getItem(i);
         viewHolder.txttengiohang.setText(gioHang.getTensp());
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         viewHolder.txtgiagiohang.setText(decimalFormat.format(gioHang.getGiasp())+" Đ");

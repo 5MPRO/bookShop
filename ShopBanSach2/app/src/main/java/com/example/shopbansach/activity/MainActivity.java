@@ -32,7 +32,7 @@ import com.example.shopbansach.adapter.GioHangAdapter;
 import com.example.shopbansach.adapter.LoaispAdapter;
 import com.example.shopbansach.adapter.SanPhamGgAdapter;
 import com.example.shopbansach.adapter.SanphamAdapter;
-import com.example.shopbansach.model.Giohang;
+import com.example.shopbansach.model.GioHang;
 import com.example.shopbansach.model.Loaisp;
 import com.example.shopbansach.model.Sanpham;
 import com.example.shopbansach.model.emailLogin;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     SanPhamGgAdapter sanphamAdapter1;
     GioHangAdapter gioHangAdapter;
   
-    public static ArrayList<Giohang> manggiohang;
+    public static ArrayList<GioHang> manggiohang;
     int id=0;
     String tenloaisp="";
     String hinhanhloaisp="";

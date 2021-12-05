@@ -1,13 +1,13 @@
 package com.example.shopbansach.model;
 
-public class Giohang {
+public class GioHang {
     public int idsp;
     public String tensp;
     public long giasp;
     public String hinhsp;
     public int soluongsp;
 
-    public Giohang(int idsp, String tensp, long giasp, String hinhsp, int soluongsp) {
+    public GioHang(int idsp, String tensp, long giasp, String hinhsp, int soluongsp) {
         this.idsp = idsp;
         this.tensp = tensp;
         this.giasp = giasp;
