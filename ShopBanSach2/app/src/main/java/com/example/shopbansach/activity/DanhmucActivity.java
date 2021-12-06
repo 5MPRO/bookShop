@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -47,6 +49,7 @@ public class DanhmucActivity extends AppCompatActivity {
         AnhXa();
         OnClickMenu();
         GetDuLieuLoaiSP();
+        setItemListView();
     }
 
     @Override
@@ -148,4 +151,35 @@ public class DanhmucActivity extends AppCompatActivity {
         requestQueue.add(jsonArrayRequest);
         lvdm.setAdapter(loaispAdapter);
     }
+
+    private void setItemListView() {
+        lvdm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i) {
+                    case 0:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent= new Intent(getApplicationContext(),TruyenTranhActivity.class);
+                            intent.putExtra("idloaisanpham",mangloaisp.get(0).getId());
+                            startActivity(intent);
+                        }
+                        else {
+                            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
+                        }
+                        break;
+                    case 1:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent= new Intent(getApplicationContext(),VanHocActivity.class);
+                            intent.putExtra("idloaisanpham",mangloaisp.get(1).getId());
+                            startActivity(intent);
+                        }
+                        else {
+                            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
+                        }
+                        break;
+                }
+            }
+        });
+    }
+
 }
