@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -39,7 +41,6 @@ public class DanhmucActivity extends AppCompatActivity {
     int id=0;
     String tenloaisp="";
     String hinhanhloaisp="";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,8 +48,34 @@ public class DanhmucActivity extends AppCompatActivity {
         AnhXa();
         OnClickMenu();
         GetDuLieuLoaiSP();
+        setListView();
     }
+    public void setListView(){
+        lvdm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 0:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent= new Intent(getApplicationContext(),TruyenTranhActivity.class);
+                            intent.putExtra("idloaisanpham",mangloaisp.get(0).getId());
+                            startActivity(intent);
+                        }
+                        else {
+                            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
+                        }
 
+                        break;
+                    case 1:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent= new Intent(getApplicationContext(),VanHocActivity.class);
+                            intent.putExtra("idloaisanpham",mangloaisp.get(1).getId());
+                            startActivity(intent);
+                        }
+                }
+            }
+        });
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);
