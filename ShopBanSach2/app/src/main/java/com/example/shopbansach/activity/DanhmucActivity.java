@@ -48,34 +48,13 @@ public class DanhmucActivity extends AppCompatActivity {
         AnhXa();
         OnClickMenu();
         GetDuLieuLoaiSP();
-        setListView();
-    }
-    public void setListView(){
-        lvdm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 0:
-                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
-                            Intent intent= new Intent(getApplicationContext(),TruyenTranhActivity.class);
-                            intent.putExtra("idloaisanpham",mangloaisp.get(0).getId());
-                            startActivity(intent);
-                        }
-                        else {
-                            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
-                        }
 
-                        break;
-                    case 1:
-                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
-                            Intent intent= new Intent(getApplicationContext(),VanHocActivity.class);
-                            intent.putExtra("idloaisanpham",mangloaisp.get(1).getId());
-                            startActivity(intent);
-                        }
-                }
-            }
-        });
+
+
+        setItemListView();
+
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);
@@ -175,4 +154,35 @@ public class DanhmucActivity extends AppCompatActivity {
         requestQueue.add(jsonArrayRequest);
         lvdm.setAdapter(loaispAdapter);
     }
+
+    private void setItemListView() {
+        lvdm.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i) {
+                    case 0:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent= new Intent(getApplicationContext(),TruyenTranhActivity.class);
+                            intent.putExtra("idloaisanpham",mangloaisp.get(0).getId());
+                            startActivity(intent);
+                        }
+                        else {
+                            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
+                        }
+                        break;
+                    case 1:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent= new Intent(getApplicationContext(),VanHocActivity.class);
+                            intent.putExtra("idloaisanpham",mangloaisp.get(1).getId());
+                            startActivity(intent);
+                        }
+                        else {
+                            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
+                        }
+                        break;
+                }
+            }
+        });
+    }
+
 }
