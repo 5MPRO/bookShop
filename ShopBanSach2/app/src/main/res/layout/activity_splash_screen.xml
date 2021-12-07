@@ -13,7 +13,7 @@
         android:layout_weight="2"
         android:textColor="#f20"
         android:textStyle="italic|bold"
-        android:fontFamily="serif"
+        android:fontFamily="@font/nabila"
         android:textAlignment="center"
         android:textSize="25sp"
         android:layout_width="match_parent"
