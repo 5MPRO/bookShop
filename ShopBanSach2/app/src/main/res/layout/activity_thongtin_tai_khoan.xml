@@ -14,7 +14,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbartttk"
             android:fontFamily="@font/cucho"
-            app:titleTextColor="#FF00FF"
+            app:titleTextColor="@color/white"
             app:title="Thông tin tài khoản"
             android:background="@color/color_menu"
             android:layout_width="match_parent"

@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbardmm"
         android:fontFamily="@font/cucho"
-        app:titleTextColor="#FF00FF"
+        app:titleTextColor="@color/white"
         app:title="Đổi mật khẩu"
         android:background="@color/color_menu"
         android:layout_width="match_parent"

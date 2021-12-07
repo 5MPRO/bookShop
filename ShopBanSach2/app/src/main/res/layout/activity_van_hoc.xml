@@ -19,7 +19,7 @@
             app:title="Văn học"
             android:background="@color/color_menu"
             android:fontFamily="@font/cucho"
-            app:titleTextColor="#FF00FF"
+            app:titleTextColor="@color/white"
             android:id="@+id/toolbarvanhoc"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">

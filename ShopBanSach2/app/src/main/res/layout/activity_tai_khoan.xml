@@ -20,7 +20,7 @@
             android:id="@+id/toolbartaikhoan"
             app:title="Tài khoản"
             android:fontFamily="@font/cucho"
-            app:titleTextColor="#FF00FF"
+            app:titleTextColor="@color/white"
             android:background="@color/color_menu"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">

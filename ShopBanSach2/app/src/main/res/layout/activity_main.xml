@@ -30,7 +30,7 @@
                     <androidx.appcompat.widget.Toolbar
                         android:id="@+id/toolbarmanhinhchinh"
                         android:fontFamily="@font/cucho"
-                        app:titleTextColor="#FF00FF"
+                        app:titleTextColor="@color/white"
                         app:title="Trang chủ"
                         android:background="@color/color_menu"
                         android:layout_width="match_parent"

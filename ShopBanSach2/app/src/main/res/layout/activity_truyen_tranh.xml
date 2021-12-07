@@ -18,7 +18,7 @@
             app:title="Truyện tranh"
             android:background="@color/color_menu"
             android:fontFamily="@font/cucho"
-            app:titleTextColor="#FF00FF"
+            app:titleTextColor="@color/white"
             android:id="@+id/toolbartruyentranh"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
