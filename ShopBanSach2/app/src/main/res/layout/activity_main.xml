@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity"
-    android:background="@color/bookAppBold"
+    android:background="@color/bookApp"
     android:orientation="vertical">
 
     <LinearLayout
@@ -24,15 +24,15 @@
                 android:layout_height="match_parent"
                 android:fillViewport="true">
                 <LinearLayout
-                    android:background="@color/bookAppBold"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <androidx.appcompat.widget.Toolbar
                         android:id="@+id/toolbarmanhinhchinh"
-                        app:titleTextColor="@color/bookAppBold"
+                        android:fontFamily="@font/cucho"
+                        app:titleTextColor="@color/white"
                         app:title="Trang chủ"
-                        android:background="@color/pirimary"
+                        android:background="@color/color_menu"
                         android:layout_width="match_parent"
                         android:layout_height="?attr/actionBarSize"/>
                     <ViewFlipper
@@ -51,7 +51,6 @@
                         app:cardCornerRadius="30dp"
                         android:backgroundTint="@color/bookAppBold"
                         >
-
                         <LinearLayout
                             android:outlineAmbientShadowColor="@color/black"
                             android:outlineSpotShadowColor="@color/black"
@@ -62,7 +61,9 @@
                             android:layout_marginBottom="10dp"
                             >
                             <TextView
+                                android:fontFamily="@font/serif"
                                 android:padding="5dp"
+                                android:textSize="13sp"
                                 android:textStyle="bold"
                                 android:textColor="#C259D5"
                                 android:text="CHÍNH SÁCH KHÁCH HÀNG TẠI NEW SHOP"
@@ -90,9 +91,11 @@
                                         android:src="@drawable/ic_car" />
 
                                     <TextView
+                                        android:fontFamily="@font/serif"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
                                         android:gravity="center"
+                                        android:textColor="#FF8C00"
                                         android:text="Free Shipping trên 250.000đ"
                                         android:textSize="10sp" />
                                 </LinearLayout>
@@ -111,6 +114,8 @@
                                         android:src="@drawable/iconhc" />
 
                                     <TextView
+                                        android:textColor="#FF8C00"
+                                        android:fontFamily="@font/serif"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
                                         android:gravity="center"
@@ -132,6 +137,8 @@
                                         android:src="@drawable/icon_money" />
 
                                     <TextView
+                                        android:textColor="#FF8C00"
+                                        android:fontFamily="@font/serif"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
                                         android:gravity="center"
@@ -145,14 +152,14 @@
                                     android:layout_margin="2dp"
                                     android:gravity="center"
                                     android:orientation="vertical">
-
                                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="@color/white"
                                         android:src="@drawable/ic_doitra" />
-
                                     <TextView
+                                        android:textColor="#FF8C00"
+                                        android:fontFamily="@font/serif"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
                                         android:gravity="center"
@@ -163,21 +170,21 @@
                         </LinearLayout>
                     </androidx.appcompat.widget.Toolbar>
                     <LinearLayout
-                        android:background="@color/bookAppBold"
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
                         <LinearLayout
-                            android:background="@color/bookAppBold"
+
                             android:orientation="vertical"
                             android:layout_marginTop="10dp"
                             android:paddingBottom="10dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
                             <TextView
+                                android:fontFamily="@font/serif"
                                 android:padding="5dp"
                                 android:textColor="#f20"
-                                android:textSize="20sp"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:text="Siêu khuyến mãi"
                                 android:layout_width="match_parent"
@@ -190,36 +197,35 @@
                             </androidx.recyclerview.widget.RecyclerView>
                         </LinearLayout>
                         <LinearLayout
-                            android:background="@color/bookAppBold"
+                            android:layout_marginTop="10dp"
                             android:orientation="vertical"
                             android:layout_width="match_parent"
-                            android:layout_height="560dp">
+                            android:layout_height="970dp">
                             <TextView
+                                android:fontFamily="@font/serif"
                                 android:padding="5dp"
                                 android:textColor="#f20"
-                                android:textSize="20sp"
+                                android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:text="Bán chạy"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"/>
-
                             <androidx.recyclerview.widget.RecyclerView
-
                                 android:id="@+id/recyclersanphammoinhat"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:nestedScrollingEnabled="false" />
+                                android:layout_height="match_parent">
+                            </androidx.recyclerview.widget.RecyclerView>
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:background="@color/white"
                         android:padding="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
                         <TextView
-                            android:textColor="@color/textcolor"
-                            android:textSize="16sp"
+                            android:fontFamily="@font/serif"
+                            android:textColor="#FF8C00"
+                            android:textSize="13sp"
                             android:text="Mọi chi tiết xin liên hệ"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -241,14 +247,16 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content">
                                 <TextView
-                                    android:textSize="16sp"
+                                    android:fontFamily="@font/serif"
+                                    android:textSize="13sp"
                                     android:textColor="@color/white"
                                     android:text="0961640909"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
                                 <TextView
+                                    android:fontFamily="@font/serif"
                                     android:textAlignment="center"
-                                    android:textSize="14sp"
+                                    android:textSize="13sp"
                                     android:textColor="@color/white"
                                     android:text="Hotline mua hàng online"
                                     android:layout_width="match_parent"
@@ -265,14 +273,16 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content">
                                 <TextView
-                                    android:textSize="16sp"
+                                    android:fontFamily="@font/serif"
+                                    android:textSize="13sp"
                                     android:textColor="@color/white"
                                     android:text="0362399217"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
                                 <TextView
+                                    android:fontFamily="@font/serif"
                                     android:textAlignment="center"
-                                    android:textSize="14sp"
+                                    android:textSize="13sp"
                                     android:textColor="@color/white"
                                     android:text="Hotline mua hàng online"
                                     android:layout_width="match_parent"
@@ -280,24 +290,27 @@
                             </LinearLayout>
                         </LinearLayout>
                         <TextView
+                            android:fontFamily="@font/serif"
                             android:textAlignment="center"
-                            android:textColor="@color/textcolor"
-                            android:textSize="16sp"
+                            android:textColor="#FF8C00"
+                            android:textSize="12sp"
                             android:text="Thời gian làm việc từ 8:00 đến 20:00"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
                         <TextView
+                            android:fontFamily="@font/serif"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:textColor="@color/textcolor"
-                            android:textSize="16sp"
+                            android:textColor="#FF8C00"
+                            android:textSize="12sp"
                             android:text="BOOKSHOP.VN - KÊNH MUA SẮM TRỰC TUYẾN"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <TextView
+                            android:fontFamily="@font/serif"
                             android:layout_marginTop="10dp"
-                            android:textColor="@color/textcolor"
-                            android:textSize="16sp"
+                            android:textColor="#FF8C00"
+                            android:textSize="12sp"
                             android:text="Địa chỉ giao dịch tại: 02 Thanh Sơn - Hải Châu - Đà Nẵng"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -334,6 +347,7 @@
             android:paddingTop="4dp"
             android:paddingBottom="4dp"
             android:layout_gravity="end"
+            android:backgroundTint="@color/color_menu1"
             >
 
             <LinearLayout
@@ -343,13 +357,11 @@
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:tint="@color/pirimary"
-                    android:src="@drawable/home_menu_activity" />
-
+                    android:src="@drawable/home_menu_activity"
+                    app:tint="@color/pirimary" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -357,7 +369,6 @@
                     android:textColor="@color/color_lightblue"
                     android:textSize="10sp" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/ln_dm"
                 android:layout_width="0dp"
@@ -365,14 +376,12 @@
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/list_menu_activity"
-                    android:tint="@color/textcolor" />
-
+                    app:tint="@color/textcolor" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -380,7 +389,6 @@
                     android:textColor="@color/textcolor"
                     android:textSize="10sp" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/ln_search"
                 android:layout_width="0dp"
@@ -388,13 +396,11 @@
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/search_menu_activity"
-                    android:tint="@color/textcolor" />
-
+                    app:tint="@color/textcolor" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -402,22 +408,18 @@
                     android:textColor="@color/textcolor"
                     android:textSize="10sp" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/ln_tb"
-
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/bell_menu_activity"
-                    android:tint="@color/textcolor" />
-
+                    app:tint="@color/textcolor" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -425,7 +427,6 @@
                     android:textColor="@color/textcolor"
                     android:textSize="10sp" />
             </LinearLayout>
-
             <LinearLayout
                 android:id="@+id/ln_tk"
                 android:layout_width="0dp"
@@ -433,13 +434,11 @@
                 android:layout_weight="1"
                 android:gravity="center|top"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/ic_baseline_person_24"
-                    android:tint="@color/textcolor" />
-
+                    app:tint="@color/textcolor" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -448,8 +447,6 @@
                     android:textSize="10sp" />
             </LinearLayout>
         </LinearLayout>
-
-
     </LinearLayout>
 
 </LinearLayout>

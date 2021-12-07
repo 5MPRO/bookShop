@@ -2,7 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/menugiohang"
-        android:icon="@drawable/ic_baseline_add_shopping_cart_24"
+        android:icon="@drawable/shoppingcart"
+        android:iconTint="#FF00FF"
         android:title="Giỏ hàng"
         app:showAsAction="always"/>
 </menu>

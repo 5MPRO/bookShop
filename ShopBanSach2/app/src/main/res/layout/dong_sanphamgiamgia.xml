@@ -8,15 +8,14 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
-
         android:id="@+id/cardviewsanphammoinhat"
         app:cardCornerRadius="7dp"
         android:elevation="30dp"
         android:layout_margin="5dp"
-
         android:layout_width="150dp"
         android:layout_height="210dp" >
         <RelativeLayout
+            android:backgroundTint="#FFD58C"
             android:background="@drawable/border_sanphamgiamgia"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -34,12 +33,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="160dp"
                     android:layout_margin="4dp"
-                    android:scaleType="fitXY"/>
+                    android:scaleType="fitXY" />
 
                 <TextView
                     android:id="@+id/textviewtensanpham"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/serif"
                     android:gravity="center"
                     android:text="Tên sản phẩm"
                     android:textColor="@color/black"
@@ -49,21 +49,18 @@
                     android:id="@+id/textviewgiasanpham"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/serif"
                     android:gravity="center"
                     android:text="Giá sản phẩm"
                     android:textColor="#f20"
-                    android:textSize="11sp" />
-
-
+                    android:textSize="12sp" />
             </LinearLayout>
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="15dp"
                 android:layout_above="@+id/imageviewsanpham"
-
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
-
                 android:src="@drawable/sale"
                 tools:ignore="NotSibling"
                 />

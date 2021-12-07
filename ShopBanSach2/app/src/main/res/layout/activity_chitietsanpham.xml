@@ -16,6 +16,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarchitietsanpham"
             android:background="@color/color_menu"
+            android:fontFamily="@font/cucho"
             app:titleTextColor="@color/white"
             app:title="Chi tiết sản phẩm"
             android:layout_width="match_parent"
@@ -44,12 +45,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="@font/serif"
                     android:text="Tên sản phẩm"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:fontFamily="@font/serif"
                     android:id="@+id/textviewgiachitietsanpham"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -69,7 +72,7 @@
                     android:textAlignment="center" />
 
                 <Button
-
+                    android:fontFamily="@font/cucho"
                     android:id="@+id/buttondatmuachitietsp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -90,19 +93,17 @@
             android:orientation="vertical">
 
             <TextView
+                android:fontFamily="@font/serif"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:text="Đọc thử"
                 android:textColor="#f20"
-                android:textSize="20sp"
-                android:textStyle="italic" />
-
+                android:textSize="20sp"/>
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <TextView
                     android:id="@+id/textviewmotachitietsp"
                     android:layout_width="wrap_content"
@@ -110,7 +111,8 @@
                     android:layout_marginTop="1dp"
                     android:padding="10dp"
                     android:textAlignment="viewStart"
-                    android:textSize="20sp" />
+                    android:fontFamily="@font/serif"
+                    android:textSize="16sp" />
             </ScrollView>
         </LinearLayout>
     </LinearLayout>
@@ -124,6 +126,7 @@
         android:weightSum="5"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
+        android:backgroundTint="@color/color_menu1"
         android:layout_gravity="end"
         >
 
@@ -134,12 +137,11 @@
             android:layout_weight="1"
             android:gravity="center|top"
             android:orientation="vertical">
-
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:tint="@color/pirimary"
-                android:src="@drawable/home_menu_activity" />
+                android:src="@drawable/home_menu_activity"
+                app:tint="@color/pirimary" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -162,7 +164,7 @@
                 android:layout_height="30dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/list_menu_activity"
-                android:tint="@color/textcolor" />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -184,7 +186,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/search_menu_activity"
-                android:tint="@color/textcolor" />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -207,7 +209,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/bell_menu_activity"
-                android:tint="@color/textcolor" />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -229,7 +231,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ic_baseline_person_24"
-                android:tint="@color/textcolor" />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"
