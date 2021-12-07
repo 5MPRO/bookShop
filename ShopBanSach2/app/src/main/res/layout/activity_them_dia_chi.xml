@@ -22,7 +22,7 @@
             android:background="@color/color_menu"
             app:title="Địa chỉ giao hàng"
             android:fontFamily="@font/cucho"
-            app:titleTextColor="#FF00FF"/>
+            app:titleTextColor="@color/white"/>
 
         <EditText
             android:fontFamily="@font/serif"

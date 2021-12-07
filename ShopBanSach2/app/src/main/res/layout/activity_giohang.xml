@@ -11,7 +11,7 @@
     >
     <androidx.appcompat.widget.Toolbar
         android:fontFamily="@font/cucho"
-        app:titleTextColor="#FF00FF"
+        app:titleTextColor="@color/white"
         android:background="#005EFF"
         app:title="Giỏ hàng"
         android:backgroundTint="@color/color_menu"
