@@ -119,6 +119,7 @@ public class Diachigiaohang extends AppCompatActivity {
             GetData();
         }
         else
+            GetData();
            // Toast.makeText(getApplicationContext(), "kkkkk", Toast.LENGTH_SHORT).show();
         super.onActivityResult(requestCode, resultCode, data);
     }

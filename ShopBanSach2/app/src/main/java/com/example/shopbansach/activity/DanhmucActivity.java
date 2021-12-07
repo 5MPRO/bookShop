@@ -40,7 +40,6 @@ public class DanhmucActivity extends AppCompatActivity {
     int id=0;
     String tenloaisp="";
     String hinhanhloaisp="";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +47,11 @@ public class DanhmucActivity extends AppCompatActivity {
         AnhXa();
         OnClickMenu();
         GetDuLieuLoaiSP();
+
+
+
         setItemListView();
+
         ActionToolbar();
     }
 
@@ -62,6 +65,7 @@ public class DanhmucActivity extends AppCompatActivity {
                 finish();
             }
         });
+
     }
 
     @Override
