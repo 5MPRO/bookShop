@@ -1,17 +1,11 @@
 -- phpMyAdmin SQL Dump
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
-<<<<<<< HEAD
-<<<<<<< HEAD
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 27, 2021 lúc 10:09 AM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.0.13
-=======
->>>>>>> register
-=======
->>>>>>> f70bb103e253c0905c8b87aa52b11f196797ba2f
+-- Host: 127.0.0.1
+-- Generation Time: Dec 04, 2021 at 01:44 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -50,7 +44,8 @@ INSERT INTO `chitietdonhang` (`id`, `maDonHang`, `maSanPham`, `tenSanPham`, `gia
 (1, 15, 2, 'Thám Tử Kindaichi R - Tập 1', 22000, 1),
 (2, 16, 1, 'Pokemon Pippi trọn bộ 14 tập', 1172000, 4),
 (3, 16, 6, 'CHUỘC TỘI', 291000, 3),
-(4, 17, 1, 'Pokemon Pippi trọn bộ 14 tập', 293000, 1);
+(4, 17, 1, 'Pokemon Pippi trọn bộ 14 tập', 293000, 1),
+(5, 18, 2, 'Thám Tử Kindaichi ', 22000, 1);
 
 -- --------------------------------------------------------
 
@@ -74,7 +69,8 @@ INSERT INTO `donhang` (`id`, `tenKhachHang`, `soDienThoai`, `email`) VALUES
 (14, 'Pvthien', 1544, 'djsadsa'),
 (15, '1', 1, '1'),
 (16, '1', 1, '1'),
-(17, '2', 2, '2');
+(17, '2', 2, '2'),
+(18, 'vanthien.zip', 63, 'fggg');
 
 -- --------------------------------------------------------
 
@@ -180,13 +176,13 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `soDienThoai`, `diaChi`, `ngaySinh`) VALUES
 (1, 'bui van sy', 'bvsy@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/10/2001'),
-(2, 'thiên', 'vanthien.zip', '1', 83647, 'Tam Anh Nam', '27/20/2001'),
+(2, 'thiên', '1', '1', 83647, 'Tam Anh Nam', '27/20/2001'),
 (3, 'thanhnhan', 'bvsy1@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
 (4, 'Bui Van Sy', 'bvsy@mail.co', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
 (5, 'Pham Van Thien', 'pvthien@gmail.cm', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
 (6, 'Pham Van Thien', 'pvthien@gmail.cm', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
 (7, 'Pham Van Thien', 'pvthien@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-(8, 'Nguyễn Quang Huy', 'vanthien.zip@gmail.com', '66', 394921219, 'Tam Anh Nam', '27/20/2001');
+(8, 'Nguyễn Quang Huy', 'vanthien.zip@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001');
 
 --
 -- Indexes for dumped tables
@@ -236,13 +232,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `donhang`
 --
 ALTER TABLE `donhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `loaisanpham`
