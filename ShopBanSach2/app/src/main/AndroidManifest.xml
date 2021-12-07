@@ -15,7 +15,7 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@drawable/icon_book_app_primary"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ShopBanSach">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
         <activity
             android:name=".activity.MainActivity"
             android:exported="false" />
