@@ -94,6 +94,7 @@ public class DiaChiAdapter extends BaseAdapter {
                 intent.putExtra("DIACHI",dc);
                 context.setResult(RESULT_OK,intent);
                 context.finish();
+
             }
         });
         return view;

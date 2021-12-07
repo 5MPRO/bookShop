@@ -122,7 +122,7 @@ public class TaiKhoanActivity extends AppCompatActivity {
         btndonhang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),Giohang.class);
+                Intent intent = new Intent(getApplicationContext(),DonHangActivity.class);
                 startActivity(intent);
 
             }
