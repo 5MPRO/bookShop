@@ -9,7 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <!--<color name="color_menu">#455EB6</color>-->
     <color name="color_menu">#FDB45A</color>
-    <color name="color_menu1">#FDB45A</color>
+
+    <color name="color_menu1">#ffff</color>
     <color name="color_lightblue">#455EB6</color>
     <color name="textcolor">#666</color>
     <color name="colorPrimary">#7b4bff</color>
@@ -26,7 +27,7 @@
     <!--<color name="pirimary">#3F51B5</color>
     <color name="bookApp" >#F8F3D1</color>
     <color name="bookAppBold" >#EDE8C0</color>  -->
-    <color name="pirimary">#4f2de4</color>
+    <color name="pirimary">#FDB45A</color>
     <color name="bookApp" >#FFFFFF</color>
     <color name="bookAppBold" >#f2f2f2</color>
 

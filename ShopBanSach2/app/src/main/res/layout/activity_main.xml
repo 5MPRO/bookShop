@@ -347,7 +347,7 @@
             android:paddingTop="4dp"
             android:paddingBottom="4dp"
             android:layout_gravity="end"
-            android:backgroundTint="@color/color_menu1"
+            android:backgroundTint="@color/white"
             >
 
             <LinearLayout
@@ -366,7 +366,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Trang chủ"
-                    android:textColor="@color/color_lightblue"
+                    android:textColor="@color/pirimary"
                     android:textSize="10sp" />
             </LinearLayout>
             <LinearLayout

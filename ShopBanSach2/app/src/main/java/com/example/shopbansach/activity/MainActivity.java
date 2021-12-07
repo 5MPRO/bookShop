@@ -338,11 +338,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void ActionViewFlipper() {
         ArrayList<String> mangquangcao = new ArrayList<>();
-        mangquangcao.add("https://bvhttdl.mediacdn.vn/291773308735864832/2021/3/16/photo-1-1615870720601745881145-1615882898863-16158828989761108660908-1615883538504-1615883539327865048813.jpg");
-        mangquangcao.add("https://nhanlucnhatban.com/wp-content/uploads/2020/01/the-gioi-manga-nhat.jpg");
-        mangquangcao.add("https://bloganchoi.com/wp-content/uploads/2021/07/truyen-tranh-dam-my-sung.jpg");
-        mangquangcao.add("https://cdn.popsww.com/blog/sites/2/2021/04/top-truyen-dam-my-xuyen-khong-da-hoan-thanh.jpg");
-        mangquangcao.add("https://i.ytimg.com/vi/iMquWDyY_jE/maxresdefault.jpg");
+        mangquangcao.add("https://chiasemoi.com/wp-content/uploads/2017/12/nhung-trich-dan-hay-trong-sach-nha-gia-kim.jpg");
+        mangquangcao.add("https://hoctruongdoi.com/wp-content/uploads/2017/11/khi-ng%C6%B0%E1%BB%9Di-ta-b%C3%A1n-tu%E1%BB%95i-tr%E1%BA%BB-v%E1%BB%9Bi-gi%C3%A1-kh%C3%A1-r%E1%BA%BB-1-500x280.png");
+        mangquangcao.add("http://file.hstatic.net/1000362347/article/damuocmow_ab793883a21f4aacb7b748a405dcdbb2_1024x1024.jpg");
+        mangquangcao.add("https://nguontinhyeu.com/wp-content/uploads/2015/10/con-nguoi-tu-dau-den1.jpg");
+        mangquangcao.add("https://tusachtinhhoa.vn/wp-content/uploads/2020/10/ben-rang-tuyet-son-1.png");
         for(int i =0; i<mangquangcao.size();i++){
             ImageView imageView = new ImageView(getApplicationContext());
             Picasso.get().load(mangquangcao.get(i)).into(imageView);

@@ -79,8 +79,6 @@ public class ThemDiaChi extends AppCompatActivity {
                     intent.putExtra("DIACHI",";;;;");
                     setResult(RESULT_OK,intent);
                     finish();
-                    //Intent intent = new Intent();
-                   // startActivity(new Intent(getApplicationContext(),Diachigiaohang.class));
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "Xảy ra lỗi chèn!", Toast.LENGTH_SHORT).show();
