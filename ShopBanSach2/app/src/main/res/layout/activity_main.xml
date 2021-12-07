@@ -224,7 +224,7 @@
                         android:orientation="vertical">
                         <TextView
                             android:fontFamily="@font/serif"
-                            android:textColor="@color/textcolor"
+                            android:textColor="#FF8C00"
                             android:textSize="13sp"
                             android:text="Mọi chi tiết xin liên hệ"
                             android:layout_width="wrap_content"
@@ -292,7 +292,7 @@
                         <TextView
                             android:fontFamily="@font/serif"
                             android:textAlignment="center"
-                            android:textColor="@color/textcolor"
+                            android:textColor="#FF8C00"
                             android:textSize="12sp"
                             android:text="Thời gian làm việc từ 8:00 đến 20:00"
                             android:layout_width="match_parent"
@@ -301,7 +301,7 @@
                             android:fontFamily="@font/serif"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:textColor="@color/textcolor"
+                            android:textColor="#FF8C00"
                             android:textSize="12sp"
                             android:text="BOOKSHOP.VN - KÊNH MUA SẮM TRỰC TUYẾN"
                             android:layout_width="wrap_content"
@@ -309,7 +309,7 @@
                         <TextView
                             android:fontFamily="@font/serif"
                             android:layout_marginTop="10dp"
-                            android:textColor="@color/textcolor"
+                            android:textColor="#FF8C00"
                             android:textSize="12sp"
                             android:text="Địa chỉ giao dịch tại: 02 Thanh Sơn - Hải Châu - Đà Nẵng"
                             android:layout_width="wrap_content"

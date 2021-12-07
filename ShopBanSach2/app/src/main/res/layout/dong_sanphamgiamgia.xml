@@ -15,7 +15,7 @@
         android:layout_width="150dp"
         android:layout_height="210dp" >
         <RelativeLayout
-            android:backgroundTint="#FFE4B5"
+            android:backgroundTint="#FFD58C"
             android:background="@drawable/border_sanphamgiamgia"
             android:layout_width="match_parent"
             android:layout_height="match_parent">

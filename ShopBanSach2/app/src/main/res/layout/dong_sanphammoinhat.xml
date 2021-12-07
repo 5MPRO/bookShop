@@ -19,7 +19,7 @@
             android:paddingTop="4dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:backgroundTint="#FFE4B5"
+            android:backgroundTint="#FFD58C"
             android:background="@drawable/border_sanphamgiamgia">
             <LinearLayout
                 android:layout_width="match_parent"

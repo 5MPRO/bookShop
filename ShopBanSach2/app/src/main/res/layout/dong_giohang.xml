@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:weightSum="10"
-    android:background="#FFE4B5">
+    android:background="#FFD58C">
     <LinearLayout
         android:gravity="center"
         android:layout_margin="5dp"
