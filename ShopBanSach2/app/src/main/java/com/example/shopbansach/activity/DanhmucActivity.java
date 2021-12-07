@@ -37,7 +37,6 @@ public class DanhmucActivity extends AppCompatActivity {
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     LoaispAdapter loaispAdapter;
     ArrayList<Loaisp> mangloaisp;
-    public static ArrayList<Giohang> manggiohang;
     int id=0;
     String tenloaisp="";
     String hinhanhloaisp="";
