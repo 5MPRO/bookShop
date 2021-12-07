@@ -1,9 +1,12 @@
 package com.example.shopbansach.util;
 
 public class Server{
-
 public static String localhost="192.168.1.109";
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 0b7ac904c069bb117b66159803a22be9c00b86e9
     public static String Duongdanloaisp = "http://" + localhost + "/BanSach/BanSach/getloaisanpham.php";
     public static String Duongdanallsp = "http://" + localhost + "/BanSach/BanSach/getallsanpham.php";
     public static String Duongdansanphammoinhat = "http://" + localhost + "/BanSach/BanSach/getsanphammoinhat.php";
