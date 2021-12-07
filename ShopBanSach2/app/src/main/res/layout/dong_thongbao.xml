@@ -5,11 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.cardview.widget.CardView
         app:cardCornerRadius="4dp"
-        android:background="#D6D3BD"
+        android:background="#FFE4B5"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:background="@color/bookAppBold"
+            android:background="#FFE4B5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -30,11 +30,13 @@
                     android:id="@+id/textviewthongbao"
                     android:textColor="@color/colorPrimary"
                     android:text="Tên thông báo"
-                    android:textSize="15sp"
+                    android:fontFamily="@font/serif"
+                    android:textSize="16sp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
-                    android:textSize="15sp"
+                    android:fontFamily="@font/serif"
+                    android:textSize="16sp"
                     android:layout_margin="5dp"
                     android:text="Mô tả"
                     android:id="@+id/textviewmotatb"

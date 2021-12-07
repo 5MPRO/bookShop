@@ -6,7 +6,8 @@
     android:orientation="vertical">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbardmm"
-        app:titleTextColor="@color/white"
+        android:fontFamily="@font/cucho"
+        app:titleTextColor="#FF00FF"
         app:title="Đơn hàng của tôi"
         android:background="@color/color_menu"
         android:layout_width="match_parent"

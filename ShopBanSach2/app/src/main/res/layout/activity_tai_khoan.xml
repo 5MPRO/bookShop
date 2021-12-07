@@ -19,7 +19,8 @@
             android:gravity="center_horizontal"
             android:id="@+id/toolbartaikhoan"
             app:title="Tài khoản"
-            app:titleTextColor="@color/white"
+            android:fontFamily="@font/cucho"
+            app:titleTextColor="#FF00FF"
             android:background="@color/color_menu"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
@@ -52,12 +53,15 @@
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
                     <TextView
+                        android:textColor="#f20"
+                        android:fontFamily="@font/serif"
                         android:id="@+id/textviewtenkh"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nguyễn Văn An"
                         android:textSize="20sp" />
                     <TextView
+                        android:fontFamily="@font/serif"
                         android:id="@+id/textviewemailkh"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -67,6 +71,9 @@
             </LinearLayout>
 
             <Button
+                android:drawableTint="#f20"
+                android:backgroundTint="@color/color_menu"
+                android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/btnthongtintk"
@@ -80,9 +87,12 @@
                 android:paddingLeft="20dp"
                 android:text="Thông tin tài khoản"
                 android:textAllCaps="false"
-                android:textColor="@color/textcolor" />
+                android:textColor="#f20" />
 
             <Button
+                android:drawableTint="#f20"
+                android:backgroundTint="@color/color_menu"
+                android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/btndonhangcuatoi"
@@ -96,9 +106,12 @@
                 android:paddingLeft="20dp"
                 android:text="Đơn hàng của tôi"
                 android:textAllCaps="false"
-                android:textColor="@color/textcolor" />
+                android:textColor="#f20" />
 
             <Button
+                android:drawableTint="#f20"
+                android:backgroundTint="@color/color_menu"
+                android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:id="@+id/btndoimatkhau"
@@ -112,9 +125,12 @@
                 android:paddingLeft="20dp"
                 android:text="Đổi mật khẩu"
                 android:textAllCaps="false"
-                android:textColor="@color/textcolor" />
+                android:textColor="#f20"/>
 
             <Button
+                android:drawableTint="#f20"
+                android:backgroundTint="@color/color_menu"
+                android:fontFamily="@font/serif"
                 android:id="@+id/btndiachigh"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
@@ -128,9 +144,12 @@
                 android:paddingLeft="20dp"
                 android:text="Địa chỉ giao hàng"
                 android:textAllCaps="false"
-                android:textColor="@color/textcolor" />
+                android:textColor="#f20" />
 
             <Button
+                android:drawableTint="#f20"
+                android:backgroundTint="@color/color_menu"
+                android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
@@ -143,7 +162,7 @@
                 android:paddingLeft="20dp"
                 android:text="Hỗ trợ"
                 android:textAllCaps="false"
-                android:textColor="@color/textcolor" />
+                android:textColor="#f20" />
 
             <Button
                 android:id="@+id/buttonDangXuat"
@@ -153,10 +172,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="30dp"
                 android:background="@drawable/boder_ttkh"
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/color_menu"
+                android:fontFamily="@font/cucho"
                 android:text="Đăng xuất"
-                android:textColor="@color/white" />
+                android:textColor="#f20" />
             <TextView
+                android:fontFamily="@font/serif"
                 android:layout_gravity="center"
                 android:text="Phiên bản 1.20 (20)"
                 android:layout_width="wrap_content"
@@ -169,6 +190,7 @@
         android:layout_weight="1"
         android:gravity="center_vertical"
         android:background="@color/bookAppBold"
+        android:backgroundTint="@color/color_menu1"
         android:orientation="horizontal"
         android:weightSum="5"
         android:paddingTop="4dp"
@@ -185,8 +207,8 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:tint="@color/textcolor"
-                android:src="@drawable/home_menu_activity" />
+                android:src="@drawable/home_menu_activity"
+                app:tint="@color/textcolor" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -208,7 +230,7 @@
                 android:layout_height="30dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/list_menu_activity"
-                android:tint="@color/textcolor" />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -230,7 +252,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/search_menu_activity"
-                android:tint="@color/textcolor" />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -253,7 +275,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/bell_menu_activity"
-                android:tint="@color/textcolor" />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -275,7 +297,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ic_baseline_person_24"
-                android:tint="@color/pirimary" />
+                app:tint="@color/pirimary" />
 
             <TextView
                 android:layout_width="wrap_content"

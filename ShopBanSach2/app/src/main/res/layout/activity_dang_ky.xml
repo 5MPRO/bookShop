@@ -8,7 +8,8 @@
     android:orientation="vertical">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbardangky"
-        app:titleTextColor="@color/white"
+        android:fontFamily="@font/cucho"
+        app:titleTextColor="#FF00FF"
         app:title="Đăng ký"
         android:background="@color/color_menu"
         android:layout_width="match_parent"
@@ -106,7 +107,7 @@
                 android:layout_gravity="end"
                 android:text="Đăng nhập ngay"
                 android:textSize="16sp"
-                android:textColor="@color/black"
+                android:textColor="#f20"
                 android:onClick="login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
@@ -147,7 +148,6 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:fontFamily="@font/cucho"
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -155,10 +155,12 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/boder_btn_dangnhap"
+        android:backgroundTint="#00FF00"
+        android:textSize="18sp"
+        android:textColor="#f20"
+        android:fontFamily="@font/cucho"
         android:onClick="save"
         android:padding="15dp"
-        android:text="Đăng ký"
-        android:textColor="@color/white"
-        android:textSize="15sp" />
+        android:text="Đăng ký" />
 
 </LinearLayout>
