@@ -16,7 +16,8 @@
         <androidx.appcompat.widget.Toolbar
             app:title="Thông báo"
             android:background="@color/color_menu"
-            app:titleTextColor="@color/white"
+            android:fontFamily="@font/cucho"
+            app:titleTextColor="#FF00FF"
             android:id="@+id/toolbarthongbao"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
@@ -160,6 +161,7 @@
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
         android:layout_gravity="end"
+        android:backgroundTint="@color/color_menu1"
         >
 
         <LinearLayout
@@ -174,8 +176,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/home_menu_activity"
-                android:tint="@color/textcolor"
-                />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -198,7 +199,7 @@
                 android:layout_height="30dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/list_menu_activity"
-                android:tint="@color/textcolor" />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -220,7 +221,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/search_menu_activity"
-                android:tint="@color/textcolor" />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -241,7 +242,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/bell_menu_activity"
-                android:tint="@color/pirimary" />
+                app:tint="@color/pirimary" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -262,7 +263,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ic_baseline_person_24"
-                android:tint="@color/textcolor" />
+                app:tint="@color/textcolor" />
 
             <TextView
                 android:layout_width="wrap_content"

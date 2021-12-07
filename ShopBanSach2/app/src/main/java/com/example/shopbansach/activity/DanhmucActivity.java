@@ -37,7 +37,6 @@ public class DanhmucActivity extends AppCompatActivity {
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
     LoaispAdapter loaispAdapter;
     ArrayList<Loaisp> mangloaisp;
-    public static ArrayList<Giohang> manggiohang;
     int id=0;
     String tenloaisp="";
     String hinhanhloaisp="";
@@ -52,6 +51,20 @@ public class DanhmucActivity extends AppCompatActivity {
 
 
         setItemListView();
+
+        ActionToolbar();
+    }
+
+    private void ActionToolbar() {
+        setSupportActionBar(toolbardm);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbardm.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
+        toolbardm.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
 

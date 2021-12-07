@@ -21,9 +21,12 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/color_menu"
             app:title="Địa chỉ giao hàng"
-            app:titleTextColor="@color/white" />
+            android:fontFamily="@font/cucho"
+            app:titleTextColor="#FF00FF"/>
 
         <EditText
+            android:fontFamily="@font/serif"
+            android:textSize="16sp"
             android:id="@+id/editAddressName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,6 +36,8 @@
             android:hint="Tên địa chỉ"
             android:padding="20dp" />
         <EditText
+            android:fontFamily="@font/serif"
+            android:textSize="16sp"
             android:id="@+id/editReceiver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -43,6 +48,8 @@
             android:padding="20dp" />
 
         <EditText
+            android:fontFamily="@font/serif"
+            android:textSize="16sp"
             android:id="@+id/editnumPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,6 +60,8 @@
             android:padding="20dp" />
 
         <EditText
+            android:fontFamily="@font/serif"
+            android:textSize="16sp"
             android:id="@+id/editAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,6 +79,7 @@
         android:weightSum="2"
         android:layout_height="0dp">
         <Button
+            android:fontFamily="@font/cucho"
             android:layout_weight="1"
             android:id="@+id/btnsaveAddress"
             android:layout_gravity="bottom"
@@ -77,10 +87,9 @@
             android:layout_height="match_parent"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:backgroundTint="@color/pirimary"
+            android:backgroundTint="@color/color_menu"
             android:background="@drawable/boder_btn_dangnhap"
             android:padding="3dp"
-
             android:text="Lưu địa chỉ"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -93,11 +102,10 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:backgroundTint="@color/textcolor"
+            android:backgroundTint="#F16F5C"
             android:background="@drawable/boder_btn_dangnhap"
-
+            android:fontFamily="@font/cucho"
             android:padding="3dp"
-
             android:text="Hủy"
             android:textAllCaps="false"
             android:textColor="@color/white"

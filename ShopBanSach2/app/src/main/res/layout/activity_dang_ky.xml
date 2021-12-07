@@ -8,26 +8,31 @@
     android:orientation="vertical">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbardangky"
-        app:titleTextColor="@color/white"
+        android:fontFamily="@font/cucho"
+        app:titleTextColor="#FF00FF"
         app:title="Đăng ký"
         android:background="@color/color_menu"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
     </androidx.appcompat.widget.Toolbar>
     <EditText
+        android:fontFamily="@font/serif"
+        android:textSize="16sp"
         android:id="@+id/etName"
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:padding="25dp"
+        android:padding="15dp"
         android:hint="@string/hoten"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <EditText
+        android:fontFamily="@font/serif"
+        android:textSize="16sp"
         android:id="@+id/etEmail"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
-        android:padding="25dp"
+        android:padding="15dp"
         android:hint="Email"
         android:layout_width="match_parent"
         android:textColorHighlight="@color/colorPrimary"
@@ -37,20 +42,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <EditText
+            android:fontFamily="@font/serif"
+            android:textSize="16dp"
             android:id="@+id/etPassword"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:padding="25dp"
+            android:padding="15dp"
             android:hint="@string/matkhau"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
         <ImageView
+            android:layout_gravity="center"
             android:id="@+id/hide_password_1"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginLeft="-55dp"
-            android:layout_marginTop="28dp"
             android:layout_toRightOf="@+id/edittextdnpassword"
             android:background="@drawable/eye_hiddent" />
     </LinearLayout>
@@ -59,31 +67,33 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <EditText
+            android:fontFamily="@font/serif"
             android:id="@+id/etReneterPassword"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:padding="25dp"
+            android:padding="15dp"
             android:hint="@string/nlmatkhau"
             android:layout_width="match_parent"
             android:inputType="textPassword"
             android:layout_height="wrap_content"/>
         <ImageView
+            android:layout_gravity="center"
             android:id="@+id/hide_password_re"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginLeft="-55dp"
-            android:layout_marginTop="28dp"
             android:layout_toRightOf="@+id/edittextdnpassword"
             android:background="@drawable/eye_hiddent" />
     </LinearLayout>
     <LinearLayout
+        android:gravity="center"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tvStatus"
             android:layout_marginLeft="10dp"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -92,17 +102,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
+                android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
                 android:layout_gravity="end"
                 android:text="Đăng nhập ngay"
-                android:textSize="18sp"
-                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textColor="#f20"
                 android:onClick="login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:orientation="horizontal"
@@ -116,6 +128,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
+            android:fontFamily="@font/serif"
             android:layout_marginLeft="10dp"
             android:textColor="@color/black"
             android:textSize="15sp"
@@ -124,6 +137,7 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
     <TextView
+        android:fontFamily="@font/serif"
         android:textColor="@color/black"
         android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
@@ -141,10 +155,12 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/boder_btn_dangnhap"
+        android:backgroundTint="#00FF00"
+        android:textSize="18sp"
+        android:textColor="#f20"
+        android:fontFamily="@font/cucho"
         android:onClick="save"
         android:padding="15dp"
-        android:text="Đăng ký"
-        android:textColor="@color/white"
-        android:textSize="15sp" />
+        android:text="Đăng ký" />
 
 </LinearLayout>
