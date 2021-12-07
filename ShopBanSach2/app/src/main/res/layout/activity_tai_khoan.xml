@@ -71,7 +71,7 @@
             </LinearLayout>
 
             <Button
-                android:drawableTint="#f20"
+                android:drawableTint="@color/black"
                 android:backgroundTint="@color/color_menu"
                 android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
@@ -87,10 +87,11 @@
                 android:paddingLeft="20dp"
                 android:text="Thông tin tài khoản"
                 android:textAllCaps="false"
-                android:textColor="#f20" />
+                android:textSize="18dp"
+                android:textColor="@color/black" />
 
             <Button
-                android:drawableTint="#f20"
+                android:drawableTint="@color/black"
                 android:backgroundTint="@color/color_menu"
                 android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
@@ -106,10 +107,11 @@
                 android:paddingLeft="20dp"
                 android:text="Đơn hàng của tôi"
                 android:textAllCaps="false"
-                android:textColor="#f20" />
+                android:textSize="18dp"
+                android:textColor="@color/black" />
 
             <Button
-                android:drawableTint="#f20"
+                android:drawableTint="@color/black"
                 android:backgroundTint="@color/color_menu"
                 android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
@@ -125,10 +127,11 @@
                 android:paddingLeft="20dp"
                 android:text="Đổi mật khẩu"
                 android:textAllCaps="false"
-                android:textColor="#f20"/>
+                android:textSize="18dp"
+                android:textColor="@color/black"/>
 
             <Button
-                android:drawableTint="#f20"
+                android:drawableTint="@color/black"
                 android:backgroundTint="@color/color_menu"
                 android:fontFamily="@font/serif"
                 android:id="@+id/btndiachigh"
@@ -144,10 +147,11 @@
                 android:paddingLeft="20dp"
                 android:text="Địa chỉ giao hàng"
                 android:textAllCaps="false"
-                android:textColor="#f20" />
+                android:textSize="18dp"
+                android:textColor="@color/black" />
 
             <Button
-                android:drawableTint="#f20"
+                android:drawableTint="@color/black"
                 android:backgroundTint="@color/color_menu"
                 android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
@@ -162,7 +166,8 @@
                 android:paddingLeft="20dp"
                 android:text="Hỗ trợ"
                 android:textAllCaps="false"
-                android:textColor="#f20" />
+                android:textSize="18dp"
+                android:textColor="@color/black" />
 
             <Button
                 android:id="@+id/buttonDangXuat"
@@ -175,7 +180,8 @@
                 android:backgroundTint="@color/color_menu"
                 android:fontFamily="@font/cucho"
                 android:text="Đăng xuất"
-                android:textColor="#f20" />
+                android:textSize="18dp"
+                android:textColor="@color/black" />
             <TextView
                 android:fontFamily="@font/serif"
                 android:layout_gravity="center"

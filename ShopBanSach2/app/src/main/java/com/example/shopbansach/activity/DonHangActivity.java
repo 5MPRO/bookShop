@@ -101,6 +101,4 @@ public class DonHangActivity extends AppCompatActivity {
         listView = findViewById(R.id.listViewOrder);
         listView.setAdapter(oderAdapter);
     }
-
-
 }

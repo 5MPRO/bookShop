@@ -20,7 +20,8 @@
             android:layout_marginTop="20dp"
             android:src="@drawable/logo"
             android:layout_width="100dp"
-            android:layout_height="100dp"/>
+            android:layout_height="100dp"
+            tools:ignore="MissingClass" />
         <EditText
             android:fontFamily="@font/serif"
             android:textColor="@color/black"

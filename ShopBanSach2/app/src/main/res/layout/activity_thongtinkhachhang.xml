@@ -72,7 +72,6 @@
                 android:hint="Nhập email"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
