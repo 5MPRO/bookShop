@@ -43,6 +43,7 @@ import java.util.Map;
 public class Login extends AppCompatActivity {
     private EditText etEmail,etPassword;
     private String email, password;
+    private ImageView imageViewHidePassword;
     public static ArrayList<TaiKhoan> mangtaikhoan;
     GoogleSignInClient mGoogleSignInClient;
     private static int RC_SIGN_IN = 100;
@@ -51,7 +52,7 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ImageView imageViewHidePassword = findViewById(R.id.hide_password);
+        imageViewHidePassword = findViewById(R.id.hide_password);
         imageViewHidePassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
