@@ -9,7 +9,8 @@
     android:background="@color/bookApp">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbardmm"
-        app:titleTextColor="@color/white"
+        android:fontFamily="@font/cucho"
+        app:titleTextColor="#FF00FF"
         app:title="Đổi mật khẩu"
         android:background="@color/color_menu"
         android:layout_width="match_parent"
@@ -20,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <EditText
+            android:fontFamily="@font/serif"
             android:id="@+id/editOldPass"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -28,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <EditText
+            android:fontFamily="@font/serif"
             android:id="@+id/editNewPass"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -37,9 +40,11 @@
             android:layout_height="wrap_content"/>
 
         <Button
+            android:textSize="20sp"
+            android:fontFamily="@font/cucho"
             android:id="@+id/btnResetPass"
             android:textColor="@color/white"
-            android:backgroundTint="@color/colorPrimary"
+            android:backgroundTint="@color/color_menu"
             android:layout_marginTop="40dp"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"

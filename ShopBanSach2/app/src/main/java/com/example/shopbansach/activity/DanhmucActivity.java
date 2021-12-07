@@ -49,6 +49,19 @@ public class DanhmucActivity extends AppCompatActivity {
         OnClickMenu();
         GetDuLieuLoaiSP();
         setItemListView();
+        ActionToolbar();
+    }
+
+    private void ActionToolbar() {
+        setSupportActionBar(toolbardm);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbardm.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
+        toolbardm.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     @Override

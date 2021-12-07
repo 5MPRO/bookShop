@@ -17,6 +17,7 @@
             android:id="@+id/txtTenDiaChi"
             android:layout_marginLeft="18sp"
             android:text="Nhà riêng:"
+            android:fontFamily="@font/serif"
             android:textSize="20sp"
             android:textColor="@color/textcolor"
             android:layout_width="wrap_content"
@@ -35,6 +36,7 @@
             <TextView
                 android:id="@+id/txtTenNguoiDung"
                 android:textColor="@color/textcolor"
+                android:fontFamily="@font/serif"
                 android:textSize="16sp"
                 android:text="Tên: Nguyễn Văn An"
                 android:layout_width="wrap_content"
@@ -42,6 +44,7 @@
             <TextView
                 android:id="@+id/txtDiaChi"
                 android:textColor="@color/textcolor"
+                android:fontFamily="@font/serif"
                 android:textSize="16sp"
                 android:text="Địa chỉ: 28, Ngô Mây, Kon Tum"
                 android:layout_width="wrap_content"
@@ -50,6 +53,7 @@
                 android:id="@+id/txtSoDienThoai"
                 android:layout_marginBottom="20dp"
                 android:textColor="@color/textcolor"
+                android:fontFamily="@font/serif"
                 android:textSize="16sp"
                 android:text="Số điện thoại: 0961640909"
                 android:layout_width="wrap_content"

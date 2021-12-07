@@ -84,6 +84,7 @@
         <Button
             android:fontFamily="@font/cucho"
             android:onClick="register"
+            android:backgroundTint="#00FF00"
             android:id="@+id/btndangky"
             android:textColor="@color/black"
             android:textSize="18sp"

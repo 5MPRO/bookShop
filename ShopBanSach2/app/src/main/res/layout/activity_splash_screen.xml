@@ -8,17 +8,18 @@
     android:background="@drawable/background_splash"
     android:orientation="vertical"
     android:weightSum="10">
+
     <TextView
-        android:paddingTop="20dp"
-        android:layout_weight="2"
-        android:textColor="#f20"
-        android:textStyle="italic|bold"
-        android:fontFamily="@font/nabila"
-        android:textAlignment="center"
-        android:textSize="25sp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="Chào mừng bạn đến                    với Book Shop"/>
+        android:layout_weight="2"
+        android:fontFamily="@font/nabila"
+        android:paddingTop="20dp"
+        android:text="Chào mừng bạn đến                    với Book Shop"
+        android:textAlignment="center"
+        android:textColor="#f20"
+        android:textSize="25sp"
+        android:textStyle="italic|bold" />
 
     <LinearLayout
         android:gravity="center"

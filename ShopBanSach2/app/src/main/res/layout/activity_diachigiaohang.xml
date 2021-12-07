@@ -16,7 +16,8 @@
         android:layout_height="0dp">
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbardiachi"
-            app:titleTextColor="@color/white"
+            android:fontFamily="@font/cucho"
+            app:titleTextColor="#FF00FF"
             android:background="@color/color_menu"
             app:title="Địa chỉ giao hàng"
             android:layout_width="match_parent"
@@ -37,13 +38,14 @@
         android:layout_height="0dp">
 
         <Button
+            android:fontFamily="@font/cucho"
             android:id="@+id/btnthemdiachi"
             android:layout_gravity="bottom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:backgroundTint="@color/pirimary"
+            android:backgroundTint="@color/color_menu"
             android:background="@drawable/boder_btn_dangnhap"
             android:padding="10dp"
             android:paddingLeft="10dp"
