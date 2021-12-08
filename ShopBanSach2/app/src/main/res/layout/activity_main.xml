@@ -95,7 +95,7 @@
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
                                         android:gravity="center"
-                                        android:textColor="#FF8C00"
+                                        android:textColor="@color/textcolor1"
                                         android:text="Free Shipping trên 250.000đ"
                                         android:textSize="10sp" />
                                 </LinearLayout>
@@ -114,7 +114,7 @@
                                         android:src="@drawable/iconhc" />
 
                                     <TextView
-                                        android:textColor="#FF8C00"
+                                        android:textColor="@color/textcolor1"
                                         android:fontFamily="@font/serif"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
@@ -137,7 +137,7 @@
                                         android:src="@drawable/icon_money" />
 
                                     <TextView
-                                        android:textColor="#FF8C00"
+                                        android:textColor="@color/textcolor1"
                                         android:fontFamily="@font/serif"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
@@ -158,7 +158,7 @@
                                         android:backgroundTint="@color/white"
                                         android:src="@drawable/ic_doitra" />
                                     <TextView
-                                        android:textColor="#FF8C00"
+                                        android:textColor="@color/textcolor1"
                                         android:fontFamily="@font/serif"
                                         android:layout_width="85dp"
                                         android:layout_height="35dp"
@@ -224,7 +224,7 @@
                         android:orientation="vertical">
                         <TextView
                             android:fontFamily="@font/serif"
-                            android:textColor="#FF8C00"
+                            android:textColor="@color/textcolor1"
                             android:textSize="13sp"
                             android:text="Mọi chi tiết xin liên hệ"
                             android:layout_width="wrap_content"
@@ -249,7 +249,7 @@
                                 <TextView
                                     android:fontFamily="@font/serif"
                                     android:textSize="13sp"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/textcolor1"
                                     android:text="0961640909"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
@@ -292,7 +292,7 @@
                         <TextView
                             android:fontFamily="@font/serif"
                             android:textAlignment="center"
-                            android:textColor="#FF8C00"
+                            android:textColor="@color/textcolor1"
                             android:textSize="12sp"
                             android:text="Thời gian làm việc từ 8:00 đến 20:00"
                             android:layout_width="match_parent"
@@ -301,7 +301,7 @@
                             android:fontFamily="@font/serif"
                             android:textStyle="bold"
                             android:layout_marginTop="10dp"
-                            android:textColor="#FF8C00"
+                            android:textColor="@color/textcolor1"
                             android:textSize="12sp"
                             android:text="BOOKSHOP.VN - KÊNH MUA SẮM TRỰC TUYẾN"
                             android:layout_width="wrap_content"
@@ -309,7 +309,7 @@
                         <TextView
                             android:fontFamily="@font/serif"
                             android:layout_marginTop="10dp"
-                            android:textColor="#FF8C00"
+                            android:textColor="@color/textcolor1"
                             android:textSize="12sp"
                             android:text="Địa chỉ giao dịch tại: 02 Thanh Sơn - Hải Châu - Đà Nẵng"
                             android:layout_width="wrap_content"

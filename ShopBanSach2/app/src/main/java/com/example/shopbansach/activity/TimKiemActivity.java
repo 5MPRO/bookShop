@@ -61,8 +61,8 @@ public class TimKiemActivity extends AppCompatActivity {
         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
             ActionToolbar();
             GetData();
-            LoadMoreData();
             Search();
+            LoadMoreData();
         }else {
             CheckConnection.ShowToast_Short(getApplicationContext(),"Hãy kiểm tra lại kết nối Internet");
             finish();
@@ -152,7 +152,6 @@ public class TimKiemActivity extends AppCompatActivity {
             public void onScrollStateChanged(AbsListView absListView, int i) {
 
             }
-
             @Override
             public void onScroll(AbsListView absListView, int FirstItem, int VisibleItem, int TotalItem) {
                 if (FirstItem + VisibleItem == TotalItem && TotalItem!= 0 && isLoading == false && limitadata == false){

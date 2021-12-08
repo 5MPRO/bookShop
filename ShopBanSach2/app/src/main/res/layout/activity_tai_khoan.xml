@@ -72,7 +72,7 @@
 
             <Button
                 android:drawableTint="@color/black"
-                android:backgroundTint="@color/color_menu"
+                android:backgroundTint="#FFFAF1"
                 android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
@@ -92,7 +92,7 @@
 
             <Button
                 android:drawableTint="@color/black"
-                android:backgroundTint="@color/color_menu"
+                android:backgroundTint="#FFFAF1"
                 android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
@@ -112,7 +112,7 @@
 
             <Button
                 android:drawableTint="@color/black"
-                android:backgroundTint="@color/color_menu"
+                android:backgroundTint="#FFFAF1"
                 android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
@@ -132,7 +132,7 @@
 
             <Button
                 android:drawableTint="@color/black"
-                android:backgroundTint="@color/color_menu"
+                android:backgroundTint="#FFFAF1"
                 android:fontFamily="@font/serif"
                 android:id="@+id/btndiachigh"
                 android:layout_marginRight="10dp"
@@ -152,7 +152,7 @@
 
             <Button
                 android:drawableTint="@color/black"
-                android:backgroundTint="@color/color_menu"
+                android:backgroundTint="#FFFAF1"
                 android:fontFamily="@font/serif"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
