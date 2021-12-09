@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Dec 04, 2021 at 01:44 PM
-=======
--- Generation Time: Dec 05, 2021 at 05:22 PM
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
+-- Generation Time: Dec 07, 2021 at 04:06 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -45,14 +41,6 @@ CREATE TABLE `chitietdonhang` (
 -- Dumping data for table `chitietdonhang`
 --
 
-<<<<<<< HEAD
-INSERT INTO `chitietdonhang` (`id`, `maDonHang`, `maSanPham`, `tenSanPham`, `giaSanPham`, `soLuongSanPham`) VALUES
-(1, 15, 2, 'Thám Tử Kindaichi R - Tập 1', 22000, 1),
-(2, 16, 1, 'Pokemon Pippi trọn bộ 14 tập', 1172000, 4),
-(3, 16, 6, 'CHUỘC TỘI', 291000, 3),
-(4, 17, 1, 'Pokemon Pippi trọn bộ 14 tập', 293000, 1),
-(5, 18, 2, 'Thám Tử Kindaichi ', 22000, 1);
-=======
 INSERT INTO `chitietdonhang` (`id`, `maDonHang`, `maSanPham`, `tenSanPham`, `giaSanPham`, `soLuongSanPham`, `trangThai`) VALUES
 (1, 15, 2, 'Thám Tử Kindaichi R - Tập 1', 22000, 1, 'đã giao'),
 (2, 16, 1, 'Pokemon Pippi trọn bộ 14 tập', 1172000, 4, 'đã giao'),
@@ -60,7 +48,8 @@ INSERT INTO `chitietdonhang` (`id`, `maDonHang`, `maSanPham`, `tenSanPham`, `gia
 (4, 20, 1, 'Pokemon Pippi trọn bộ 14 tập', 293000, 1, 'đã giao'),
 (5, 18, 2, 'Thám Tử Kindaichi ', 22000, 1, 'đã giao'),
 (6, 19, 12, 'Mối tình đầu', 1404000, 6, 'đã giao'),
-(7, 22, 2, 'Thám Tử Kindaichi ', 22000, 1, 'đã giao');
+(7, 22, 2, 'Thám Tử Kindaichi ', 22000, 1, 'đã giao'),
+(8, 23, 2, 'Thám Tử Kindaichi ', 22000, 1, '');
 
 -- --------------------------------------------------------
 
@@ -83,8 +72,8 @@ CREATE TABLE `diachigiaohang` (
 
 INSERT INTO `diachigiaohang` (`tenDiaChi`, `diaChi`, `email`, `idDiaChi`, `soDienThoaiDc`, `tenNguoiNhan`) VALUES
 ('Văn Phòng', 'Tam anh nam, Núi Thành, Quảng Nam', 'admin', 11, '84359', 'thien'),
-('Nhà riêng', '02 Thanh Sơn, Hải Châu, Đà Nẵng', 'admin', 28, 'nhan', 'nhan');
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
+('Nhà riêng', '02 Thanh Sơn, Hải Châu, Đà Nẵng', 'admin', 28, 'nhan', 'nhan'),
+('Khách sạn', '77', 'admin', 30, '09918817ư77', 'Nhân');
 
 -- --------------------------------------------------------
 
@@ -104,15 +93,6 @@ CREATE TABLE `donhang` (
 -- Dumping data for table `donhang`
 --
 
-<<<<<<< HEAD
-INSERT INTO `donhang` (`id`, `tenKhachHang`, `soDienThoai`, `email`) VALUES
-(13, 'Bui Van Sy', 921321, 'bvsy@gmail.cm'),
-(14, 'Pvthien', 1544, 'djsadsa'),
-(15, '1', 1, '1'),
-(16, '1', 1, '1'),
-(17, '2', 2, '2'),
-(18, 'vanthien.zip', 63, 'fggg');
-=======
 INSERT INTO `donhang` (`id`, `tenKhachHang`, `soDienThoai`, `email`, `diaChi`) VALUES
 (13, 'Bui Van Sy', 921321, 'bvsy@gmail.cm', ''),
 (14, 'Pvthien', 1544, 'djsadsa', ''),
@@ -123,8 +103,8 @@ INSERT INTO `donhang` (`id`, `tenKhachHang`, `soDienThoai`, `email`, `diaChi`) V
 (19, 'thiên', 83647, 'admin', ''),
 (20, 'thiên', 83647, 'admin', ''),
 (21, 'thiên', 83647, '1', 'Tam Anh Nam'),
-(22, '4', 0, '2', 'f');
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
+(22, '4', 0, '2', 'f'),
+(23, 'hhH', 83647, 'admin', 'Tam Anh Nam');
 
 -- --------------------------------------------------------
 
@@ -230,17 +210,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `soDienThoai`, `diaChi`, `ngaySinh`) VALUES
 (1, 'bui van sy', 'bvsy@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/10/2001'),
-<<<<<<< HEAD
-(2, 'thiên', '1', '1', 83647, 'Tam Anh Nam', '27/20/2001'),
-(3, 'thanhnhan', 'bvsy1@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-(4, 'Bui Van Sy', 'bvsy@mail.co', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-(5, 'Pham Van Thien', 'pvthien@gmail.cm', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-(6, 'Pham Van Thien', 'pvthien@gmail.cm', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-(7, 'Pham Van Thien', 'pvthien@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-=======
 (2, 'thiên', 'admin', '2', 83647, 'Tam Anh Nam', '27/20/2001'),
 (3, 'thanhnhan', 'bvsy1@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
 (8, 'Nguyễn Quang Huy', 'vanthien.zip@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001');
 
 --
@@ -298,27 +269,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-=======
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `diachigiaohang`
 --
 ALTER TABLE `diachigiaohang`
-  MODIFY `idDiaChi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
+  MODIFY `idDiaChi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `donhang`
 --
 ALTER TABLE `donhang`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-=======
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `loaisanpham`
