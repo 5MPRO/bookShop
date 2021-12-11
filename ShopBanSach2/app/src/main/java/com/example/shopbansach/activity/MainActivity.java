@@ -19,7 +19,6 @@ import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.appcompat.widget.*;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -178,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
+
                     case 2:
                         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
                             Intent intent= new Intent(MainActivity.this,VanHocActivity.class);
@@ -189,7 +189,20 @@ public class MainActivity extends AppCompatActivity {
                         }
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
+
                     case 3:
+                        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+                            Intent intent= new Intent(MainActivity.this, KhoaHocActivity.class);
+                            intent.putExtra("idloaisanpham",mangloaisp.get(i).getId());
+                            startActivity(intent);
+                        }
+                        else {
+                            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối");
+                        }
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case 4:
                         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
                             Intent intent= new Intent(MainActivity.this,ThongBaoActivity.class);
                             startActivity(intent);
@@ -199,7 +212,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-                    case 4:
+
+                    case 5:
                         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
                             Intent intent= new Intent(MainActivity.this,LienHeActivity.class);
                             startActivity(intent);
@@ -209,7 +223,8 @@ public class MainActivity extends AppCompatActivity {
                         }
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-                    case 5:
+
+                    case 6:
                         if (CheckConnection.haveNetworkConnection(getApplicationContext())){
                             Intent intent = new Intent(getApplicationContext(),Login.class);
                             startActivity(intent);

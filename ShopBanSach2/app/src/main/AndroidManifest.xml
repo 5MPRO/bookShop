@@ -23,6 +23,9 @@
             android:name=".activity.DonHangActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.KhoaHocActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ThemDiaChi"
             android:exported="false" />
         <activity

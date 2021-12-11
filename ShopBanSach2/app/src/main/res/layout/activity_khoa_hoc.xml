@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.TruyenTranhActivity"
+    tools:context=".activity.KhoaHocActivity"
     android:orientation="vertical"
     android:weightSum="9">
 
@@ -15,11 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <androidx.appcompat.widget.Toolbar
-            app:title="Thiếu Nhi"
+            app:title="Khoa học"
             android:background="@color/color_menu"
             android:fontFamily="@font/cucho"
             app:titleTextColor="@color/white"
-            android:id="@+id/toolbartruyentranh"
+            android:id="@+id/toolbarthieunhi"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize">
 

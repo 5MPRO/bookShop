@@ -16,11 +16,11 @@ import com.squareup.picasso.Picasso;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class ThieuNhiAdapter extends BaseAdapter {
+public class KhoaHocAdapter extends BaseAdapter {
     Context context;
     ArrayList<Sanpham> arraythieunhi;
 
-    public ThieuNhiAdapter(Context context, ArrayList<Sanpham> arraythieunhi) {
+    public KhoaHocAdapter(Context context, ArrayList<Sanpham> arraythieunhi) {
         this.context = context;
         this.arraythieunhi = arraythieunhi;
     }
@@ -51,7 +51,7 @@ public class ThieuNhiAdapter extends BaseAdapter {
         if(view ==null){
             viewHolder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.dong_thieunhi,null);
+            view = inflater.inflate(R.layout.dong_khoahoc,null);
             viewHolder.txttenthieunhi = view.findViewById(R.id.textviewthieunhi);
             viewHolder.txtgiathieunhi = view.findViewById(R.id.textviewgiathieunhi);
             viewHolder.txtmotathieunhi = view.findViewById(R.id.textviewmotathieunhi);
