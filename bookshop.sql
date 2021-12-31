@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 11, 2021 lúc 08:31 AM
--- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 8.0.10
+-- Thời gian đã tạo: Th12 31, 2021 lúc 01:03 PM
+-- Phiên bản máy phục vụ: 10.4.22-MariaDB
+-- Phiên bản PHP: 8.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -115,7 +115,7 @@ INSERT INTO `donhang` (`id`, `tenKhachHang`, `soDienThoai`, `email`, `diaChi`) V
 CREATE TABLE `loaisanpham` (
   `id` int(11) NOT NULL,
   `tenLoaiSanPham` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `hinhAnhLoaiSanPham` varchar(200) COLLATE utf8_unicode_ci NOT NULL
+  `hinhAnhLoaiSanPham` mediumtext COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -123,9 +123,9 @@ CREATE TABLE `loaisanpham` (
 --
 
 INSERT INTO `loaisanpham` (`id`, `tenLoaiSanPham`, `hinhAnhLoaiSanPham`) VALUES
-(1, 'Truyện tranh', 'https://img.websosanh.vn/v10/users/review/images/aeq4glcfiy24v/bo-truyen-tranh-doremon.jpg?compress=85'),
-(2, 'Văn học', 'https://cdn0.fahasa.com/media/catalog/product/b/i/biamem.jpg'),
-(3, 'Khoa học', 'https://cdn.vietnambiz.vn/2019/10/15/1nvhe7mchqmjbgyvx-uobra-15711056360651103109227.png');
+(1, 'Truyện tranh', '/BanSach/BanSach/uploads/truyentranh.jpg'),
+(2, 'Văn học', '/BanSach/BanSach/uploads/vanhoc.jpg'),
+(3, 'Khoa học', '/BanSach/BanSach/uploads/khoahoc.jpg');
 
 -- --------------------------------------------------------
 
@@ -201,6 +201,7 @@ INSERT INTO `thongtinsanpham` (`DanhMuc`, `Id`, `TacGia`, `TenSach`, `NhaCungCap
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
+  `maQuyen` int(11) NOT NULL,
   `name` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
@@ -213,11 +214,10 @@ CREATE TABLE `users` (
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `soDienThoai`, `diaChi`, `ngaySinh`) VALUES
-(1, 'bui van sy', 'bvsy@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/10/2001'),
-(2, 'thiên', 'admin', '2', 83647, 'Tam Anh Nam', '27/20/2001'),
-(3, 'thanhnhan', 'bvsy1@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-(8, 'Nguyễn Quang Huy', 'vanthien.zip@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001');
+INSERT INTO `users` (`id`, `maQuyen`, `name`, `email`, `password`, `soDienThoai`, `diaChi`, `ngaySinh`) VALUES
+(2, 1, 'huyy', 'admin', '1', 961640909, 'Kon Tum', '12/12/1999'),
+(3, 0, 'thanhnhan', 'bvsy1@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
+(8, 0, 'Nguyễn Quang Huy', 'vanthien.zip@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -292,7 +292,7 @@ ALTER TABLE `donhang`
 -- AUTO_INCREMENT cho bảng `loaisanpham`
 --
 ALTER TABLE `loaisanpham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT cho bảng `sanpham`

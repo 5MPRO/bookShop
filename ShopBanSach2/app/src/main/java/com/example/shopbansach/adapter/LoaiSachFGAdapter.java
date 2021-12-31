@@ -9,17 +9,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.shopbansach.R;
+import com.example.shopbansach.fragment.LoaiSachFragment;
 import com.example.shopbansach.model.Loaisp;
 import com.example.shopbansach.util.Server;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class LoaispAdapter extends BaseAdapter {
+public class LoaiSachFGAdapter extends BaseAdapter {
     ArrayList<Loaisp> arrayListLoaisp;
-    Context context;
+    LoaiSachFragment context;
 
-    public LoaispAdapter(ArrayList<Loaisp> arrayListLoaisp, Context context) {
+    public LoaiSachFGAdapter(ArrayList<Loaisp> arrayListLoaisp, LoaiSachFragment context) {
         this.arrayListLoaisp = arrayListLoaisp;
         this.context = context;
     }
@@ -54,7 +55,7 @@ public class LoaispAdapter extends BaseAdapter {
         ViewHolder viewHolder= null;
         if(view ==null){
             viewHolder = new ViewHolder();
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) context.getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.dong_listview_loaisp,null);
             viewHolder.txttenloaisanpham = view.findViewById(R.id.textviewtenloaisp);
             viewHolder.imgloaisp = view.findViewById(R.id.imageviewloaisp);
@@ -64,9 +65,9 @@ public class LoaispAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) view.getTag();
         }
         Loaisp loaisp = (Loaisp) getItem(i);
-        String hinhanhlsp = "http://"+ Server.localhost+loaisp.getHinhanhloaisp();
-        viewHolder.txttenloaisanpham.setText(hinhanhlsp);
-        Picasso.get().load(loaisp.getHinhanhloaisp())
+        viewHolder.txttenloaisanpham.setText(loaisp.getTenloaisp());
+        String hinhanhlsp = "http://"+Server.localhost+loaisp.getHinhanhloaisp();
+        Picasso.get().load(hinhanhlsp)
                 .placeholder(R.drawable.noimage)
                 .error(R.drawable.error)
                 .into(viewHolder.imgloaisp);

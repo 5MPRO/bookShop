@@ -1,7 +1,7 @@
 package com.example.shopbansach.util;
 
 public class Server{
-    public static String localhost="192.168.1.118";
+    public static String localhost="192.168.1.109";
     public static String Duongdanloaisp = "http://" + localhost + "/BanSach/BanSach/getloaisanpham.php";
     public static String Duongdanallsp = "http://" + localhost + "/BanSach/BanSach/getallsanpham.php";
     public static String Duongdansanphammoinhat = "http://" + localhost + "/BanSach/BanSach/getsanphammoinhat.php";
@@ -19,4 +19,6 @@ public class Server{
     public static String DuongdaninsertAddress="http://"+localhost+"/BanSach/BanSach/insertAddress.php";
     public static String DuongdandeleteAdress="http://"+localhost+"/BanSach/BanSach/deleteAdress.php";
     public static String DuongdangetDonHang="http://"+localhost+"/BanSach/BanSach/getdonhang.php";
+    public static String Duongdanloginad="http://"+localhost+"/BanSach/LoginBook/loginad.php";
+    public static String Duongdaninsertloaisach="http://"+localhost+"/BanSach/BanSach/insertloaisach.php";
 }
