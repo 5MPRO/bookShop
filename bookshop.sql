@@ -2,14 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Dec 04, 2021 at 01:44 PM
-=======
--- Generation Time: Dec 05, 2021 at 05:22 PM
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th12 31, 2021 lúc 01:03 PM
+-- Phiên bản máy phục vụ: 10.4.22-MariaDB
+-- Phiên bản PHP: 8.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -22,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bookshop`
+-- Cơ sở dữ liệu: `bookshop`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `chitietdonhang`
+-- Cấu trúc bảng cho bảng `chitietdonhang`
 --
 
 CREATE TABLE `chitietdonhang` (
@@ -42,17 +38,9 @@ CREATE TABLE `chitietdonhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `chitietdonhang`
+-- Đang đổ dữ liệu cho bảng `chitietdonhang`
 --
 
-<<<<<<< HEAD
-INSERT INTO `chitietdonhang` (`id`, `maDonHang`, `maSanPham`, `tenSanPham`, `giaSanPham`, `soLuongSanPham`) VALUES
-(1, 15, 2, 'Thám Tử Kindaichi R - Tập 1', 22000, 1),
-(2, 16, 1, 'Pokemon Pippi trọn bộ 14 tập', 1172000, 4),
-(3, 16, 6, 'CHUỘC TỘI', 291000, 3),
-(4, 17, 1, 'Pokemon Pippi trọn bộ 14 tập', 293000, 1),
-(5, 18, 2, 'Thám Tử Kindaichi ', 22000, 1);
-=======
 INSERT INTO `chitietdonhang` (`id`, `maDonHang`, `maSanPham`, `tenSanPham`, `giaSanPham`, `soLuongSanPham`, `trangThai`) VALUES
 (1, 15, 2, 'Thám Tử Kindaichi R - Tập 1', 22000, 1, 'đã giao'),
 (2, 16, 1, 'Pokemon Pippi trọn bộ 14 tập', 1172000, 4, 'đã giao'),
@@ -60,12 +48,13 @@ INSERT INTO `chitietdonhang` (`id`, `maDonHang`, `maSanPham`, `tenSanPham`, `gia
 (4, 20, 1, 'Pokemon Pippi trọn bộ 14 tập', 293000, 1, 'đã giao'),
 (5, 18, 2, 'Thám Tử Kindaichi ', 22000, 1, 'đã giao'),
 (6, 19, 12, 'Mối tình đầu', 1404000, 6, 'đã giao'),
-(7, 22, 2, 'Thám Tử Kindaichi ', 22000, 1, 'đã giao');
+(7, 22, 2, 'Thám Tử Kindaichi ', 22000, 1, 'đã giao'),
+(8, 23, 2, 'Thám Tử Kindaichi ', 22000, 1, '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `diachigiaohang`
+-- Cấu trúc bảng cho bảng `diachigiaohang`
 --
 
 CREATE TABLE `diachigiaohang` (
@@ -78,18 +67,18 @@ CREATE TABLE `diachigiaohang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `diachigiaohang`
+-- Đang đổ dữ liệu cho bảng `diachigiaohang`
 --
 
 INSERT INTO `diachigiaohang` (`tenDiaChi`, `diaChi`, `email`, `idDiaChi`, `soDienThoaiDc`, `tenNguoiNhan`) VALUES
 ('Văn Phòng', 'Tam anh nam, Núi Thành, Quảng Nam', 'admin', 11, '84359', 'thien'),
-('Nhà riêng', '02 Thanh Sơn, Hải Châu, Đà Nẵng', 'admin', 28, 'nhan', 'nhan');
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
+('Nhà riêng', '02 Thanh Sơn, Hải Châu, Đà Nẵng', 'admin', 28, 'nhan', 'nhan'),
+('Khách sạn', '77', 'admin', 30, '09918817ư77', 'Nhân');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `donhang`
+-- Cấu trúc bảng cho bảng `donhang`
 --
 
 CREATE TABLE `donhang` (
@@ -101,18 +90,9 @@ CREATE TABLE `donhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `donhang`
+-- Đang đổ dữ liệu cho bảng `donhang`
 --
 
-<<<<<<< HEAD
-INSERT INTO `donhang` (`id`, `tenKhachHang`, `soDienThoai`, `email`) VALUES
-(13, 'Bui Van Sy', 921321, 'bvsy@gmail.cm'),
-(14, 'Pvthien', 1544, 'djsadsa'),
-(15, '1', 1, '1'),
-(16, '1', 1, '1'),
-(17, '2', 2, '2'),
-(18, 'vanthien.zip', 63, 'fggg');
-=======
 INSERT INTO `donhang` (`id`, `tenKhachHang`, `soDienThoai`, `email`, `diaChi`) VALUES
 (13, 'Bui Van Sy', 921321, 'bvsy@gmail.cm', ''),
 (14, 'Pvthien', 1544, 'djsadsa', ''),
@@ -123,33 +103,34 @@ INSERT INTO `donhang` (`id`, `tenKhachHang`, `soDienThoai`, `email`, `diaChi`) V
 (19, 'thiên', 83647, 'admin', ''),
 (20, 'thiên', 83647, 'admin', ''),
 (21, 'thiên', 83647, '1', 'Tam Anh Nam'),
-(22, '4', 0, '2', 'f');
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
+(22, '4', 0, '2', 'f'),
+(23, 'hhH', 83647, 'admin', 'Tam Anh Nam');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loaisanpham`
+-- Cấu trúc bảng cho bảng `loaisanpham`
 --
 
 CREATE TABLE `loaisanpham` (
   `id` int(11) NOT NULL,
   `tenLoaiSanPham` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `hinhAnhLoaiSanPham` varchar(200) COLLATE utf8_unicode_ci NOT NULL
+  `hinhAnhLoaiSanPham` mediumtext COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `loaisanpham`
+-- Đang đổ dữ liệu cho bảng `loaisanpham`
 --
 
 INSERT INTO `loaisanpham` (`id`, `tenLoaiSanPham`, `hinhAnhLoaiSanPham`) VALUES
-(1, 'Truyện tranh', 'https://img.websosanh.vn/v10/users/review/images/aeq4glcfiy24v/bo-truyen-tranh-doremon.jpg?compress=85'),
-(2, 'Văn học', 'https://cdn0.fahasa.com/media/catalog/product/b/i/biamem.jpg');
+(1, 'Truyện tranh', '/BanSach/BanSach/uploads/truyentranh.jpg'),
+(2, 'Văn học', '/BanSach/BanSach/uploads/vanhoc.jpg'),
+(3, 'Khoa học', '/BanSach/BanSach/uploads/khoahoc.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sanpham`
+-- Cấu trúc bảng cho bảng `sanpham`
 --
 
 CREATE TABLE `sanpham` (
@@ -162,7 +143,7 @@ CREATE TABLE `sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `sanpham`
+-- Đang đổ dữ liệu cho bảng `sanpham`
 --
 
 INSERT INTO `sanpham` (`id`, `tenSanPham`, `giaSanPham`, `hinhAnhSanPham`, `moTaSanPham`, `idSanPham`) VALUES
@@ -177,12 +158,16 @@ INSERT INTO `sanpham` (`id`, `tenSanPham`, `giaSanPham`, `hinhAnhSanPham`, `moTa
 (9, 'POKÉMON ', 452000, 'https://www.nae.vn/ttv/ttv/public/images/story/21252c34b8e5b4bc9b60344be8c409c59ac161338a55f9fc51dfed9d16f1f80e.jpg', 'Năm 2016 ngày mùng 9 tháng 6, hạ.\r\n\r\n	Trời trong gió nhẹ, vạn dặm không mây.\r\n\r\n	Nhưng nằm ở trên giường nằm ngáy o o Phương Duyên lại đột nhiên cảm giác thân thể mát lạnh.\r\n\r\n	\"Luôn cảm thấy quên chút gì. . .\"\r\n\r\n	Mở to mắt về sau, Phương Duyên nhìn lên trần nhà, vuốt vuốt đầu.\r\n\r\n	Là!\r\n\r\n	Hôm nay là thi đại học ngày, mà lại là thi đại học ngày cuối cùng.\r\n\r\n	Duỗi tay cầm điện thoại di động lên nhìn thoáng qua thời gian, Phương Duyên lập tức giật mình, giữa trưa ? !\r\n\r\n	\"Chuông báo không có vang à. . .\"\r\n\r\n	Hốt hoảng đưa di động sau khi để xuống, Phương Duyên trong lòng hơi hồi hộp một chút, nguy rồi, ngay tại hôm qua, hắn cùng ngay tại kinh lịch thi đại học học tỷ đã hẹn hôm nay muốn đi vì đối phương cố lên. . . Kết quả. . . Kết quả dậy trễ ?\r\n\r\n	Theo lý thuyết tối hôm qua hắn rất sớm đã Rest\\ngủ, coi như chuông báo không có vang cũng không trở thành ngủ đến giữa trưa đi.\r\n\r\n	Lần nữa đưa di động cầm lấy, Phương Duyên tâm tình hỏng bét vô cùng, lo lắng lấy nên như thế nào cùng học tỷ xin lỗi.\r\n\r\n	Bất quá. . .\r\n\r\n	Đinh!\r\n\r\n	Đúng lúc này, hệ thống bắn ra tới một tin tức khung.\r\n\r\n	Học tỷ: Buổi sáng đối chiến khảo thí rất thuận lợi, đối thủ Pikachu quá yếu.\r\n\r\n	\"Ha ha, xem ra kết quả không tệ.\"\r\n\r\n	Phương Duyên vừa định về một câu chúc mừng, thuận tiện nói lời xin lỗi, không quá mạnh nhưng ở giữa, hắn lại cảm thấy chỗ nào không thích hợp.\r\n\r\n	Đối chiến khảo thí ?\r\n\r\n	Pikachu ?\r\n\r\n	Ngươi không phải đi thi tốt nghiệp trung học sao, ngươi cho rằng ngươi đang chơi Pokémon a!\r\n\r\n	\"Ta nhất định còn chưa tỉnh ngủ.\"\r\n\r\n	Lúc này. . . Lại song nhược chuyết một đống tin tức khung bắn ra ngoài, là QQ tin tức.\r\n\r\n	Cái thứ nhất tin tức tiêu đề, liền rất không thể tưởng tượng, Phương Duyên nhìn lướt qua, toàn thân trên dưới càng không được tự nhiên.\r\n\r\n	« bốn tên chức nghiệp Trainer cộng tham Liêu Tây đại hạp cốc bí cảnh, tao ngộ thời kỳ viễn cổ hung mãnh Pokémon Aerodactyl, chỉ có một người còn sống! »\r\n\r\n	Phương Duyên nhíu mày lật ra bình luận.\r\n\r\n	Ngày sau hãy nói: Dực Long ? Long ? Lại phát hiện loại sản phẩm mới hệ Dragon Pokémon sao ?\r\n\r\n	Lớn cúc làm trọng: Xem ra Liêu Tây một vùng muốn náo nhiệt lên, ai muốn thu phục cái này Aerodactyl, nhất định có thể nổi danh, bất quá ngay cả bốn tên chức nghiệp Trainer cũng không là đối thủ, cái này Aerodactyl thực lực khẳng định không tầm thường.', 1),
 (10, 'Song trùng', 245111, 'https://gacsach.com/sites/gacsach.com/files/styles/large/public/images/26761/172184632_2179344152198784_214163847867767093_n.jpg?itok=wXejfB97', 'Đêm nay, tôi đã mơ về cái chết của mình.\r\nMột kẻ cô độc trong màn đêm tối tăm lạnh lẽo. Thăm thăm. Hun hút. Mông lung. Tôi đứng lọt thỏm và mắc kẹt nơi bóng tối bủa vây. Những thanh âm sắc lạnh như chực chờ nuốt chửng.\r\n“Liệu khi chết đi rồi, người ta có được giải thoát không nhỉ?” Kim vẫn thường hỏi tôi như thế. “Có thể.” Tôi chưa bao giờ có một sự hình dung nguyên vẹn đối với cái chết. Với tôi, đó là những dòng ý thức đứt đoạn không có một sợi dây liên kết rõ ràng. Chết là hết. Hoặc giả chết là con đường để bước sang một thế giới khác. Cũng như nhau cả thôi. Nếu như dùng một cách ngắn gọn nhất để lý giải thì đó là khi sóng não của người ta ngừng hoạt động. Và con người thôi những suy nghĩ vớ vẩn, từ trên cao mà nhìn xuống cuộc đời với ánh mắt dửng dưng.”\r\nKim luôn có những ý nghĩ quái gở. Anh ta thường đi tìm kiếm những ý niệm về cái chết. Còn tôi, tôi quá bận rộn và chẳng có thời gian mà để tâm tới điều đó.\r\nThi thoảng mỗi khi Kim xuất hiện, những kí ức của cậu ta cũng theo đó mà thâm nhập vào bộ não của tôi. Kim không có quá nhiều những kí ức đẹp đẽ. Những mối liên hệ giữa cậu ta với thế giới bên ngoài chỉ xoay quanh hai tầng nhận thức vô cùng kì quặc. Đó là: Cái Chết và Nghệ Thuật.\r\nTôi lần theo những mảng kí ức của Kim. Có đôi lúc cậu ta sẽ mê mải rong chơi với những giai điệu du dương từ cây đàn vĩ cầm, thỏa bung những khát khao tự do bay bổng theo đôi cánh nghệ thuật. Lại có những lúc, cậu ta say sưa ngồi thì thầm khe khẽ theo những khuông nhạc, gõ gõ ngón tay theo từng nhịp phách ngân vang. Và sẽ có những lúc, cậu ta lặng lẽ ôm cây đàn rồi cúi mặt xuống mà khóc nức nở, đắm chìm trong nỗi tuyệt vọng u uẩn. Thật kì lạ! Tôi đã không thể nhớ ra nổi gương mặt của Kim. Cậu ta đến và ghé thăm tôi bất kì lúc nào rồi tan biến như một hình ảnh hư ảo trôi lãng đãng trong miền kí ức xa xôi.\r\n***\r\nTôi lặng lẽ ngắm nhìn mình trong gương. Phải rồi! Tôi chính là Kim. Đây là một trong những lần gặp gỡ tình cờ, hiếm hoi giữa tôi và gã. Tôi đã gặp bản sao của chính mình như trong câu chuyện truyền thuyết. Gã nhìn tôi. Cái nhìn vô hồn và trống rỗng. Dăm ba câu chuyện tầm phào, đôi lúc gã sẽ kể cho tôi nghe. Thi thoảng, tôi sẽ bắt gặp gã hướng ánh mắt lơ đãng nhìn ra ngoài cửa sổ. Chẳng hiểu nổi ngoài đó có gì mà thu hút gã đến thế. Âm thanh? Cảnh vật. Hay chỉ đơn giản đó là một thói quen. Đôi khi, gã cũng chẳng nói chẳng rằng, chỉ ngồi yên lặng mà lắng nghe những bản nhạc của tôi. Một kẻ biết khá rõ về tôi nhưng tôi lại không biết quá nhiều điều về gã.\r\nGã là một kẻ cầu toàn.Tôi đã sớm nhận ra điều đó. Trong những lần để vuột mất cơ hội để thăng chức, gã thở dài thườn thượt, ai oán cho cái số phận hẩm hiu. Rồi khi không có được những thứ như mong muốn, gã sẽ than vãn, tự trách móc bản thân mình vô dụng. Gã cũng là một người thích suy tính mọi việc theo lý trí. Có đôi khi, gã tỏ ra khinh thường tôi, một kẻ sẵn sàng sống theo bản năng và chạy theo những đam mê vụn vặt.', 2),
 (11, 'Xóm Ế', 244000, 'https://cdn-4.ohay.tv/imgs/553723eeeb92485fbfe5/500.jpg', 'Đây là một câu chuyện mà ngoài đời bạn có thể bắt gặp được ở đâu đó hoặc được nghe ai đó kể lại.\r\n\r\nCác nhân vật của tôi cũng không phải hoàn toàn hư cấu, mà có thể bạn đã bắt gặp được bóng dáng họ ở đâu đấy ngoài đời thật.\r\n\r\nTôi chỉ là một người muốn truyền tải một thông điệp “Chiến tranh\" - Đó là thảm họa của loài người. Nó không chỉ gây bao mất mát, đau thương, tổn thất cho đất nước, cho những thế hệ sống trong thời kì đó mà còn ảnh hưởng đến cuộc sống của những thế hệ đi tiếp sau đó, hệ lụy biết bao con người. Vì vậy, ta còn sống trong hòa bình, hãy cố gắng bảo vệ hòa bình.\r\n\r\n**\r\n\r\nVào những năm đầu sau đổi mới…\r\n\r\nNhà nước tích cực thực hiện phong trào phổ cập giáo dục trên cả nước, phấn đấu chống lại giặc dốt.\r\n\r\nTại một làng quê heo hút, nằm cách xa thị trấn, hôm nay người ta dậy từ rất sớm chào đón một sự kiện tương đối đặc biệt. Họ kháo nhau rằng, hôm nay có một thầy giáo từ trên thị trấn tình nguyện chuyển về nơi đây dạy học.\r\n\r\nCòn vì sao lại là sự kiện đặc biệt thì đó là vì trong xóm bây giờ hiện tại chỉ có hai người là nam giới trên tổng số hai mươi hộ dân, nếu tính trung bình mỗi hộ dân chỉ có ba người, thì bạn đã thấy sự chênh lệch dân số ở đây như thế nào.\r\n\r\nCũng chính vì vậy, xóm này có một cái tên khá chua chát và dễ nhớ:\"Xóm ế\".\r\n\r\nPhần lớn hộ dân ở đây đều là những bà mẹ đơn thân, những cô gái đã quá lứa lỡ thì, một số ít còn lại là những người có chồng nhưng đã hi sinh trong chiến tranh.\r\n\r\nHọ không phải xấu xí, không phải dở hơi, đừng nghi ngờ mà mang tiếng họ.\r\n\r\nChỉ là, thời kì chiến tranh, trai làng đã xung phong ra chiến trường gần hết, hòa bình lập lại, những người con đó đều đã anh dũng ngã xuống, để lại một phần máu thịt của mình cho tổ quốc.\r\n\r\nXóm này chỉ còn lại đơn sơ, tan tác với những hậu quả của tàn dư chiến tranh.\r\n\r\nThầy giáo Văn theo lời chỉ dẫn của thầy hiệu trưởng chẳng khó mà tìm thấy \"Xóm ế\".\r\n\r\nTất nhiên, tên thật xóm này là xóm C, chỉ là dù có hỏi thế nào người ta vẫn chỉ nhớ đến cái tên \"Xóm ế\".\r\n\r\nChỉ cần đi qua đầu xóm thôi, thầy Văn đã thấy người ta chỉ chỉ trỏ trỏ, người người nhìn anh bằng con mắt hiếu kì, đi vào sâu chút nữa mới thấy có người hỏi to:\"Thầy giáo mới về đấy hả ?\". Anh chắp tay lễ phép:\"Vâng, chào cụ\".\r\n\r\nVào đến trường học, thầy hiệu trưởng niềm nở ra đón anh. Mái tóc ông đã bạc hết nửa. Ông mỉm cười vui vẻ, mang hành lí của anh đến chỗ ở mới.\r\n\r\n- Thầy giáo sẽ ở đây, còn dạy học ở gian bên kia nhé.\r\n\r\nÔng vừa nói dứt câu, đã thấy từ đàng xa có một cô gái chạy lại. Cô ta ôm một cái rổ, bên trong đựng đầy ổi chín, cô nàng cất giọng lanh lảnh từ đầu ngõ:\r\n\r\n- Bác Ba ơi, mẹ cháu bảo cháu mang ổi sang mời bác với thầy giáo mới.\r\n\r\nCô gái đó chỉ tầm độ mười tám đôi mươi, đang độ xuân sắc, liếc mắt nhìn thầy giáo mới, rồi tươi cười chào ra về.\r\n\r\nÔng hiệu trưởng lắc đầu cười. Thầy Văn còn ngơ ngác chưa hiểu tại sao.\r\n\r\nTối đến, đang thu dọn đồ đạc, anh lại thấy có người sang tìm: Lúc đầu, anh còn tưởng họ tìm ông Ba, nào ngờ tìm anh.\r\n\r\nLần này là người phụ nữ tầm ngoài ba mươi, cô ta chưa cần anh hỏi đã tự giới thiệu :\r\n\r\n- Chào thầy, tôi tên Cúc, nhà tôi ở đối diện trường này, hôm nay thấy thầy lặn lội đường xa đến đây thật cảm kích vô cùng nên tôi thay mặt người dân trong xóm sang hỏi thăm thầy.\r\n\r\n- Cảm ơn chị, có gì đâu, tôi tình nguyện về đây mong dạy cho các cháu cái chữ, để các cháu sau này nên người. Đây cũng là việc nên làm mà.\r\n\r\nChị ta mỉm cười nhìn thầy giáo, cố ý lại gần giường thầy ngồi, hỏi:\r\n\r\n- Thầy có cần tôi giúp gì không ?\r\n\r\n- Không cần đâu chị ạ.\r\n\r\n- Nếu cần gì cứ nói nhé, nhà tôi ở bên kia kìa.\r\n\r\nChị ta chỉ tay về phía đối diện cổng trường, trong khi thầy giáo đang mải tập trung dọn đồ, dường như chẳng nghe thấy những gì chị ta vừa nói.\r\n\r\n- Thầy này.\r\n\r\n- Dạ vâng,\r\n\r\n- Buổi tối tôi thường ở nhà một mình, nếu hôm nào thầy có rảnh thì sang chơi.\r\n\r\n- Vâng.', 2),
-(12, 'Mối tình đầu', 234000, 'https://gacsach.com/sites/gacsach.com/files/styles/large/public/images/155760/moi_tinh_dau.png?itok=06oaTb89', 'Lặng lẽ nhìn rồi lặng lẽ quay đi vì sợ bắt gặp, cảm giác đó gọi là gì nhỉ? Nhìn trộm à? Mà thật ra cũng không hẳn là nhìn trộm mà chỉ là cái nhìn yêu thương của cô gái khẽ trao cho người mình thích nhưng lại sợ anh chàng kia biết mà thôi. Bạn đã bao giờ có cảm giác đó chưa? Còn với tôi chẳng biết từ khi nào mà tôi cứ lén la lén lút nhìn nó như thế.\r\n\r\n Nó chẳng có gì đặc biệt- một thằng con trai như  bao thằng con trai khác, cao, hơi ốm, nước da ngăm ngăm và nụ cười ấm áp. Nó đối với tôi có một xúc cảm đặc biệt đến lạ lùng. Mỗi lần vô tình chạm mặt nó tôi đều rất ngượng ngùng nhưng số phận thật biết trêu ngươi, chúng tôi học chung một lớp nên ngày nào cũng gặp nha. Từ lần gặp đầu tiên đầy bỡ ngỡ cho đến khi thành đôi bạn thân thiết, tôi chợt nhận ra rằng trái tim mình có chút xao xuyến, có chút rung động tuổi mới lớn. Tất cả diễn ra một cách tự nhiên và tinh tế, diệu kì như một bài thơ mà chất liệu từ những xúc cảm tưởng chừng mong manh nhất. Tình yêu là vậy đấy bao giờ cũng bắt đầu từ những điều nhỏ nhất, đơn giản nhất cho đến những điều cao quý nhất. Những lần không thuộc bài hai đứa vẫn “đồng cam cộng khổ” với nhau để vượt qua kì kiểm tra. Nhớ nhất là khi cô giáo bất ngờ tiến lại gần phía chúng tôi, vì sợ bị bắt gặp trao đổi bài giờ kiểm tra cả hai vô cùng lúng túng, những lúc như thế nhìn mặt nó đỏ ửng như quả cà chua chín quá  trông thật đáng yêu. Chẳng hiểu vì sao mà lúc nó đi, nó đứng, nó trò chuyện tôi đều để ý và mỗi lúc như thế tôi lại thấy nó càng đặc biệt hơn.\r\n\r\nVào những buổi tan trường cơn mưa chiều miền trung như trút nước, hai đứa đứng cùng nhau dưới hiên ngắm từng hạt mưa rơi rồi đưa bàn tay nhỏ bé của mình nghịch những giọt nước đang rơi vô định, trao nhau nụ cười ngây thơ tuổi học trò. Nó đã kể cho tôi nghe rất nhiều về bố, về mẹ và về nó nữa. Tôi chợt nhận ra giữa hai đứa có thật nhiều điểm chung và điểm chung lớn nhất là chỉ có một mình. Bất giác tâm hồn tôi cô đơn, trống rỗng, lòng mình như thắt lại, có một cơn đau chợt nhói lên trong tim rồi tan biết nhanh. Dường như đây chưa phải là lúc tôi cảm nhận được đầy đủ cơn đau đó vì rằng ít nhất tôi vẫn còn có bố, mẹ và… có nó. Tôi hiểu nó buồn như thế nào mỗi khi bố mẹ về muộn, bố mẹ cãi nhau hay họ bận rộn không quan tâm đến nó. Cô đơn là một cảm giác rất đáng sợ. Nó không làm ta tổn thương thể xác nhưng để lại những vết thương lòng dai dẳng không nguôi. Tôi đã từng cảm thấy rất cô đơn khi không có anh chị em, khi thấy bạn nào đó được chị mình dắt đi hoc hay đi ra phố mua quà sinh nhật. Tôi và nó hai đứa trẻ như hai tâm hồn đơn điệu bỗng vô tình gặp nhau, mang đến cho nhau những phút trải lòng, những kỉ niệm vui dù chỉ là thoáng qua.\r\n\r\nNgày tháng cứ thế lặng lẽ trôi, chúng tôi đã lớn lên cạnh nhau và tình yêu trong tôi cũng theo đó lớn dần, biết ghen tuông, biết giận hờn. Có một chút tức giận khi thấy nó trò chuyện vui vẻ với một đứa con gái nào đó trong lớp mà trong cuộc trò chuyện đó không có tôi. Có một chút buồn bồn chồn, lo lắng khi nó ốm nghỉ học mấy ngày không gặp? Dẫu vẫn biết tình đầu mong manh dễ vỡ nhưng sao trong tim tôi vẫn cố gắng tìm kiếm một tình đầu như thế- một tình đầu lung linh như thủy tinh dưới nắng. Phải chăng trái tim tuổi mới lớn thường bồng bột, ngây thơ là thế? Cố giấu cảm xúc tôi đã làm như thế trong khi rất muốn nói ra những gì trái tim mách bảo. Tôi đã lặng lẽ yêu rồi lặng lẽ nhìn nó ra khỏi cuộc đời mình.\r\n\r\nNó theo gia đình sang Mỹ định cư, còn tôi vẫn ở lại với thị trấn thân thương với biết bao những kỉ niệm vui buồn. Khi biết nó sắp đi tôi buồn lắm nhưng tôi đâu thể làm gì khác. Nếu định mệnh đã cho chúng tôi gặp nhau nhưng không để chúng tôi bên nhau thì tôi cũng chỉ có thể im lặng mỉm cười mà bước tiếp. Đường đời rộng lớn biết đâu được một ngày nào đó những con đường lại giao nhau và kí ức xưa sống lại lần nữa.\r\n\r\nDù thời gian trôi qua đã khá lâu kể từ ngày chiếc máy bay cất cánh mang nó đến một nơi xa lạ cách tôi nửa vòng trái đất, chúng tôi vẫn chưa một lần gặp lại. Phải chăng đây là ý trời. Tôi và nó mỗi đứa có một đường đi riêng, một định hướng riêng. Nhưng đôi khi ngẫm lại những chuyện xưa ký ức ngày nào lại hiện về trong tôi như vẫn còn tươi nguyên. Tôi tự nhủ hãy khép lại ký ức một thời vì nó đã là quá khứ. Cái gì đến sẽ đến, cái gì đi sẽ đi nhưng sao trong lòng tôi vẫn băn khoăn một câu hỏi không lời giải: Nếu như ngày đó mình dũng cảm nói ra tấm chân tình thì liệu giờ này mọi thứ có khác hơn không?', 2);
+(12, 'Mối tình đầu', 234000, 'https://gacsach.com/sites/gacsach.com/files/styles/large/public/images/155760/moi_tinh_dau.png?itok=06oaTb89', 'Lặng lẽ nhìn rồi lặng lẽ quay đi vì sợ bắt gặp, cảm giác đó gọi là gì nhỉ? Nhìn trộm à? Mà thật ra cũng không hẳn là nhìn trộm mà chỉ là cái nhìn yêu thương của cô gái khẽ trao cho người mình thích nhưng lại sợ anh chàng kia biết mà thôi. Bạn đã bao giờ có cảm giác đó chưa? Còn với tôi chẳng biết từ khi nào mà tôi cứ lén la lén lút nhìn nó như thế.\r\n\r\n Nó chẳng có gì đặc biệt- một thằng con trai như  bao thằng con trai khác, cao, hơi ốm, nước da ngăm ngăm và nụ cười ấm áp. Nó đối với tôi có một xúc cảm đặc biệt đến lạ lùng. Mỗi lần vô tình chạm mặt nó tôi đều rất ngượng ngùng nhưng số phận thật biết trêu ngươi, chúng tôi học chung một lớp nên ngày nào cũng gặp nha. Từ lần gặp đầu tiên đầy bỡ ngỡ cho đến khi thành đôi bạn thân thiết, tôi chợt nhận ra rằng trái tim mình có chút xao xuyến, có chút rung động tuổi mới lớn. Tất cả diễn ra một cách tự nhiên và tinh tế, diệu kì như một bài thơ mà chất liệu từ những xúc cảm tưởng chừng mong manh nhất. Tình yêu là vậy đấy bao giờ cũng bắt đầu từ những điều nhỏ nhất, đơn giản nhất cho đến những điều cao quý nhất. Những lần không thuộc bài hai đứa vẫn “đồng cam cộng khổ” với nhau để vượt qua kì kiểm tra. Nhớ nhất là khi cô giáo bất ngờ tiến lại gần phía chúng tôi, vì sợ bị bắt gặp trao đổi bài giờ kiểm tra cả hai vô cùng lúng túng, những lúc như thế nhìn mặt nó đỏ ửng như quả cà chua chín quá  trông thật đáng yêu. Chẳng hiểu vì sao mà lúc nó đi, nó đứng, nó trò chuyện tôi đều để ý và mỗi lúc như thế tôi lại thấy nó càng đặc biệt hơn.\r\n\r\nVào những buổi tan trường cơn mưa chiều miền trung như trút nước, hai đứa đứng cùng nhau dưới hiên ngắm từng hạt mưa rơi rồi đưa bàn tay nhỏ bé của mình nghịch những giọt nước đang rơi vô định, trao nhau nụ cười ngây thơ tuổi học trò. Nó đã kể cho tôi nghe rất nhiều về bố, về mẹ và về nó nữa. Tôi chợt nhận ra giữa hai đứa có thật nhiều điểm chung và điểm chung lớn nhất là chỉ có một mình. Bất giác tâm hồn tôi cô đơn, trống rỗng, lòng mình như thắt lại, có một cơn đau chợt nhói lên trong tim rồi tan biết nhanh. Dường như đây chưa phải là lúc tôi cảm nhận được đầy đủ cơn đau đó vì rằng ít nhất tôi vẫn còn có bố, mẹ và… có nó. Tôi hiểu nó buồn như thế nào mỗi khi bố mẹ về muộn, bố mẹ cãi nhau hay họ bận rộn không quan tâm đến nó. Cô đơn là một cảm giác rất đáng sợ. Nó không làm ta tổn thương thể xác nhưng để lại những vết thương lòng dai dẳng không nguôi. Tôi đã từng cảm thấy rất cô đơn khi không có anh chị em, khi thấy bạn nào đó được chị mình dắt đi hoc hay đi ra phố mua quà sinh nhật. Tôi và nó hai đứa trẻ như hai tâm hồn đơn điệu bỗng vô tình gặp nhau, mang đến cho nhau những phút trải lòng, những kỉ niệm vui dù chỉ là thoáng qua.\r\n\r\nNgày tháng cứ thế lặng lẽ trôi, chúng tôi đã lớn lên cạnh nhau và tình yêu trong tôi cũng theo đó lớn dần, biết ghen tuông, biết giận hờn. Có một chút tức giận khi thấy nó trò chuyện vui vẻ với một đứa con gái nào đó trong lớp mà trong cuộc trò chuyện đó không có tôi. Có một chút buồn bồn chồn, lo lắng khi nó ốm nghỉ học mấy ngày không gặp? Dẫu vẫn biết tình đầu mong manh dễ vỡ nhưng sao trong tim tôi vẫn cố gắng tìm kiếm một tình đầu như thế- một tình đầu lung linh như thủy tinh dưới nắng. Phải chăng trái tim tuổi mới lớn thường bồng bột, ngây thơ là thế? Cố giấu cảm xúc tôi đã làm như thế trong khi rất muốn nói ra những gì trái tim mách bảo. Tôi đã lặng lẽ yêu rồi lặng lẽ nhìn nó ra khỏi cuộc đời mình.\r\n\r\nNó theo gia đình sang Mỹ định cư, còn tôi vẫn ở lại với thị trấn thân thương với biết bao những kỉ niệm vui buồn. Khi biết nó sắp đi tôi buồn lắm nhưng tôi đâu thể làm gì khác. Nếu định mệnh đã cho chúng tôi gặp nhau nhưng không để chúng tôi bên nhau thì tôi cũng chỉ có thể im lặng mỉm cười mà bước tiếp. Đường đời rộng lớn biết đâu được một ngày nào đó những con đường lại giao nhau và kí ức xưa sống lại lần nữa.\r\n\r\nDù thời gian trôi qua đã khá lâu kể từ ngày chiếc máy bay cất cánh mang nó đến một nơi xa lạ cách tôi nửa vòng trái đất, chúng tôi vẫn chưa một lần gặp lại. Phải chăng đây là ý trời. Tôi và nó mỗi đứa có một đường đi riêng, một định hướng riêng. Nhưng đôi khi ngẫm lại những chuyện xưa ký ức ngày nào lại hiện về trong tôi như vẫn còn tươi nguyên. Tôi tự nhủ hãy khép lại ký ức một thời vì nó đã là quá khứ. Cái gì đến sẽ đến, cái gì đi sẽ đi nhưng sao trong lòng tôi vẫn băn khoăn một câu hỏi không lời giải: Nếu như ngày đó mình dũng cảm nói ra tấm chân tình thì liệu giờ này mọi thứ có khác hơn không?', 2),
+(13, 'Who Stalked Einstein', 120000, 'https://images-na.ssl-images-amazon.com/images/I/410VH-wdSEL._SX332_BO1,204,203,200_.jpg', 'By the end of World War I, Albert Einstein had become the face of the new science of theoretical physics and had made some powerful enemies. One of those enemies, Nobel Prize winner Philipp Lenard, spent a career trying to discredit him. Their story of conflict, pitting Germany’s most widely celebrated Jew against the Nazi scientist who was to become Hitler’s chief advisor on physics, had an impact far exceeding what the scientific community felt at the time. Indeed, their mutual antagonism affected the direction of science long after 1933, when Einstein took flight to America and changed the history of two nations. The Man Who Stalked Einstein details the tense relationship between Einstein and Lenard, their ideas and actions, during the eventful period between World War I and World War II.', 3),
+(14, 'Story of Marie Curie', 85000, 'https://images-na.ssl-images-amazon.com/images/I/81fy+p-YxSL.jpg', 'Marie Curie became one of the most celebrated scientists in history. Before she changed the world with her discoveries in physics and chemistry, Marie was an intelligent girl who studied hard to reach the top of her class. She overcame many challenges, including people who told her she couldn’t be a scientist because she was a woman. She didn’t let anything stop her, and her important research is still helping people today. Explore how Marie Curie went from being a young girl growing up in Poland to a famous', 3),
+(15, 'A Brief History', 120000, 'https://salt.tikicdn.com/cache/400x400/ts/product/bb/32/bf/f62612039f47cab1949c5e2ddda39bc9.jpg.webp', 'These are just some of the questions considered in the internationally acclaimed masterpiece by the world renowned physicist - generally considered to have been one of the world\'s greatest thinkers. It begins by reviewing the great theories of the cosmos from Newton to Einstein, before delving into the secrets which still lie at the heart of space and time, from the Big Bang to black holes, via spiral galaxies and strong theory. To this day A Brief History of Time remains a staple of the scientific canon, and its succinct and clear language continues to introduce millions to the universe and its wonders.', 3),
+(16, 'Big Data', 92000, 'https://salt.tikicdn.com/cache/400x400/ts/product/4e/73/21/c5ddc5514feb57c492dd9ad5a862aaf1.jpg.webp', 'Big data knows where you\'ve been and who your friends are. It knows what you like and what makes you angry. It can predict what you\'ll buy, where you\'ll be the victim of crime and when you\'ll have a heart attack. Big data knows you better than you know yourself, or so it claims.', 3);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thongtinsanpham`
+-- Cấu trúc bảng cho bảng `thongtinsanpham`
 --
 
 CREATE TABLE `thongtinsanpham` (
@@ -197,7 +182,7 @@ CREATE TABLE `thongtinsanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `thongtinsanpham`
+-- Đang đổ dữ liệu cho bảng `thongtinsanpham`
 --
 
 INSERT INTO `thongtinsanpham` (`DanhMuc`, `Id`, `TacGia`, `TenSach`, `NhaCungCap`, `CtyPhatHanh`, `NgayXB`, `HinhAnh`) VALUES
@@ -211,11 +196,12 @@ INSERT INTO `thongtinsanpham` (`DanhMuc`, `Id`, `TacGia`, `TenSach`, `NhaCungCap
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
+  `maQuyen` int(11) NOT NULL,
   `name` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
@@ -225,115 +211,97 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `soDienThoai`, `diaChi`, `ngaySinh`) VALUES
-(1, 'bui van sy', 'bvsy@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/10/2001'),
-<<<<<<< HEAD
-(2, 'thiên', '1', '1', 83647, 'Tam Anh Nam', '27/20/2001'),
-(3, 'thanhnhan', 'bvsy1@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-(4, 'Bui Van Sy', 'bvsy@mail.co', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-(5, 'Pham Van Thien', 'pvthien@gmail.cm', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-(6, 'Pham Van Thien', 'pvthien@gmail.cm', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-(7, 'Pham Van Thien', 'pvthien@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
-=======
-(2, 'thiên', 'admin', '2', 83647, 'Tam Anh Nam', '27/20/2001'),
-(3, 'thanhnhan', 'bvsy1@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
-(8, 'Nguyễn Quang Huy', 'vanthien.zip@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001');
+INSERT INTO `users` (`id`, `maQuyen`, `name`, `email`, `password`, `soDienThoai`, `diaChi`, `ngaySinh`) VALUES
+(2, 1, 'huyy', 'admin', '1', 961640909, 'Kon Tum', '12/12/1999'),
+(3, 0, 'thanhnhan', 'bvsy1@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001'),
+(8, 0, 'Nguyễn Quang Huy', 'vanthien.zip@gmail.com', '1', 394921219, 'Tam Anh Nam', '27/20/2001');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `chitietdonhang`
+-- Chỉ mục cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `diachigiaohang`
+-- Chỉ mục cho bảng `diachigiaohang`
 --
 ALTER TABLE `diachigiaohang`
   ADD PRIMARY KEY (`idDiaChi`);
 
 --
--- Indexes for table `donhang`
+-- Chỉ mục cho bảng `donhang`
 --
 ALTER TABLE `donhang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `loaisanpham`
+-- Chỉ mục cho bảng `loaisanpham`
 --
 ALTER TABLE `loaisanpham`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sanpham`
+-- Chỉ mục cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `thongtinsanpham`
+-- Chỉ mục cho bảng `thongtinsanpham`
 --
 ALTER TABLE `thongtinsanpham`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `chitietdonhang`
+-- AUTO_INCREMENT cho bảng `chitietdonhang`
 --
 ALTER TABLE `chitietdonhang`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-=======
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `diachigiaohang`
+-- AUTO_INCREMENT cho bảng `diachigiaohang`
 --
 ALTER TABLE `diachigiaohang`
-  MODIFY `idDiaChi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
+  MODIFY `idDiaChi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `donhang`
+-- AUTO_INCREMENT cho bảng `donhang`
 --
 ALTER TABLE `donhang`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-=======
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
->>>>>>> d2f8b2e63ccd183d86e9ee7ef62c631bdbaf2cf8
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT for table `loaisanpham`
+-- AUTO_INCREMENT cho bảng `loaisanpham`
 --
 ALTER TABLE `loaisanpham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT for table `sanpham`
+-- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;

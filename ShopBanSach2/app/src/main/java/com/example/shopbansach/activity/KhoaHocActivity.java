@@ -1,22 +1,20 @@
 package com.example.shopbansach.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -28,7 +26,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.shopbansach.R;
-import com.example.shopbansach.adapter.AllSanphamAdapter;
+import com.example.shopbansach.adapter.KhoaHocAdapter;
 import com.example.shopbansach.model.Sanpham;
 import com.example.shopbansach.util.CheckConnection;
 import com.example.shopbansach.util.Server;
@@ -41,64 +39,36 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TimKiemActivity extends AppCompatActivity {
-    EditText edtSearch;
-    Toolbar toolbartk;
+public class KhoaHocActivity extends AppCompatActivity {
+    Toolbar toolbartn;
+    ListView lvtn;
     LinearLayout ln_home,ln_tk,ln_tb,ln_search,ln_dm;
-    mHandler mHandler;
-    int idsp = 0;
-    ListView lvsp;
+    KhoaHocAdapter thieuNhiAdapter;
+    ArrayList<Sanpham> mangtt;
+    int idtt = 0;
+    int page = 1;
     View footerview;
-    AllSanphamAdapter sanphamAdapter;
-    ArrayList<Sanpham> mangsp;
-    Boolean isLoading = false,limitadata =false;
+    boolean isLoading = false;
+    KhoaHocActivity.mHandler mHandler;
+    boolean limitadata = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tim_kiem);
+        setContentView(R.layout.activity_khoa_hoc);
         AnhXa();
-        OnClickMenu();
-        if (CheckConnection.haveNetworkConnection(getApplicationContext())){
+        if(CheckConnection.haveNetworkConnection(getApplicationContext())){
+            GetIdLoaisp();
             ActionToolbar();
-            GetData();
-            Search();
+            GetData(page);
             LoadMoreData();
-        }else {
-            CheckConnection.ShowToast_Short(getApplicationContext(),"Hãy kiểm tra lại kết nối Internet");
-            finish();
+            OnclickMenu();
+        }
+        else {
+            CheckConnection.ShowToast_Short(getApplicationContext(),"Bạn hãy kiểm tra lại kết nối Internet");
         }
     }
 
-    private void Search() {
-        edtSearch.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                filter(s.toString());
-            }
-        });
-    }
-
-    private void filter(String text){
-        ArrayList<Sanpham> filteredList = new ArrayList<>();
-        for(Sanpham item: mangsp){
-            if(item.getTensanpham().toLowerCase().contains(text.toLowerCase())){
-                filteredList.add(item);
-            }
-        }
-        sanphamAdapter.filterList(filteredList);
-    }
-
-    private void OnClickMenu() {
+    private void OnclickMenu() {
         ln_dm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -137,86 +107,6 @@ public class TimKiemActivity extends AppCompatActivity {
         });
     }
 
-    private void LoadMoreData() {
-        lvsp.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(),Chitietsanpham.class);
-                intent.putExtra("thongtinsanpham",mangsp.get(i));
-                startActivity(intent);
-            }
-        });
-
-        lvsp.setOnScrollListener(new AbsListView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(AbsListView absListView, int i) {
-
-            }
-            @Override
-            public void onScroll(AbsListView absListView, int FirstItem, int VisibleItem, int TotalItem) {
-                if (FirstItem + VisibleItem == TotalItem && TotalItem!= 0 && isLoading == false && limitadata == false){
-                    isLoading = true;
-                    ThreadData threadData = new ThreadData();
-                    threadData.start();
-                }
-            }
-        });
-    }
-
-    private void GetData() {
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        String duongdan = Server.Duongdanallsp;
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, duongdan, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                int id = 0;
-                String Tensp = "";
-                int Giasp;
-                String Hinhanhsp="";
-                String Motasp="";
-                int Idsp=0;
-                if(response!=null && response.length() != 2){
-
-                    lvsp.removeFooterView(footerview);
-                    try {
-                        JSONArray jsonArray = new JSONArray(response);
-                        for (int i = 0;i<jsonArray.length();i++){
-                            JSONObject jsonObject = jsonArray.getJSONObject(i);
-                            id = jsonObject.getInt("id");
-                            Tensp = jsonObject.getString("tensp");
-                            Giasp = jsonObject.getInt("giasp");
-                            Hinhanhsp = jsonObject.getString("hinhanhsp");
-                            Motasp = jsonObject.getString("motasp");
-                            Idsp = jsonObject.getInt("idsanpham");
-                            mangsp.add(new Sanpham(id,Tensp,Giasp,Hinhanhsp,Motasp,Idsp));
-                            sanphamAdapter.notifyDataSetChanged();
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-                else {
-                    limitadata = true;
-                    lvsp.removeFooterView(footerview);
-                    CheckConnection.ShowToast_Short(getApplicationContext(),"Đã hết dữ liệu");
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        }){
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                HashMap<String,String> parram = new HashMap<String,String>();
-                parram.put("idSanPham",String.valueOf(idsp));
-                return super.getParams();
-            }
-        };
-        requestQueue.add(stringRequest);
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu,menu);
@@ -233,28 +123,94 @@ public class TimKiemActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void AnhXa() {
-        toolbartk = findViewById(R.id.toolbartimkiem);
-        ln_home = findViewById(R.id.ln_home);
-        ln_tk = findViewById(R.id.ln_tk);
-        ln_tb = findViewById(R.id.ln_tb);
-        ln_dm = findViewById(R.id.ln_dm);
-        ln_search = findViewById(R.id.ln_search);
-        lvsp = findViewById(R.id.listviewtimkiem);
-        mangsp = new ArrayList<>();
-        sanphamAdapter = new AllSanphamAdapter(getApplicationContext(),mangsp);
-        lvsp.setAdapter(sanphamAdapter);
-        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        footerview = inflater.inflate(R.layout.progressbar,null);
-        mHandler = new mHandler();
-        edtSearch = findViewById(R.id.edt_search);
+    private void LoadMoreData() {
+        lvtn.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(),Chitietsanpham.class);
+                intent.putExtra("thongtinsanpham",mangtt.get(i));
+                startActivity(intent);
+            }
+        });
+
+        lvtn.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView absListView, int i) {
+
+            }
+
+            @Override
+            public void onScroll(AbsListView absListView, int FirstItem, int VisibleItem, int TotalItem) {
+                if (FirstItem + VisibleItem == TotalItem && TotalItem!= 0 && isLoading == false && limitadata == false){
+                    isLoading = true;
+                    ThreadData threadData = new ThreadData();
+                    threadData.start();
+                }
+            }
+        });
+    }
+
+    private void GetData(int Page) {
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        String duongdan = Server.Duongdantruyentranh+String.valueOf(Page);
+        Log.d("giatriloaisanpham",duongdan+"");
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, duongdan, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                lvtn.removeFooterView(footerview);
+                int id=0;
+                String Tentt = "";
+                int Giatt = 0;
+                String Hinhanhtt="";
+                String Motatt="";
+                int Idsptt = 0;
+                if(response != null && response.length() != 2   ){
+                    lvtn.removeFooterView(footerview);
+                    try {
+                        JSONArray jsonArray = new JSONArray(response);
+                        Log.d("giatriloaisanpham",jsonArray.length()+"");
+                        for (int i = 0;i<jsonArray.length();i++){
+                            JSONObject jsonObject = jsonArray.getJSONObject(i);
+                            id = jsonObject.getInt("id");
+                            Tentt = jsonObject.getString("tensp");
+                            Giatt = jsonObject.getInt("giasp");
+                            Hinhanhtt = jsonObject.getString("hinhanhsp");
+                            Motatt = jsonObject.getString("motasp");
+                            Idsptt = jsonObject.getInt("idsanpham");
+                            mangtt.add(new Sanpham(id,Tentt,Giatt,Hinhanhtt,Motatt,Idsptt));
+                            thieuNhiAdapter.notifyDataSetChanged();
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else {
+                    limitadata = true;
+                    lvtn.removeFooterView(footerview);
+                    CheckConnection.ShowToast_Short(getApplicationContext(),"Đã hết dữ liệu");
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String,String> param = new HashMap<String,String>();
+                param.put("idSanPham",String.valueOf(idtt));
+                return param;
+            }
+        };
+        requestQueue.add(stringRequest);
     }
 
     private void ActionToolbar() {
-        setSupportActionBar(toolbartk);
+        setSupportActionBar(toolbartn);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbartk.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
-        toolbartk.setNavigationOnClickListener(new View.OnClickListener() {
+        toolbartn.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
+        toolbartn.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -262,15 +218,36 @@ public class TimKiemActivity extends AppCompatActivity {
         });
     }
 
-    public class mHandler extends Handler {
+    private void GetIdLoaisp() {
+        idtt = getIntent().getIntExtra("idloaisanpham",-1);
+        Log.d("giatriloaisanpham",idtt+"");
+    }
+
+    private void AnhXa() {
+        toolbartn = findViewById(R.id.toolbarthieunhi);
+        lvtn = findViewById(R.id.listviewthieunhi);
+        mangtt= new ArrayList<>();
+        thieuNhiAdapter = new KhoaHocAdapter(getApplicationContext(),mangtt);
+        lvtn.setAdapter(thieuNhiAdapter);
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        footerview = inflater.inflate(R.layout.progressbar,null);
+        mHandler = new mHandler();
+        ln_home = findViewById(R.id.ln_home);
+        ln_tk = findViewById(R.id.ln_tk);
+        ln_tb = findViewById(R.id.ln_tb);
+        ln_dm = findViewById(R.id.ln_dm);
+        ln_search = findViewById(R.id.ln_search);
+    }
+
+    public class mHandler extends Handler{
         @Override
         public void handleMessage(@NonNull Message msg) {
             switch (msg.what){
                 case 0:
-                    lvsp.addFooterView(footerview);
+                    lvtn.addFooterView(footerview);
                     break;
                 case 1:
-                    GetData();
+                    GetData(++page);
                     isLoading = false;
                     break;
             }

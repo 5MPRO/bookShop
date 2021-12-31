@@ -48,6 +48,7 @@ public class Login extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     private static int RC_SIGN_IN = 100;
     public static String personEmail= "", personName="";
+    public static String taiKhoanDN ="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,14 +147,48 @@ public class Login extends AppCompatActivity {
                     if(response.contains("success")){
                         Intent intent = new Intent(Login.this, MainActivity.class);
                         String tkemail = etEmail.getText().toString().trim();
-                        Log.d("email"," "+tkemail);
                         intent.putExtra("email",tkemail);
                         startActivity(intent);
                         finish();
                         Log.e("QB", "onResponse: " + response);
                     }else if(response.contains("failure")) {
 
-                        Toast.makeText(Login.this, "Nhập sai tài khoản hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+                        StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.Duongdanloginad, new Response.Listener<String>() {
+
+                            @Override
+                            public void onResponse(String response) {
+                                Log.e("QB", "onResponse: " + response);
+                                if(response.contains("success")){
+                                    Intent intent = new Intent(Login.this, MainActivityAdmin.class);
+                                    taiKhoanDN = etEmail.getText().toString().trim();
+                                    intent.putExtra("email",taiKhoanDN);
+                                    startActivity(intent);
+                                    finish();
+                                    Log.e("QB", "onResponse: " + response);
+                                }else if(response.contains("failure")) {
+
+                                    Toast.makeText(Login.this, "Nhập sai tài khoản hoặc mật khẩu", Toast.LENGTH_SHORT).show();
+                                }
+                                else {
+                                    Toast.makeText(Login.this, "onResponse: " + response, Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Toast.makeText(getApplicationContext(),error.toString().trim(), Toast.LENGTH_SHORT).show();
+                            }
+                        }){
+                            @Override
+                            protected Map<String, String> getParams() throws AuthFailureError {
+                                Map<String, String> data = new HashMap<>();
+                                data.put("email",email);
+                                data.put("password",password);
+                                return data;
+                            }
+                        };
+                        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+                        requestQueue.add(stringRequest);
                     }
                     else {
                         Toast.makeText(Login.this, "onResponse: " + response, Toast.LENGTH_SHORT).show();
