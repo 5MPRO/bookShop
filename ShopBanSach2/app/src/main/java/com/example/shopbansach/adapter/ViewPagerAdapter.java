@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.shopbansach.fragment.LoaiSachFragment;
+//import com.example.shopbansach.fragment.LoaiSachFragment;
 import com.example.shopbansach.fragment.SachFragment;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
@@ -18,11 +18,11 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new LoaiSachFragment();
+                return new SachFragment();
             case 1:
                 return new SachFragment();
             default:
-                return new LoaiSachFragment();
+                return new SachFragment();
         }
     }
 
