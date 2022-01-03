@@ -70,7 +70,6 @@ public class ThemSach extends AppCompatActivity{
                 addSach();
             }
         });
-
     }
 
     private void AnhXa() {
@@ -131,7 +130,7 @@ public class ThemSach extends AppCompatActivity{
 
 
     private void addSach(){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.Duongdaninsertloaisach, new Response.Listener<String>() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.DuongdaninsertSanPham, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 CheckConnection.ShowToast_Short(getApplicationContext(),"Them thanh cong");
@@ -148,6 +147,7 @@ public class ThemSach extends AppCompatActivity{
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params = new HashMap<>();
                 params.put("idLoaiSach",String.valueOf( idTypeBook));
+                //Toast.makeText(getApplicationContext(), String.valueOf( idTypeBook), Toast.LENGTH_SHORT).show();
                 params.put("tenSach",edit_Title.getText().toString().trim());
                 params.put("gia",edit_Price.getText().toString().trim());
                 params.put("soLuong",edit_Quantity.getText().toString().trim());
@@ -161,6 +161,7 @@ public class ThemSach extends AppCompatActivity{
 
     @Override
     protected void onResume() {
+
         super.onResume();
     }
 

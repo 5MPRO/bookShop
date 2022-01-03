@@ -128,5 +128,9 @@ public class SachFragment extends Fragment {
         btnThem = view.findViewById(R.id.btnAddBook);
     }
 
-
+    @Override
+    public void onResume() {
+        GetData();
+        super.onResume();
+    }
 }

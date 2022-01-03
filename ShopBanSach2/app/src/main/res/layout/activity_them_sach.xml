@@ -96,8 +96,8 @@
         android:background="@drawable/boder_btn_dangnhap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnAddBook"
+
         android:text="Thêm"
         android:layout_marginTop="25dp"
-        android:id="@+id/btnUpload"/>
+        android:id="@+id/btnAddBook"/>
 </LinearLayout>
