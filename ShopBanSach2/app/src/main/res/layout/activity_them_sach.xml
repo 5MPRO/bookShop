@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/groupSnp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:text="Chon loại sách"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+        <Spinner
+            android:id="@+id/spnTypeBook"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:fontFamily="@font/serif"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:id="@+id/edit_Title"
+            android:hint="Tiêu đề: "
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:fontFamily="@font/serif"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:id="@+id/edit_Price"
+            android:hint="Giá: "
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:fontFamily="@font/serif"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:id="@+id/edit_Quantity"
+            android:hint="Số lượng: "
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:fontFamily="@font/serif"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:id="@+id/edit_Desc"
+            android:hint="Mô tả: "
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:fontFamily="@font/serif"
+            android:textSize="18sp"
+            android:layout_margin="5dp"
+            android:id="@+id/edit_imgs"
+            android:hint="Hình ảnh: "
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:backgroundTint="@color/color_menu"
+        android:textColor="@color/white"
+        android:background="@drawable/boder_btn_dangnhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Thêm"
+        android:layout_marginTop="25dp"
+        android:id="@+id/btnAddBook"/>
+</LinearLayout>
