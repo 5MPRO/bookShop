@@ -161,11 +161,13 @@ public class Thongtinkhachhang extends AppCompatActivity {
                                         for(int i =0; i< MainActivity.manggiohang.size();i++){
                                             JSONObject jsonObject = new JSONObject();
                                             try {
+                                                String trangThai= "Chờ xử lý";
                                                 jsonObject.put("maDonHang",madonhang);
                                                 jsonObject.put("maSanPham",MainActivity.manggiohang.get(i).getIdsp());
                                                 jsonObject.put("tenSanPham",MainActivity.manggiohang.get(i).getTensp());
                                                 jsonObject.put("giaSanPham",MainActivity.manggiohang.get(i).getGiasp());
                                                 jsonObject.put("soLuongSanPham",MainActivity.manggiohang.get(i).getSoluongsp());
+                                                jsonObject.put("trangThai",trangThai.toString().trim());
                                             } catch (JSONException e) {
                                                 e.printStackTrace();
                                             }

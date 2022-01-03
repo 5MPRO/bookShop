@@ -27,4 +27,6 @@ public class Server{
     public static String DuongdangetDonHang="http://"+localhost+"/BanSach/BanSach/getdonhang.php";
     public static String Duongdanloginad="http://"+localhost+"/BanSach/LoginBook/loginad.php";
     public static String Duongdaninsertloaisach="http://"+localhost+"/BanSach/BanSach/insertloaisach.php";
+    public static String DuongdangetdonhangAD="http://"+localhost+"/BanSach/BanSach/getdonhangad.php";
+    public static String Duongdanupdatedh="http://"+localhost+"/BanSach/BanSach/updatedonhang.php";
 }

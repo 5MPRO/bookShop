@@ -17,12 +17,10 @@ import java.util.List;
 
 public class OderAdapter extends BaseAdapter {
     Context context;
-
     List<DonHang> donHangList;
 
     public OderAdapter(Context context,ArrayList<DonHang> listtb) {
         this.context = context;
-
         this.donHangList = listtb;
     }
 
