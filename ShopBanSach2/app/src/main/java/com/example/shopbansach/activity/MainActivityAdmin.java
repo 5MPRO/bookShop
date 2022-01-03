@@ -54,7 +54,7 @@ public class MainActivityAdmin extends AppCompatActivity {
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
                 switch (position){
                     case 0:
-                        tab.setText("Kệ sách ");
+                        tab.setText("Loại Sách ");
                         break;
                     case 1:
                         tab.setText("Sách");
