@@ -92,6 +92,9 @@
             android:name=".activity.TruyenTranhActivity"
             android:exported="false" />
         <activity
+            android:name=".activity.ThemSach"
+            android:exported="false" />
+        <activity
             android:name=".Splash.SplashScreen"
             android:exported="true">
             <intent-filter>

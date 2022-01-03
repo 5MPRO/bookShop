@@ -34,4 +34,9 @@ public class Loaisp {
     public void setHinhanhloaisp(String hinhanhloaisp) {
         Hinhanhloaisp = hinhanhloaisp;
     }
+
+    public Loaisp(int id, String tenloaisp) {
+        Id = id;
+        Tenloaisp = tenloaisp;
+    }
 }
