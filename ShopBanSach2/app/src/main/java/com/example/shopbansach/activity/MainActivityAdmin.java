@@ -59,6 +59,9 @@ public class MainActivityAdmin extends AppCompatActivity {
                     case 1:
                         tab.setText("Sách");
                         break;
+                    case 2:
+                        tab.setText("Đơn hàng");
+                        break;
                 }
             }
         }).attach();

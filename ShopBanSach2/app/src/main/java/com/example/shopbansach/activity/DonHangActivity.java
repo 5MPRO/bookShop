@@ -24,6 +24,7 @@ import com.example.shopbansach.adapter.ThongbaoAdapter;
 import com.example.shopbansach.model.DonHang;
 import com.example.shopbansach.model.ThongBao;
 import com.example.shopbansach.model.emailLogin;
+import com.example.shopbansach.util.CheckConnection;
 import com.example.shopbansach.util.Server;
 
 import org.json.JSONArray;
@@ -35,15 +36,16 @@ import java.util.ArrayList;
 public class DonHangActivity extends AppCompatActivity {
     ListView listView;
     ArrayList<DonHang> donHangArrayList;
-   OderAdapter oderAdapter;
+    OderAdapter oderAdapter;
     Toolbar toolbardmm;
+    String URL = Server.DuongdangetDonHang+"?email="+emailLogin.email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order);
         AnhXa();
         ActionToolbar();
-        GetDonHang(Server.DuongdangetDonHang+"?email="+emailLogin.email);
+        GetDonHang(URL);
     }
     private void ActionToolbar() {
         setSupportActionBar(toolbardmm);
@@ -57,22 +59,23 @@ public class DonHangActivity extends AppCompatActivity {
         });
     }
     private void GetDonHang(String url) {
-            donHangArrayList.clear();
+            /*donHangArrayList.clear();*/
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url,null,
                     new Response.Listener<JSONArray>() {
-
                         @Override
                         public void onResponse(JSONArray response){
                             for (int i = 0;i < response.length();i++){
                             String txtOrderName,txtTotal, txtQuantity, txtStatus;
                             try {
                                 JSONObject jsonObject = response.getJSONObject(i);
+                                String maDH= "";
+                                maDH = jsonObject.getString("maDonHang");
                                 txtOrderName = jsonObject.getString("tenSanPham");
                                 txtTotal   =(jsonObject.getString("tongtien"));
                                 txtQuantity = (jsonObject.getString("soLuongSanPham"));
                                 txtStatus = (jsonObject.getString("trangThai"));
-                                donHangArrayList.add(new DonHang(txtOrderName,txtQuantity,txtStatus,txtTotal));
+                                donHangArrayList.add(new DonHang(maDH,txtOrderName,txtQuantity,txtStatus,txtTotal));
                                 oderAdapter.notifyDataSetChanged();
                             } catch (JSONException e) {
                                 e.printStackTrace();

@@ -1,7 +1,6 @@
 <?php
     include "connect.php";
-    $email = $_GET['email'];
-    $query = "SELECT * FROM chitietdonhang, donhang where donhang.id = chitietdonhang.maDonHang and email = '$email' ";
+    $query = "SELECT * FROM chitietdonhang, donhang where donhang.id = chitietdonhang.maDonHang";
     $data = mysqli_query($conn, $query);
     $mangdonhang = array();
     while ($row = mysqli_fetch_assoc($data)){

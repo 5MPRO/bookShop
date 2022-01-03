@@ -8,8 +8,9 @@
         $tensanpham = $value['tenSanPham'];
         $giasanpham = $value['giaSanPham'];
         $soluongsanpham = $value['soLuongSanPham'];
-        $query = "INSERT INTO chitietdonhang(id,maDonHang,maSanPham,tenSanPham,giaSanPham,soLuongSanPham)"
-                . "VALUE(null,'$madonhang','$masanpham','$tensanpham','$giasanpham','$soluongsanpham')";
+        $trangThai = $value['trangThai'];
+        $query = "INSERT INTO chitietdonhang(id,maDonHang,maSanPham,tenSanPham,giaSanPham,soLuongSanPham,trangThai)"
+                . "VALUE(null,'$madonhang','$masanpham','$tensanpham','$giasanpham','$soluongsanpham','$trangThai')";
         $Dta = mysqli_query($conn, $query);
     }
     if($Dta){
