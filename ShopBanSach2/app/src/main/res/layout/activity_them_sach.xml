@@ -77,26 +77,30 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_marginTop="5dp"
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/imageViewSach"
+        android:visibility="gone"/>
+
+    <Button
+        android:backgroundTint="@color/color_menu"
+        android:textColor="@color/white"
+        android:background="@drawable/boder_btn_dangnhap"
+        android:id="@+id/btnChonHASach"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:fontFamily="@font/serif"
-            android:textSize="18sp"
-            android:layout_margin="5dp"
-            android:id="@+id/edit_imgs"
-            android:hint="Hình ảnh: "
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/serif"
+        android:text="Chọn hình ảnh" />
     <Button
         android:backgroundTint="@color/color_menu"
         android:textColor="@color/white"
         android:background="@drawable/boder_btn_dangnhap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:text="Thêm"
         android:layout_marginTop="25dp"
         android:id="@+id/btnAddBook"/>

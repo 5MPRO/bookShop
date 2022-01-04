@@ -44,7 +44,7 @@ public class LoaiSachFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_loaisach,container,false);
         AnhXa();
-        GetDuLieuLoaiSP();
+        //GetDuLieuLoaiSP();
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,6 +85,13 @@ public class LoaiSachFragment extends Fragment {
         });
         requestQueue.add(jsonArrayRequest);
         lvLoaiSach.setAdapter(keSachAdapter);
+    }
+
+    @Override
+    public void onResume() {
+        arrayListKeSach.clear();
+        GetDuLieuLoaiSP();
+        super.onResume();
     }
 
     private void AnhXa() {

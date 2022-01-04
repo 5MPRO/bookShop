@@ -21,6 +21,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.shopbansach.R;
 import com.example.shopbansach.model.Giohang;
 import com.example.shopbansach.model.Sanpham;
+import com.example.shopbansach.util.Server;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
@@ -160,7 +161,8 @@ public class Chitietsanpham extends AppCompatActivity {
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         txtgia.setText("Giá: "+decimalFormat.format(GiaChitiet) + " Đ");
         txtmota.setText(MotaChitiet);
-        Picasso.get().load(HinhanhChitiet)
+        String hinhanhsp = "http://"+Server.localhost+HinhanhChitiet;
+        Picasso.get().load(hinhanhsp)
                 .placeholder(R.drawable.noimage)
                 .error(R.drawable.error)
                 .into(imageViewChiTiet);

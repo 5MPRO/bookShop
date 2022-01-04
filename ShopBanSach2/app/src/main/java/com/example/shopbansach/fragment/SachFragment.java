@@ -56,7 +56,7 @@ public class SachFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_sach,container,false);
         AnhXa();
-        GetData();
+        //GetData();
         btnThem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,6 +130,7 @@ public class SachFragment extends Fragment {
 
     @Override
     public void onResume() {
+        mangsp.clear();
         GetData();
         super.onResume();
     }

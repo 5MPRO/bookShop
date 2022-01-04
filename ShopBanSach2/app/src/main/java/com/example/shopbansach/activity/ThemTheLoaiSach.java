@@ -138,12 +138,6 @@ public class ThemTheLoaiSach extends AppCompatActivity{
         AdapterLoaiSach.getInstance(ThemTheLoaiSach.this).addToRequesQue(stringRequest);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-
     private String imageToString(Bitmap bitmap)
     {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();

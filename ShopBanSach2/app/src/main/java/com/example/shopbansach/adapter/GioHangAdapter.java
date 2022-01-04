@@ -18,6 +18,7 @@ import com.example.shopbansach.R;
 import com.example.shopbansach.activity.MainActivity;
 import com.example.shopbansach.model.Giohang;
 
+import com.example.shopbansach.util.Server;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
@@ -77,7 +78,8 @@ public class GioHangAdapter extends BaseAdapter {
         viewHolder.txttengiohang.setText(gioHang.getTensp());
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         viewHolder.txtgiagiohang.setText(decimalFormat.format(gioHang.getGiasp())+" Đ");
-        Picasso.get().load(gioHang.getHinhsp())
+        String hinhanhsp = "http://"+ Server.localhost+gioHang.getHinhsp();
+        Picasso.get().load(hinhanhsp)
                 .placeholder(R.drawable.noimage)
                 .error(R.drawable.error)
                 .into(viewHolder.imggiohang);

@@ -14,6 +14,7 @@ import com.example.shopbansach.R;
 import com.example.shopbansach.activity.Chitietsanpham;
 import com.example.shopbansach.model.Sanpham;
 import com.example.shopbansach.util.CheckConnection;
+import com.example.shopbansach.util.Server;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
@@ -41,7 +42,8 @@ public class SanphamAdapter extends RecyclerView.Adapter<SanphamAdapter.ItemHold
         itemHolder.txtTensanpham.setText(sanpham.getTensanpham());
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         itemHolder.txtGiasanpham.setText("Giá: "+decimalFormat.format(sanpham.getGiasanpham())+" Đ");
-        Picasso.get().load(sanpham.getHinhanhsanpham())
+        String hinhanhsp = "http://"+ Server.localhost+sanpham.getHinhanhsanpham();
+        Picasso.get().load(hinhanhsp)
                 .placeholder(R.drawable.noimage)
                 .error(R.drawable.error)
                 .into(itemHolder.imghinhsanpham);

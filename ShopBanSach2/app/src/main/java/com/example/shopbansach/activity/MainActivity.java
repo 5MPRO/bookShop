@@ -337,9 +337,9 @@ public class MainActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                     }
-                    mangloaisp.add(3,new Loaisp(0,"Thông báo","https://banner2.cleanpng.com/20190728/plb/kisspng-loudspeaker-megaphone-sound-microphone-audio-power-homepage-mtela-5d3d4082abef47.5598839215642952987043.jpg"));
-                    mangloaisp.add(4,new Loaisp(0,"Liên hệ","https://chuakeo.com.vn/wp-content/uploads/2018/07/contact-us.jpg"));
-                    mangloaisp.add(5,new Loaisp(0,"Đăng xuất","https://png.pngtree.com/png-clipart/20190520/original/pngtree-vector-logout-icon-png-image_4276345.jpg"));
+                    mangloaisp.add(3,new Loaisp(0,"Thông báo","/BanSach/BanSach/uploads/Thông%20báo.jpg"));
+                    mangloaisp.add(4,new Loaisp(0,"Liên hệ","/BanSach/BanSach/uploads/Liên%20Hệ.jpg"));
+                    mangloaisp.add(5,new Loaisp(0,"Đăng xuất","/BanSach/BanSach/uploads/Đăng%20xuất.jpg"));
                 }
             }
         }, new Response.ErrorListener() {
@@ -398,7 +398,7 @@ public class MainActivity extends AppCompatActivity {
         listViewmanhinhchinh = findViewById(R.id.listviewmanhinhchinh);
         drawerLayout = findViewById(R.id.drawerlayout);
         mangloaisp = new ArrayList<>();
-        mangloaisp.add(0,new Loaisp(0,"Trang chính","https://indianewengland.com/wp-content/uploads/2016/04/Home-iage.png"));
+        mangloaisp.add(0,new Loaisp(0,"Trang chính","/BanSach/BanSach/uploads/Trang%20chủ.jpg"));
       // Khởi tạo adapter navigation
         loaispAdapter = new  LoaispAdapter(mangloaisp,getApplicationContext());
         listViewmanhinhchinh.setAdapter(loaispAdapter);
