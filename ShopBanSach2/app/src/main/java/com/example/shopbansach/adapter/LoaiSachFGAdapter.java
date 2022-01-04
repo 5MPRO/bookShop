@@ -1,12 +1,15 @@
 package com.example.shopbansach.adapter;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.example.shopbansach.R;
 import com.example.shopbansach.fragment.LoaiSachFragment;
@@ -45,7 +48,7 @@ public class LoaiSachFGAdapter extends BaseAdapter {
 
     public class ViewHolder{
         TextView txttenloaisanpham;
-        ImageView imgloaisp;
+        ImageView imgloaisp,btnDelete;
 
     }
 
@@ -56,9 +59,10 @@ public class LoaiSachFGAdapter extends BaseAdapter {
         if(view ==null){
             viewHolder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context.getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.dong_listview_loaisp,null);
-            viewHolder.txttenloaisanpham = view.findViewById(R.id.textviewtenloaisp);
-            viewHolder.imgloaisp = view.findViewById(R.id.imageviewloaisp);
+            view = inflater.inflate(R.layout.item_lspadmin,null);
+            viewHolder.txttenloaisanpham = view.findViewById(R.id.tvLSPAD);
+            viewHolder.imgloaisp = view.findViewById(R.id.imgLoaiSPAD);
+            viewHolder.btnDelete = view.findViewById(R.id.btnDeleteLSP);
             view.setTag(viewHolder);
         }
         else {
@@ -71,7 +75,31 @@ public class LoaiSachFGAdapter extends BaseAdapter {
                 .placeholder(R.drawable.noimage)
                 .error(R.drawable.error)
                 .into(viewHolder.imgloaisp);
+        viewHolder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                XacNhanXoa(loaisp.getTenloaisp(),loaisp.getId());
+            }
+        });
 
         return view;
+    }
+
+    private void XacNhanXoa(String ten,final int id){
+        AlertDialog.Builder dialogXoa = new AlertDialog.Builder(context.getActivity());
+        dialogXoa.setMessage("Bạn có muốn xóa "+ten+" không?");
+        dialogXoa.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                context.DeleteLoaiSach(id);
+            }
+        });
+        dialogXoa.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        });
+        dialogXoa.show();
     }
 }

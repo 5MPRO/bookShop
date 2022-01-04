@@ -11,10 +11,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.shopbansach.R;
 import com.example.shopbansach.activity.ThemTheLoaiSach;
@@ -29,6 +32,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoaiSachFragment extends Fragment {
     private View view;
@@ -53,6 +58,36 @@ public class LoaiSachFragment extends Fragment {
             }
         });
         return view;
+    }
+
+    public void DeleteLoaiSach(int id){
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.Duongdandeletelsp, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(response.trim().equals("success")){
+                    CheckConnection.ShowToast_Short(getActivity(),"Xóa thành công");
+                    arrayListKeSach.clear();
+                    GetDuLieuLoaiSP();
+                }else {
+                    CheckConnection.ShowToast_Short(getActivity(),"Xóa không thành công");
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                CheckConnection.ShowToast_Short(getActivity(),"Xóa không thành công");
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                params.put("id",String.valueOf(id));
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
     }
 
     private void GetDuLieuLoaiSP() {

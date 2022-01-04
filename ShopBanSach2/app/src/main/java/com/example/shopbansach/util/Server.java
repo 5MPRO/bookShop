@@ -28,4 +28,6 @@ public class Server{
     public static String DuongdangetdonhangAD="http://"+localhost+"/BanSach/BanSach/getdonhangad.php";
     public static String Duongdanupdatedh="http://"+localhost+"/BanSach/BanSach/updatedonhang.php";
     public static String DuongdaninsertSanPham="http://"+localhost+"/BanSach/BanSach/insertsach.php";
+    public static String Duongdandeletelsp="http://"+localhost+"/BanSach/BanSach/deleteloaisp.php";
+    public static String Duongdandeletedonhang="http://"+localhost+"/BanSach/BanSach/deletedonhang.php";
 }

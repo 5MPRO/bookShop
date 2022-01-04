@@ -15,6 +15,7 @@ import com.example.shopbansach.R;
 import com.example.shopbansach.fragment.DonHangFragment;
 import com.example.shopbansach.model.DonHang;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,25 +65,28 @@ public class donhangFGAdapter extends BaseAdapter {
         }
         DonHang donHang = donHangList.get(i);
         viewHolder.txtOrderName.setText(donHang.getOrderName());
-        viewHolder.txtTotal.setText(donHang.getTotal());
+        DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+        viewHolder.txtTotal.setText(decimalFormat.format(Integer.parseInt(donHang.getTotal()))+" VNĐ");
         viewHolder.txtQuantity.setText(donHang.getQuantity());
         viewHolder.txtStatus.setText(donHang.getStatus());
-        if(donHang.getStatus().equals("Đã duyệt")){
+        if(donHang.getStatus().contains("Đã duyệt")||donHang.getStatus().contains("Đã hủy")){
             viewHolder.btnDuyet.setEnabled(false);
             viewHolder.btnDuyet.setBackgroundColor(Color.parseColor("#c1c1c1"));
         }
-        viewHolder.btnDuyet.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                XacNhanDuyet(donHang.getOrderName(),donHang.getMaDH());
-            }
-        });
+        else {
+            viewHolder.btnDuyet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    XacNhanDuyet(donHang.getOrderName(), donHang.getMaDH());
+                }
+            });
+        }
         return view;
     }
 
     private void XacNhanDuyet(String ten,final String maDonHang){
         AlertDialog.Builder dialogXoa = new AlertDialog.Builder(context.getActivity());
-        dialogXoa.setMessage("Bạn có muốn xác nhận "+ten+" duyệt đơn hàng?");
+        dialogXoa.setMessage("Bạn có muốn xác nhận duyệt đơn hàng "+ten+" không?");
         dialogXoa.setPositiveButton("Có", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
