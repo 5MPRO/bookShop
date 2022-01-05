@@ -126,25 +126,7 @@ public class EditSanPham extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
-//    private void GetInfomation() {
-//        Sanpham sanPham = (Sanpham) getIntent().getSerializableExtra("thongtinsp");
-//        id = sanPham.getID();
-//        TenChitiet = sanPham.getTensanpham();
-//        GiaChitiet = sanPham.Giasanpham;
-//        HinhanhChitiet = sanPham.Hinhanhsanpham;
-//        MotaChitiet = sanPham.getMotasanpham();
-//        Idsanpham = sanPham.getIDSanpham();
-//        edit_Title.setText(TenChitiet);
-//        DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-//        edit_Price.setText("Giá: "+decimalFormat.format(GiaChitiet) + " Đ");
-//        edit_Title.setText(MotaChitiet);
-//        String hinhanhsp = "http://"+Server.localhost+HinhanhChitiet;
-//        Picasso.get().load(hinhanhsp)
-//                .placeholder(R.drawable.noimage)
-//                .error(R.drawable.error)
-//                .into(imageViewChiTiet);
-//
-//    }
+
 
     private void AnhXa() {
         edit_Title = findViewById(R.id.edit_Title);
