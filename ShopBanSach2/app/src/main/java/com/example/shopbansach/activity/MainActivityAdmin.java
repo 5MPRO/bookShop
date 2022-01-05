@@ -32,11 +32,11 @@ public class MainActivityAdmin extends AppCompatActivity {
         setContentView(R.layout.activity_main_admin);
         AnhXa();
         TLayout();
-        ActionBar();
+        //ActionBar();
         OnClickMenu();
     }
 
-    private void ActionBar() {
+    /*private void ActionBar() {
         setSupportActionBar(toolbarMain);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbarMain.setNavigationIcon(android.R.drawable.ic_menu_sort_by_size);
@@ -46,7 +46,7 @@ public class MainActivityAdmin extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
-    }
+    }*/
 
     private void TLayout() {
         new TabLayoutMediator(mTabLayout, mViewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
@@ -100,7 +100,7 @@ public class MainActivityAdmin extends AppCompatActivity {
         mainViewPagerAdapter = new ViewPagerAdapter(this);
         mViewPager2.setAdapter(mainViewPagerAdapter);
         toolbarMain = findViewById(R.id.toolBarMain);
-        drawerLayout = findViewById(R.id.drawerLayoutMain);
+        //drawerLayout = findViewById(R.id.drawerLayoutMain);
         lnTimKiem = findViewById(R.id.ln_search);
         lnTaiKhoan = findViewById(R.id.ln_tk);
     }

@@ -17,6 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
         <activity
+            android:name=".activity.EditSanPham"
+            android:exported="false" />
+        <activity
+            android:name=".activity.EditLoaiSP"
+            android:exported="false" />
+        <activity
             android:name=".activity.TTTKAdmin"
             android:exported="false" />
         <activity

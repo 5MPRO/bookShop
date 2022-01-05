@@ -6,15 +6,16 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:weightSum="10">
-    <androidx.drawerlayout.widget.DrawerLayout
+    <!--<androidx.drawerlayout.widget.DrawerLayout
         android:layout_weight="9.2"
         android:id="@+id/drawerLayoutMain"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp">-->
         <LinearLayout
+            android:layout_weight="9.2"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="0dp">
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolBarMain"
                 android:fontFamily="@font/cucho"
@@ -50,7 +51,7 @@
                 android:layout_height="wrap_content">
             </ListView>
         </com.google.android.material.navigation.NavigationView>-->
-    </androidx.drawerlayout.widget.DrawerLayout>
+    <!--</androidx.drawerlayout.widget.DrawerLayout>-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -1,6 +1,8 @@
 package com.example.shopbansach.model;
 
-public class Loaisp {
+import java.io.Serializable;
+
+public class Loaisp implements Serializable {
     public int Id;
     public String Tenloaisp;
     public String Hinhanhloaisp;

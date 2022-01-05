@@ -29,5 +29,7 @@ public class Server{
     public static String Duongdanupdatedh="http://"+localhost+"/BanSach/BanSach/updatedonhang.php";
     public static String DuongdaninsertSanPham="http://"+localhost+"/BanSach/BanSach/insertsach.php";
     public static String Duongdandeletelsp="http://"+localhost+"/BanSach/BanSach/deleteloaisp.php";
+    public static String Duongdandeletesach="http://"+localhost+"/BanSach/BanSach/deletesach.php";
     public static String Duongdandeletedonhang="http://"+localhost+"/BanSach/BanSach/deletedonhang.php";
+    public static String Duongdanupdatelsp="http://"+localhost+"/BanSach/BanSach/updateloaisach.php";
 }

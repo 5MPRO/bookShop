@@ -45,7 +45,6 @@ public class LoaispAdapter extends BaseAdapter {
     public class ViewHolder{
         TextView txttenloaisanpham;
         ImageView imgloaisp;
-
     }
 
     @Override

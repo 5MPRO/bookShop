@@ -10,14 +10,16 @@
         android:layout_marginTop="20dp"
         android:id="@+id/groupSnp"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
         <TextView
+            android:fontFamily="@font/serif"
+            android:textSize="18sp"
             android:layout_gravity="center_vertical"
             android:text="Chon loại sách"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
         <Spinner
             android:id="@+id/spnTypeBook"
             android:layout_width="match_parent"

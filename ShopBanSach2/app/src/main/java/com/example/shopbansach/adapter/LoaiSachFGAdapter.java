@@ -2,6 +2,8 @@ package com.example.shopbansach.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +14,15 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 
 import com.example.shopbansach.R;
+import com.example.shopbansach.activity.Chitietsanpham;
+import com.example.shopbansach.activity.EditLoaiSP;
 import com.example.shopbansach.fragment.LoaiSachFragment;
 import com.example.shopbansach.model.Loaisp;
+import com.example.shopbansach.util.CheckConnection;
 import com.example.shopbansach.util.Server;
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class LoaiSachFGAdapter extends BaseAdapter {
@@ -48,7 +54,7 @@ public class LoaiSachFGAdapter extends BaseAdapter {
 
     public class ViewHolder{
         TextView txttenloaisanpham;
-        ImageView imgloaisp,btnDelete;
+        ImageView imgloaisp,btnDelete,btnEdit;
 
     }
 
@@ -63,6 +69,7 @@ public class LoaiSachFGAdapter extends BaseAdapter {
             viewHolder.txttenloaisanpham = view.findViewById(R.id.tvLSPAD);
             viewHolder.imgloaisp = view.findViewById(R.id.imgLoaiSPAD);
             viewHolder.btnDelete = view.findViewById(R.id.btnDeleteLSP);
+            viewHolder.btnEdit = view.findViewById(R.id.btnEditLSP);
             view.setTag(viewHolder);
         }
         else {
@@ -81,7 +88,16 @@ public class LoaiSachFGAdapter extends BaseAdapter {
                 XacNhanXoa(loaisp.getTenloaisp(),loaisp.getId());
             }
         });
-
+        viewHolder.btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context.getActivity(), EditLoaiSP.class);
+                intent.putExtra("thongtinlsp",arrayListLoaisp.get(i));
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                CheckConnection.ShowToast_Short(context.getActivity(),arrayListLoaisp.get(i).getTenloaisp());
+                context.startActivity(intent);
+            }
+        });
         return view;
     }
 

@@ -120,6 +120,36 @@ public class SachFragment extends Fragment {
 
     }
 
+    public void DeleteSach(int id){
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.Duongdandeletesach, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if(response.trim().equals("success")){
+                    CheckConnection.ShowToast_Short(getActivity(),"Xóa thành công");
+                    mangsp.clear();
+                    GetData();
+                }else {
+                    CheckConnection.ShowToast_Short(getActivity(),"Xóa không thành công");
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                CheckConnection.ShowToast_Short(getActivity(),"Xóa không thành công");
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                params.put("id",String.valueOf(id));
+                return params;
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
     private void AnhXa() {
         lvLoaiSach = view.findViewById(R.id.lvLoaiSach);
         mangsp = new ArrayList<>();
