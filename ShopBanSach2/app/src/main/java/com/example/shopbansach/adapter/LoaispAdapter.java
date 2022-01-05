@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.shopbansach.R;
 import com.example.shopbansach.model.Loaisp;
+import com.example.shopbansach.util.Server;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -44,7 +45,6 @@ public class LoaispAdapter extends BaseAdapter {
     public class ViewHolder{
         TextView txttenloaisanpham;
         ImageView imgloaisp;
-
     }
 
     @Override
@@ -63,8 +63,9 @@ public class LoaispAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) view.getTag();
         }
         Loaisp loaisp = (Loaisp) getItem(i);
+        String hinhanhlsp = "http://"+ Server.localhost+loaisp.getHinhanhloaisp();
         viewHolder.txttenloaisanpham.setText(loaisp.getTenloaisp());
-        Picasso.get().load(loaisp.getHinhanhloaisp())
+        Picasso.get().load(hinhanhlsp)
                 .placeholder(R.drawable.noimage)
                 .error(R.drawable.error)
                 .into(viewHolder.imgloaisp);

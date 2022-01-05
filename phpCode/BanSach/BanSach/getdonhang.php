@@ -7,6 +7,7 @@
     while ($row = mysqli_fetch_assoc($data)){
 
         array_push($mangdonhang,new DonHang(
+                $row['maDonHang'],
                 $row['tenSanPham'],
                 $row['trangThai'],
                 $row['soLuongSanPham']*$row['giaSanPham'],
@@ -16,7 +17,8 @@
     echo json_encode($mangdonhang);
     
     class DonHang{
-        function __construct($tenSanPham,$trangThai,$tongtien,$soLuongSanPham) {
+        function __construct($maDonHang,$tenSanPham,$trangThai,$tongtien,$soLuongSanPham) {
+            $this->maDonHang = $maDonHang;
             $this->tenSanPham = $tenSanPham;
             $this->trangThai = $trangThai;
             $this->tongtien = $tongtien;

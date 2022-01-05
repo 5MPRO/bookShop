@@ -25,15 +25,14 @@
     <color name="light_blue_A400">#FF00B0FF</color>
     <color name="black_overlay">#66000000</color>
     <color name="save" >#e9e3ba</color>
-    <!--<color name="pirimary">#3F51B5</color>
-    <color name="bookApp" >#F8F3D1</color>
-    <color name="bookAppBold" >#EDE8C0</color>  -->
+
 
     <color name="pirimary">#FDB45A</color>
-
+    <color name="text">#303030</color>
+    <color name="light_gray">#DCD8D8</color>
     <color name="bookApp" >#FFFFFF</color>
     <color name="bookAppBold" >#f2f2f2</color>
-
+    <color name="transparent">#00F4EFEF</color>
 
 
 </resources>

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.shopbansach.R;
 import com.example.shopbansach.model.Sanpham;
+import com.example.shopbansach.util.Server;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
@@ -69,7 +70,8 @@ public class VanHocAdapter extends BaseAdapter {
         viewHolder.txtmotavanhoc.setMaxLines(2);
         viewHolder.txtmotavanhoc.setEllipsize(TextUtils.TruncateAt.END);
         viewHolder.txtmotavanhoc.setText(sanpham.getMotasanpham());
-        Picasso.get().load(sanpham.getHinhanhsanpham())
+        String hinhanhsp = "http://"+ Server.localhost+sanpham.getHinhanhsanpham();
+        Picasso.get().load(hinhanhsp)
                 .placeholder(R.drawable.noimage)
                 .error(R.drawable.error)
                 .into(viewHolder.imgvanhoc);

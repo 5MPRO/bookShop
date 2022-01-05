@@ -4,7 +4,7 @@
         require_once "validate.php";
         $email = validate($_POST['email']);
         $password = validate($_POST['password']);
-        $sql = "select * from users where email='$email' and password='$password'";
+        $sql = "select * from users where email='$email' and password='$password' and maQuyen=0";
 	$result = mysqli_query($connect,$sql);
         if($result->num_rows > 0){
             echo "success" ;
